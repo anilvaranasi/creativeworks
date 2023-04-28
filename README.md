@@ -47,6 +47,6 @@ Benefits :
 Take snapshot of CI demographic at regular intervals.
 Use to simiulate and analyze CI state in order to bring in any optimization or efficiency.
 
-Video demo :
+Video demo :https://youtu.be/n9OlxP-J0vw
 ServiceNow share: https://developer.servicenow.com/connect.do#!/share/contents/3287388_awesomenow_creativeworks_create_a_digital_twin_in_graphml_format?t=PRODUCT_DETAILS
 GitHub: https://github.com/anilvaranasi/creativeworks.git
