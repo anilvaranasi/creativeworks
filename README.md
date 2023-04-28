@@ -1,5 +1,6 @@
 # creativeworks
 Contains application called awesomenowcreativeworks
+
 Digital twin -> A digital twin is a virtual model designed to accurately reflect a physical
 object.
 References:
@@ -27,7 +28,8 @@ Create a local user with role as itil or cmdb manager. This is needed only in de
 Same credentials need to be updated in the basic auth credentials record.
 https://<instance_name>.service-now.com/basic_auth_credentials.do?sys_id=fc05b0ee07dde950b965f7208c1ed0c1
 Install updateset = varanutil_GetRelationshipsForAGivenCIUpToAGivenLevel_v2.0 from github or share links below.
-Download and install graph editor
+Install app from github repo.
+Download and install graph editor (this is an optional step)
 https://www.yworks.com/products/yed/download
 
 
@@ -46,7 +48,5 @@ Take snapshot of CI demographic at regular intervals.
 Use to simiulate and analyze CI state in order to bring in any optimization or efficiency.
 
 Video demo :
-
-ServiceNow share: 
-
- GitHub: https://github.com/anilvaranasi/creativeworks.git
+ServiceNow share: https://developer.servicenow.com/connect.do#!/share/contents/3287388_awesomenow_creativeworks_create_a_digital_twin_in_graphml_format?t=PRODUCT_DETAILS
+GitHub: https://github.com/anilvaranasi/creativeworks.git
