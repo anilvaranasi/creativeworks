@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4eb7a2fa07c2ed90b965f7208c1ed0a9" label="graph" max_length="40" name="x_146833_creativ_0_graph" type="collection">
+        <element label="directed" max_length="10" name="directed" type="integer"/>
+        <element label="File" max_length="32" name="file" reference="x_146833_creativ_0_file" type="reference"/>
+        <element label="hierarchic" max_length="10" name="hierarchic" type="integer"/>
+        <element display="true" label="Label" max_length="255" name="label" type="string"/>
+        <index name="index">
+            <element name="file"/>
+        </index>
+        <index name="index2">
+            <element name="label"/>
+        </index>
+    </element>
+</database>

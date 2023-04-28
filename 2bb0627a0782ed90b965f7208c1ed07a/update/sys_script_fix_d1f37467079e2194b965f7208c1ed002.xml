@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>deBugGraphicsOutput</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var tableSysId = '8e033bf6070221d0b965f7208c1ed0dd';
+var sDebug = '';
+         try {
+            var gColumnListEdgeQuote = ['quote','targetArrow', 'fill'];
+            var gColumnListEdgeNoQuote = [];
+            var gColumnListNodeQuote = ['quote','type', 'fill', 'outline'];
+            //var gColumnListNodeNoQuote = ['x', 'y','w','h','raisedBorder'];
+			var gColumnListNodeNoQuote = ['noquote','x', 'y','w','h'];
+            var gColumnList = [];
+            var gOutputGml = '';
+            var gEnQuery = 'sys_id=' + tableSysId;
+            var minimalName = 'Graphics';
+            var appPrefix = 'x_146833_creativ_0_';
+            var tableName = appPrefix + minimalName.toLowerCase();
+            var grgTable = new GlideRecord(tableName);
+            grgTable.addEncodedQuery(gEnQuery);
+            grgTable.query();
+            gOutputGml += minimalName + "\n";
+            gOutputGml += "[" + "\n";
+            if (grgTable.next()) {
+                processRow('quote');
+                processRow('noquote');
+                gOutputGml += "]" + "\n";
+            }
+sDebug += gOutputGml ;
+            function processRow(quoteType) {
+				sDebug += " grgTable.recordtype=" + grgTable.recordtype + " quoteType=" + quoteType + "\n";
+                if (grgTable.recordtype == 'node') {
+                    if (quoteType == 'quote') {
+                        gColumnList = gColumnListNodeQuote;
+                    }
+                    if (quoteType == 'noquote') {
+                        gColumnList = gColumnListNodeNoQuote;
+                    }
+
+                }
+                if (grgTable.recordtype == 'edge') {
+                    if (quoteType == 'quote') {
+                        gColumnList = gColumnListEdgeQuote;
+                    }
+                    if (quoteType == 'noquote') {
+                        gColumnList = gColumnListEdgeNoQuote;
+                    }
+                }
+                for (var gcCounter = 1; gcCounter < gColumnList.length; gcCounter++) {
+					sDebug += " gColumnList[0]=" + gColumnList[0] + "\n";
+					   var gRow = '';
+                    var columnName = gColumnList[gcCounter].toLowerCase();
+					  var gValue = "null";
+					  sDebug += " columnName=" + columnName + " grgTable[columnName]=" + grgTable[columnName] + "\n";
+                    if (global.JSUtil.notNil(grgTable[columnName])) {
+                        gValue = grgTable[columnName];
+                    }
+                    if (gColumnList[0] == 'quote') {
+                        gRow = gColumnList[gcCounter] + ' ' + '"' + gValue + '"';
+                    }
+                    if (gColumnList[0] == 'noquote') {
+                        gRow = gColumnList[gcCounter] + ' ' + +gValue;
+                    }
+					sDebug += gRow + "\n";
+                    gRow += "\n";
+                    gOutputGml += gRow;
+                }
+            }
+        } catch (err) {
+            gs.error('Error from function buildLabegraphics ' + err);
+        }
+gs.info(sDebug);]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-04-25 09:12:23</sys_created_on>
+        <sys_id>d1f37467079e2194b965f7208c1ed002</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>deBugGraphicsOutput</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_script_fix_d1f37467079e2194b965f7208c1ed002</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-04-25 10:00:14</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

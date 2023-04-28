@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="658b149807aa2994b965f7208c1ed09d" label="Label Graphics Lookup" max_length="40" name="x_146833_creativ_0_label_graphics_lookup" type="collection">
+        <element default="#CCCCFF" label="fill" max_length="10" name="fill" type="string"/>
+        <element label="node table" max_length="32" name="node_table" reference="sys_db_object" type="reference"/>
+        <index name="index">
+            <element name="node_table"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>deBugLabelGraphicsOutput</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var tableSysId = '17443b7a070221d0b965f7208c1ed0b1';
+var sDebug = '';
+         try {
+            var lgColumnListEdgeQuote = ['quote','text', 'fontName', 'configuration', 'model', 'position'];
+			var lgColumnListEdgeNoQuote = ['noquote','fontSize',  'contentWidth', 'contentHeight'];
+            var lgColumnListNodeQuote = ['quote','text', 'fontName', 'model'];
+			var lgColumnListNodeNoQuote = ['noquote','fontSize'];
+            var lgColumnList = [];
+            var lgOutputGml = '';
+            var lgEnQuery = 'sys_id=' + tableSysId;
+            var minimalName = 'LabelGraphics';
+            var appPrefix = 'x_146833_creativ_0_';
+            var tableName = appPrefix + minimalName.toLowerCase();
+            var grLgTable = new GlideRecord(tableName);
+            grLgTable.addEncodedQuery(lgEnQuery);
+            grLgTable.query();
+            lgOutputGml += minimalName + "\n";
+            lgOutputGml += "[" + "\n";
+            if (grLgTable.next()) {
+				sDebug += "grLgTable.recordtype=" + grLgTable.recordtype + "\n";
+				sDebug += "grLgTable.text=" + grLgTable.text + "\n";
+				processRow('quote');
+                processRow('noquote');
+                lgOutputGml += "]" + "\n";
+				sDebug +=lgOutputGml;
+            }
+			function processRow(quoteType) {
+                if(grLgTable.recordtype == 'node' ) {
+                    if(quoteType =='quote')  {
+                        lgColumnList = lgColumnListNodeQuote;
+                    }
+                    if(quoteType =='noquote') {
+                        lgColumnList = lgColumnListNodeNoQuote;
+                    }
+
+                }
+                if(grLgTable.recordtype == 'edge' ) {
+                    if(quoteType =='quote')  {
+                        lgColumnList = lgColumnListEdgeQuote;
+                    }
+                    if(quoteType =='noquote') {
+                        lgColumnList = lgColumnListEdgeNoQuote;
+                    }
+                }
+                for (var lgcCounter = 1; lgcCounter < lgColumnList.length; lgcCounter++) {
+                    var lgRow = '';
+					var columnName = lgColumnList[lgcCounter].toLowerCase();
+                    var lgValue = "null";
+                    if (global.JSUtil.notNil(grLgTable[columnName])) {
+                        lgValue = grLgTable[columnName];
+                    }
+					if(lgColumnList[0] == 'quote') {
+                    lgRow = lgColumnList[lgcCounter] + ' ' + '"' + lgValue + '"';
+					}
+					if(lgColumnList[0] == 'noquote') {
+						lgRow = lgColumnList[lgcCounter] + ' ' +  + lgValue ;
+					}
+                    lgRow += "\n";
+                    lgOutputGml += lgRow;
+                }
+			}
+        } catch (err) {
+            gs.error('Error from function buildLabelGraphics ' + err);
+        }
+gs.info(sDebug);]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-04-25 06:11:58</sys_created_on>
+        <sys_id>392acc2707d62194b965f7208c1ed081</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>deBugLabelGraphicsOutput</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_script_fix_392acc2707d62194b965f7208c1ed081</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-04-25 09:12:13</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f95ae6f20706ed90b965f7208c1ed0f2" label="edge" max_length="40" name="x_146833_creativ_0_edge" type="collection">
+        <element label="Graph" max_length="32" name="graph" reference="x_146833_creativ_0_graph" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Identifier" max_length="100" name="identifier" type="string"/>
+        <element display="true" label="Label" max_length="255" name="label" type="string"/>
+        <element label="Source" max_length="32" name="source" reference="x_146833_creativ_0_node" type="reference"/>
+        <element label="Target" max_length="32" name="target" reference="x_146833_creativ_0_node" type="reference"/>
+        <index name="index">
+            <element name="graph"/>
+        </index>
+        <index name="index2">
+            <element name="identifier"/>
+        </index>
+    </element>
+</database>

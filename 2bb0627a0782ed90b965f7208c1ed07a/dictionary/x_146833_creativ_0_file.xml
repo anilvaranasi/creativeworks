@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f2f62a7a07c2ed90b965f7208c1ed083" label="file" max_length="40" name="x_146833_creativ_0_file" type="collection">
+        <element attributes="encode_utf8=false" label="Configuration Item" max_length="32" name="ci" reference="cmdb_ci" type="reference"/>
+        <element default="CreativeWorks" label="Creator" max_length="40" name="creator" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Name" max_length="255" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="draft" label="State" max_length="40" name="state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="draft" sequence="0" value="draft"/>
+                <element inactive_on_update="false" label="processing" sequence="1" value="processing"/>
+                <element inactive_on_update="false" label="processed" sequence="2" value="processed"/>
+            </choice>
+        </element>
+        <element default="2.18" label="Version" max_length="5" name="version" type="string"/>
+        <index name="index">
+            <element name="ci"/>
+        </index>
+    </element>
+</database>

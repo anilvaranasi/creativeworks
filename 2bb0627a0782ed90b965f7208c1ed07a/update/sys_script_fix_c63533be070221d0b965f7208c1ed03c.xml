@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>GenerateDotGMLFile</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var fileObject = '';
+var fileVarList = ['Creator', 'Version'];
+var fileQuery = 'name=SampleTwoBlockOneEdge.gml';
+var appPrefix = 'x_146833_creativ_0_';
+fileTable = appPrefix + 'file';
+var grFile = new GlideRecord(fileTable);
+grFile.addEncodedQuery(fileQuery);
+grFile.query();
+if(grFile.next()) {
+	for (var k=0; k <fileVarList.length; k++) {
+		fileObject += fileVarList[k] + " " + '"' + grFile[fileVarList[k].toLowerCase()] + '"' + "\n";
+	}
+}
+gs.info(fileObject);]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-04-11 05:11:31</sys_created_on>
+        <sys_id>c63533be070221d0b965f7208c1ed03c</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>GenerateDotGMLFile</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_script_fix_c63533be070221d0b965f7208c1ed03c</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-04-11 05:16:20</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>
