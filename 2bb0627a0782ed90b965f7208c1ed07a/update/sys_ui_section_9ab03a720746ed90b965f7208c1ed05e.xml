@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="9ab03a720746ed90b965f7208c1ed05e" sys_domain="global" table="x_146833_creativ_0_node" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ci</element>
+            <position>0</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-04-26 17:23:31</sys_created_on>
+            <sys_id>29fd2333075a6594b965f7208c1ed0f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_146833_creativ_0_node" sys_domain="global" view="Default view">9ab03a720746ed90b965f7208c1ed05e</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-04-26 17:23:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>graph</element>
+            <position>1</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-04-26 17:23:31</sys_created_on>
+            <sys_id>adfd2333075a6594b965f7208c1ed0f9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_146833_creativ_0_node" sys_domain="global" view="Default view">9ab03a720746ed90b965f7208c1ed05e</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-04-26 17:23:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>label</element>
+            <position>2</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-04-26 17:23:31</sys_created_on>
+            <sys_id>21fd2333075a6594b965f7208c1ed0fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_146833_creativ_0_node" sys_domain="global" view="Default view">9ab03a720746ed90b965f7208c1ed05e</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-04-26 17:23:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-04-26 17:23:31</sys_created_on>
+            <sys_id>a1fd2333075a6594b965f7208c1ed0fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_146833_creativ_0_node" sys_domain="global" view="Default view">9ab03a720746ed90b965f7208c1ed05e</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-04-26 17:23:31</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>id</element>
+            <position>4</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-04-26 17:23:31</sys_created_on>
+            <sys_id>25fd2333075a6594b965f7208c1ed0fa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_146833_creativ_0_node" sys_domain="global" view="Default view">9ab03a720746ed90b965f7208c1ed05e</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-04-26 17:23:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>5</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-04-26 17:36:18</sys_created_on>
+            <sys_id>f4e033bb075a6594b965f7208c1ed082</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_146833_creativ_0_node" sys_domain="global" view="Default view">9ab03a720746ed90b965f7208c1ed05e</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-04-26 17:36:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_146833_creativ_0_node</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-04-11 00:06:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9ab03a720746ed90b965f7208c1ed05e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_146833_creativ_0_node</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+            <sys_update_name>sys_ui_section_9ab03a720746ed90b965f7208c1ed05e</sys_update_name>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-04-11 00:06:21</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

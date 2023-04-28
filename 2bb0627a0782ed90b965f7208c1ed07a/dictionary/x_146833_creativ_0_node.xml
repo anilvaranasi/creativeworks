@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="ba3a62f20706ed90b965f7208c1ed08f" label="node" max_length="40" name="x_146833_creativ_0_node" type="collection">
+        <element attributes="encode_utf8=false" label="CI" max_length="32" name="ci" reference="cmdb_ci" type="reference"/>
+        <element label="Graph" max_length="32" name="graph" reference="x_146833_creativ_0_graph" type="reference"/>
+        <element label="id" max_length="40" name="id" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="label" max_length="255" name="label" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="ci"/>
+        </index>
+        <index name="index2">
+            <element name="graph"/>
+        </index>
+        <index name="index3">
+            <element name="id"/>
+        </index>
+    </element>
+</database>

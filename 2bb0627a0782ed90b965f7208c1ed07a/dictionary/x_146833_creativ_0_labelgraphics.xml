@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="abfb2a3a0706ed90b965f7208c1ed040" label="LabelGraphics" max_length="40" name="x_146833_creativ_0_labelgraphics" type="collection">
+        <element default="AutoFlippingLabel" label="configuration" max_length="40" name="configuration" type="string"/>
+        <element label="contentHeight" max_length="10" name="contentheight" type="float"/>
+        <element label="contentWidth" max_length="40" name="contentwidth" type="float"/>
+        <element label="edge" max_length="32" name="edge" reference="x_146833_creativ_0_edge" type="reference"/>
+        <element label="fontName" max_length="20" name="fontname" type="string"/>
+        <element default="14" label="fontSize" max_length="2" name="fontsize" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="bold" label="fontStyle" max_length="40" name="fontstyle" type="string"/>
+        <element attributes="encode_utf8=false" label="Graph" max_length="32" name="graph" reference="x_146833_creativ_0_graph" type="reference"/>
+        <element label="Model" max_length="10" name="model" type="string"/>
+        <element label="node" max_length="32" name="node" reference="x_146833_creativ_0_node" type="reference"/>
+        <element label="position" max_length="10" name="position" type="string"/>
+        <element choice="1" label="RecordType" max_length="40" name="recordtype" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="edge" value="edge"/>
+                <element inactive_on_update="false" label="node" value="node"/>
+            </choice>
+        </element>
+        <element label="text" max_length="255" name="text" type="string"/>
+        <index name="index">
+            <element name="edge"/>
+        </index>
+        <index name="index2">
+            <element name="graph"/>
+        </index>
+        <index name="index3">
+            <element name="node"/>
+        </index>
+    </element>
+</database>

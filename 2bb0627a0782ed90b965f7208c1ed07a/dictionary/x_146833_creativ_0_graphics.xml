@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="13db223a0706ed90b965f7208c1ed0b6" label="graphics" max_length="40" name="x_146833_creativ_0_graphics" type="collection">
+        <element label="Edge" max_length="32" name="edge" reference="x_146833_creativ_0_edge" type="reference"/>
+        <element default="#7D9264" label="Fill" max_length="10" name="fill" type="string"/>
+        <element attributes="encode_utf8=false" label="Graph" max_length="32" name="graph" reference="x_146833_creativ_0_graph" type="reference"/>
+        <element label="H" max_length="5" name="h" type="float"/>
+        <element label="Node" max_length="32" name="node" reference="x_146833_creativ_0_node" type="reference"/>
+        <element default="#000000" label="outline" max_length="10" name="outline" type="string"/>
+        <element label="raisedBorder" max_length="40" name="raisedborder" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="RecordType" max_length="40" name="recordtype" type="string">
+            <choice>
+                <element inactive_on_update="false" label="edge" sequence="0" value="edge"/>
+                <element inactive_on_update="false" label="node" sequence="1" value="node"/>
+            </choice>
+        </element>
+        <element label="smoothBends" max_length="40" name="smoothbends" type="integer"/>
+        <element default="standard" label="targetArrow" max_length="40" name="targetarrow" type="string"/>
+        <element default="roundrectangle" label="type" max_length="40" name="type" type="string"/>
+        <element label="w" max_length="5" name="w" type="float"/>
+        <element label="x" max_length="5" name="x" type="float"/>
+        <element label="Y" max_length="5" name="y" type="float"/>
+        <index name="index">
+            <element name="edge"/>
+        </index>
+        <index name="index2">
+            <element name="graph"/>
+        </index>
+        <index name="index3">
+            <element name="node"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_146833_creativ_0.GenerateOutput</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GenerateOutput</name>
+        <script><![CDATA[var GenerateOutput = Class.create();
+GenerateOutput.prototype = {
+    initialize: function() {},
+    buildLabelGraphics: function(lgEnQuery) {
+        try {
+            var lgColumnListEdgeQuote = ['quote', 'text', 'fontName', 'configuration', 'model', 'position', 'fontStyle'];
+            var lgColumnListEdgeNoQuote = ['noquote', 'fontSize', 'contentWidth', 'contentHeight'];
+            var lgColumnListNodeQuote = ['quote', 'text', 'fontName', 'model', 'fontStyle'];
+            var lgColumnListNodeNoQuote = ['noquote', 'fontSize'];
+            var lgColumnList = [];
+            var lgOutputGml = '';
+            //var lgEnQuery = 'sys_id=' + tableSysId;
+            var minimalName = 'LabelGraphics';
+            var appPrefix = 'x_146833_creativ_0_';
+            var tableName = appPrefix + minimalName.toLowerCase();
+            var grLgTable = new GlideRecord(tableName);
+            grLgTable.addEncodedQuery(lgEnQuery);
+            grLgTable.query();
+            lgOutputGml += minimalName + "\n";
+            lgOutputGml += "[" + "\n";
+            if (grLgTable.next()) {
+                processRow('quote');
+                processRow('noquote');
+                lgOutputGml += "]" + "\n";
+            }
+
+            function processRow(quoteType) {
+                if (grLgTable.recordtype == 'node') {
+                    if (quoteType == 'quote') {
+                        lgColumnList = lgColumnListNodeQuote;
+                    }
+                    if (quoteType == 'noquote') {
+                        lgColumnList = lgColumnListNodeNoQuote;
+                    }
+
+                }
+                if (grLgTable.recordtype == 'edge') {
+                    if (quoteType == 'quote') {
+                        lgColumnList = lgColumnListEdgeQuote;
+                    }
+                    if (quoteType == 'noquote') {
+                        lgColumnList = lgColumnListEdgeNoQuote;
+                    }
+                }
+                for (var lgcCounter = 1; lgcCounter < lgColumnList.length; lgcCounter++) {
+                    var lgRow = '';
+                    var columnName = lgColumnList[lgcCounter].toLowerCase();
+                    var lgValue = "null";
+                    if (global.JSUtil.notNil(grLgTable[columnName])) {
+                        lgValue = grLgTable[columnName];
+                    }
+                    if (lgColumnList[0] == 'quote') {
+                        lgRow = lgColumnList[lgcCounter] + ' ' + '"' + lgValue + '"';
+                    }
+                    if (lgColumnList[0] == 'noquote') {
+                        lgRow = lgColumnList[lgcCounter] + ' ' + +lgValue;
+                    }
+                    lgRow += "\n";
+                    lgOutputGml += lgRow;
+                }
+            }
+        } catch (err) {
+            gs.error('Error from function buildLabelGraphics ' + err);
+        }
+        return lgOutputGml;
+    },
+    buildGraphics: function(gEnQuery) {
+        try {
+            var gColumnListEdgeQuote = ['quote', 'targetArrow', 'fill', 'smoothBends'];
+            var gColumnListEdgeNoQuote = [];
+            var gColumnListNodeQuote = ['quote', 'type', 'fill', 'outline'];
+            var gColumnListNodeNoQuote = ['noquote', 'x', 'y', 'w', 'h', 'raisedBorder'];
+            var gColumnList = [];
+            var gOutputGml = '';
+            // var gEnQuery = 'sys_id=' + tableSysId;
+            var minimalName = 'graphics';
+            var appPrefix = 'x_146833_creativ_0_';
+            var tableName = appPrefix + minimalName.toLowerCase();
+            var grgTable = new GlideRecord(tableName);
+            grgTable.addEncodedQuery(gEnQuery);
+            grgTable.query();
+            gOutputGml += minimalName + "\n";
+            gOutputGml += "[" + "\n";
+            if (grgTable.next()) {
+                processRow('quote');
+                processRow('noquote');
+                gOutputGml += "]" + "\n";
+            }
+
+            function processRow(quoteType) {
+                if (grgTable.recordtype == 'node') {
+                    if (quoteType == 'quote') {
+                        gColumnList = gColumnListNodeQuote;
+                    }
+                    if (quoteType == 'noquote') {
+                        gColumnList = gColumnListNodeNoQuote;
+                    }
+
+                }
+                if (grgTable.recordtype == 'edge') {
+                    if (quoteType == 'quote') {
+                        gColumnList = gColumnListEdgeQuote;
+                    }
+                    if (quoteType == 'noquote') {
+                        gColumnList = gColumnListEdgeNoQuote;
+                    }
+                }
+                for (var gcCounter = 1; gcCounter < gColumnList.length; gcCounter++) {
+                    var gRow = '';
+                    var columnName = gColumnList[gcCounter].toLowerCase();
+                    var gValue = "null";
+                    if (global.JSUtil.notNil(grgTable[columnName])) {
+                        gValue = grgTable[columnName];
+                    }
+                    if (gColumnList[0] == 'quote') {
+                        gRow = gColumnList[gcCounter] + ' ' + '"' + gValue + '"';
+                    }
+                    if (gColumnList[0] == 'noquote') {
+                        gRow = gColumnList[gcCounter] + ' ' + +gValue;
+                    }
+                    gRow += "\n";
+                    gOutputGml += gRow;
+                }
+            }
+        } catch (err) {
+            gs.error('Error from function buildLabegraphics ' + err);
+        }
+        return gOutputGml;
+    },
+    buildNode: function(gEnQuery) {
+        try {
+            var gColumnListNodeNoQuote = ['noquote', 'id'];
+            var columnListNodeQuote = ['quote', 'label'];
+            var gColumnList = [];
+            var gOutputGml = '';
+            //var gEnQuery = 'sys_id=' + tableSysId;
+            var minimalName = 'node';
+            var appPrefix = 'x_146833_creativ_0_';
+            var tableName = appPrefix + minimalName.toLowerCase();
+            var grgTable = new GlideRecord(tableName);
+            grgTable.addEncodedQuery(gEnQuery);
+            grgTable.query();
+            gOutputGml += minimalName + "\n";
+            gOutputGml += "[" + "\n";
+            if (grgTable.next()) {
+                var tableSysId = grgTable.sys_id;
+                processRow('noquote');
+                processRow('quote');
+                var enQuery = 'node=' + tableSysId;
+                var graphicsText = this.buildGraphics(enQuery);
+                //gOutputGml += processGraphics(tableSysId,'node') + "\n";
+                gOutputGml += graphicsText;
+                var labelGraphicsText = this.buildLabelGraphics(enQuery);
+                gOutputGml += labelGraphicsText;
+                //gOutputGml += processLabelGraphics(tableSysId,'node') + "\n";
+                gOutputGml += "]" + "\n";
+            }
+
+            function processRow(quoteType) {
+                if (quoteType == 'quote') {
+                    gColumnList = columnListNodeQuote;
+                }
+                if (quoteType == 'noquote') {
+                    gColumnList = gColumnListNodeNoQuote;
+                }
+
+                for (var gcCounter = 1; gcCounter < gColumnList.length; gcCounter++) {
+                    var gRow = '';
+                    var columnName = gColumnList[gcCounter].toLowerCase();
+                    var gValue = "null";
+                    if (global.JSUtil.notNil(grgTable[columnName])) {
+                        gValue = grgTable[columnName];
+                    }
+                    if (gColumnList[0] == 'quote') {
+                        gRow = gColumnList[gcCounter] + ' ' + '"' + gValue + '"';
+                    }
+                    if (gColumnList[0] == 'noquote') {
+                        gRow = gColumnList[gcCounter] + ' ' + +gValue;
+                    }
+                    gRow += "\n";
+                    gOutputGml += gRow;
+                }
+            }
+        } catch (err) {
+            gs.error('Error from function buildLabegraphics ' + err);
+        }
+        return gOutputGml;
+    },
+    buildEdge: function(gEnQuery) {
+        try {
+            var gColumnListEdgeNoQuote = ['noquote', 'source', 'target'];
+            var columnListEdgeQuote = ['quote', 'label'];
+            var gColumnList = [];
+            var gOutputGml = '';
+            // var gEnQuery = 'sys_id=' + tableSysId;
+            var minimalName = 'edge';
+            var appPrefix = 'x_146833_creativ_0_';
+            var tableName = appPrefix + minimalName.toLowerCase();
+            var grgTable = new GlideRecord(tableName);
+            grgTable.addEncodedQuery(gEnQuery);
+            grgTable.query();
+            gOutputGml += minimalName + "\n";
+            gOutputGml += "[" + "\n";
+            if (grgTable.next()) {
+                var tableSysId = grgTable.sys_id;
+                processRow('noquote');
+                processRow('quote');
+                var enQuery = 'edge=' + tableSysId;
+                var graphicsText = this.buildGraphics(enQuery);
+                //gOutputGml += processGraphics(tableSysId,'node') + "\n";
+                gOutputGml += graphicsText;
+                var labelGraphicsText = this.buildLabelGraphics(enQuery);
+                gOutputGml += labelGraphicsText;
+                //gOutputGml += processLabelGraphics(tableSysId,'node') + "\n";
+                gOutputGml += "]" + "\n";
+            }
+
+            function processRow(quoteType) {
+                if (quoteType == 'quote') {
+                    gColumnList = columnListEdgeQuote;
+                }
+                if (quoteType == 'noquote') {
+                    gColumnList = gColumnListEdgeNoQuote;
+                }
+
+                for (var gcCounter = 1; gcCounter < gColumnList.length; gcCounter++) {
+                    var gRow = '';
+                    var columnName = gColumnList[gcCounter].toLowerCase();
+
+                    var gValue = "null";
+                    if (global.JSUtil.notNil(grgTable[columnName])) {
+                        if (columnName == 'source') {
+                            gValue = grgTable.source.id;
+                        }
+                        if (columnName == 'target') {
+                            gValue = grgTable.target.id;
+                        }
+
+                    }
+                    if (gColumnList[0] == 'quote') {
+                        gRow = gColumnList[gcCounter] + ' ' + '"' + gValue + '"';
+                    }
+                    if (gColumnList[0] == 'noquote') {
+                        gRow = gColumnList[gcCounter] + ' ' + +gValue;
+                    }
+                    gRow += "\n";
+                    gOutputGml += gRow;
+                }
+            }
+        } catch (err) {
+            gs.error('Error from function buildLabegraphics ' + err);
+        }
+        return gOutputGml;
+    },
+    buildGraph: function(gEnQuery) {
+        try {
+            var columnListGraphNoQuote = ['noquote', 'hierarchic', 'directed'];
+            var columnListGraphQuote = ['quote', 'label'];
+            var gColumnList = [];
+            var gOutputGml = '';
+            //var gEnQuery = 'sys_id=' + tableSysId;
+            var minimalName = 'graph';
+            var appPrefix = 'x_146833_creativ_0_';
+            var tableName = appPrefix + minimalName.toLowerCase();
+            var grgTable = new GlideRecord(tableName);
+            grgTable.addEncodedQuery(gEnQuery);
+            grgTable.query();
+            gOutputGml += minimalName + "\n";
+            gOutputGml += "[" + "\n";
+            if (grgTable.next()) {
+                var tableSysId = grgTable.sys_id;
+                processRow('noquote');
+                processRow('quote');
+                var enQuery = 'graph=' + tableSysId;
+                var grNode = new GlideRecord('x_146833_creativ_0_node');
+                grNode.addEncodedQuery(enQuery);
+                grNode.query();
+                while (grNode.next()) {
+                    var enNoQuery = 'sys_id=' + grNode.sys_id;
+                    var nodeText = this.buildNode(enNoQuery);
+                    //gOutputGml += processGraphics(tableSysId,'node') + "\n";
+                    gOutputGml += nodeText;
+                }
+                var grEdge = new GlideRecord('x_146833_creativ_0_edge');
+                grEdge.addEncodedQuery(enQuery);
+                grEdge.query();
+                while (grEdge.next()) {
+                    var enEdQuery = 'sys_id=' + grEdge.sys_id;
+                    var edgtext = this.buildEdge(enEdQuery);
+                    gOutputGml += edgtext;
+                }
+
+                //gOutputGml += processLabelGraphics(tableSysId,'node') + "\n";
+                gOutputGml += "]" + "\n";
+            }
+
+            function processRow(quoteType) {
+                if (quoteType == 'quote') {
+                    gColumnList = columnListGraphQuote;
+                }
+                if (quoteType == 'noquote') {
+                    gColumnList = columnListGraphNoQuote;
+                }
+
+                for (var gcCounter = 1; gcCounter < gColumnList.length; gcCounter++) {
+                    var gRow = '';
+                    var columnName = gColumnList[gcCounter].toLowerCase();
+                    var gValue = "null";
+                    if (global.JSUtil.notNil(grgTable[columnName])) {
+                        gValue = grgTable[columnName];
+                    }
+                    if (gColumnList[0] == 'quote') {
+                        gRow = gColumnList[gcCounter] + ' ' + '"' + gValue + '"';
+                    }
+                    if (gColumnList[0] == 'noquote') {
+                        gRow = gColumnList[gcCounter] + ' ' + +gValue;
+                    }
+                    gRow += "\n";
+                    gOutputGml += gRow;
+                }
+            }
+        } catch (err) {
+            gs.error('Error from function buildLabegraphics ' + err);
+        }
+        return gOutputGml;
+    },
+    buildFile: function(gEnQuery) {
+        try {
+            var columnListGraphNoQuote = ['noquote'];
+            var columnListGraphQuote = ['quote', 'Creator', 'Version'];
+            var gColumnList = [];
+            var gOutputGml = '';
+            var minimalName = 'file';
+            var appPrefix = 'x_146833_creativ_0_';
+            var tableName = appPrefix + minimalName.toLowerCase();
+            var grgTable = new GlideRecord(tableName);
+            grgTable.addEncodedQuery(gEnQuery);
+            grgTable.query();
+            if (grgTable.next()) {
+                var tableSysId = grgTable.sys_id;
+                //no quote doesnt exist for this data type
+                processRow('quote');
+                var enQuery = 'file=' + tableSysId;
+                var graphText = this.buildGraph(enQuery);
+                gOutputGml += graphText;
+                createAttachment();
+                setToProcessed();
+
+            }
+
+            function processRow(quoteType) {
+                if (quoteType == 'quote') {
+                    gColumnList = columnListGraphQuote;
+                }
+                if (quoteType == 'noquote') {
+                    gColumnList = columnListGraphNoQuote;
+                }
+
+                for (var gcCounter = 1; gcCounter < gColumnList.length; gcCounter++) {
+                    var gRow = '';
+                    var columnName = gColumnList[gcCounter].toLowerCase();
+                    var gValue = "null";
+                    if (global.JSUtil.notNil(grgTable[columnName])) {
+                        gValue = grgTable[columnName];
+                    }
+                    if (gColumnList[0] == 'quote') {
+                        gRow = gColumnList[gcCounter] + ' ' + '"' + gValue + '"';
+                    }
+                    if (gColumnList[0] == 'noquote') {
+                        gRow = gColumnList[gcCounter] + ' ' + +gValue;
+                    }
+                    gRow += "\n";
+                    gOutputGml += gRow;
+                }
+            }
+            function createAttachment() {
+                var attachment = new GlideSysAttachment();
+				//get datetime for suffix
+                var dateTimeNow = new GlideDateTime().getDisplayValue();
+                dateTimeNow = dateTimeNow.split(" ").join("");
+                dateTimeNow = dateTimeNow.split(":").join("");
+                dateTimeNow = dateTimeNow.split("-").join("");
+
+                //set up inputs
+                var rec = new GlideRecord(tableName);
+                rec.get(tableSysId);
+                var fileName = grgTable.name + "_" + dateTimeNow;
+                var contentType = 'gml';
+				fileName +="." + contentType;
+                var content = gOutputGml;
+
+                var agr = attachment.write(rec, fileName, contentType, content);
+
+                gs.info('The attachment sys_id is: ' + agr);
+            }
+
+            function setToProcessed() {
+                var grFile = new GlideRecord(tableName);
+                grFile.get(tableSysId);
+                grFile.set('state', 'processed');
+                grFile.update();
+
+            }
+        } catch (err) {
+            gs.error('Error from function buildLabegraphics ' + err);
+        }
+        //  return gOutputGml;
+    },
+    type: 'GenerateOutput'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-04-25 06:10:22</sys_created_on>
+        <sys_id>2d938ca307962194b965f7208c1ed07f</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_name>GenerateOutput</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_script_include_2d938ca307962194b965f7208c1ed07f</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-04-27 17:14:48</sys_updated_on>
+    </sys_script_include>
+</record_update>

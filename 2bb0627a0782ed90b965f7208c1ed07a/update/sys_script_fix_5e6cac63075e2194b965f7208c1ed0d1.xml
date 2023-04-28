@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>testLabelGraphicsOutput</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var tableSysId = 'node=5152bf76070221d0b965f7208c1ed051';
+var graphicsoutput = new GenerateOutput();
+gs.info(graphicsoutput.buildLabelGraphics(tableSysId));
+
+var tableSysId = 'node=5152bf76070221d0b965f7208c1ed051';
+var graphicsoutput = new GenerateOutput();
+gs.info(graphicsoutput.buildLabelGraphics(tableSysId));
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-04-25 08:39:24</sys_created_on>
+        <sys_id>5e6cac63075e2194b965f7208c1ed0d1</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>testLabelGraphicsOutput</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_script_fix_5e6cac63075e2194b965f7208c1ed0d1</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-04-25 10:44:40</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>
