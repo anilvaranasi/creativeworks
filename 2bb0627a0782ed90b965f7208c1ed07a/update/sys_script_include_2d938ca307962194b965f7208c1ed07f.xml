@@ -5,11 +5,15 @@
         <api_name>x_146833_creativ_0.GenerateOutput</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description/>
+        <description>CodeScriptInclude</description>
         <name>GenerateOutput</name>
         <script><![CDATA[var GenerateOutput = Class.create();
 GenerateOutput.prototype = {
-    initialize: function() {},
+    initialize: function() {
+		//var tableName = '';
+		//var tableSysId = '';
+		var tableFileSysId = '';
+	},
     buildLabelGraphics: function(lgEnQuery) {
         try {
             var lgColumnListEdgeQuote = ['quote', 'text', 'fontName', 'configuration', 'model', 'position', 'fontStyle'];
@@ -132,7 +136,7 @@ GenerateOutput.prototype = {
                 }
             }
         } catch (err) {
-            gs.error('Error from function buildLabegraphics ' + err);
+            gs.error('Error from function buildGraphics ' + err);
         }
         return gOutputGml;
     },
@@ -191,7 +195,7 @@ GenerateOutput.prototype = {
                 }
             }
         } catch (err) {
-            gs.error('Error from function buildLabegraphics ' + err);
+            gs.error('Error from function buildNode ' + err);
         }
         return gOutputGml;
     },
@@ -257,7 +261,7 @@ GenerateOutput.prototype = {
                 }
             }
         } catch (err) {
-            gs.error('Error from function buildLabegraphics ' + err);
+            gs.error('Error from function buildEdge ' + err);
         }
         return gOutputGml;
     },
@@ -329,12 +333,12 @@ GenerateOutput.prototype = {
                 }
             }
         } catch (err) {
-            gs.error('Error from function buildLabegraphics ' + err);
+            gs.error('Error from function buildGraph ' + err);
         }
         return gOutputGml;
     },
     buildFile: function(gEnQuery) {
-        try {
+       try {
             var columnListGraphNoQuote = ['noquote'];
             var columnListGraphQuote = ['quote', 'Creator', 'Version'];
             var gColumnList = [];
@@ -347,6 +351,7 @@ GenerateOutput.prototype = {
             grgTable.query();
             if (grgTable.next()) {
                 var tableSysId = grgTable.sys_id;
+				tableFileSysId = grgTable.sys_id;
                 //no quote doesnt exist for this data type
                 processRow('quote');
                 var enQuery = 'file=' + tableSysId;
@@ -391,8 +396,8 @@ GenerateOutput.prototype = {
                 dateTimeNow = dateTimeNow.split("-").join("");
 
                 //set up inputs
-                var rec = new GlideRecord(tableName);
-                rec.get(tableSysId);
+                var rec = new GlideRecord('x_146833_creativ_0_file');
+                rec.get(tableFileSysId);
                 var fileName = grgTable.name + "_" + dateTimeNow;
                 var contentType = 'gml';
 				fileName +="." + contentType;
@@ -406,12 +411,12 @@ GenerateOutput.prototype = {
             function setToProcessed() {
                 var grFile = new GlideRecord(tableName);
                 grFile.get(tableSysId);
-                grFile.set('state', 'processed');
+                grFile.state = 'processed';
                 grFile.update();
 
             }
-        } catch (err) {
-            gs.error('Error from function buildLabegraphics ' + err);
+       } catch (err) {
+           gs.error('Error from function buildFile ' + err);
         }
         //  return gOutputGml;
     },
@@ -421,13 +426,13 @@ GenerateOutput.prototype = {
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-04-25 06:10:22</sys_created_on>
         <sys_id>2d938ca307962194b965f7208c1ed07f</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>55</sys_mod_count>
         <sys_name>GenerateOutput</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_script_include_2d938ca307962194b965f7208c1ed07f</sys_update_name>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-04-27 17:14:48</sys_updated_on>
+        <sys_updated_on>2023-10-13 15:26:27</sys_updated_on>
     </sys_script_include>
 </record_update>
