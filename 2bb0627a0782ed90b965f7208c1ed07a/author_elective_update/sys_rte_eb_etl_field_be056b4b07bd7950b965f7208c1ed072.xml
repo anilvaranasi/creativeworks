@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_etl_field">
+    <sys_rte_eb_etl_field action="DELETE">
+        <coalesce>true</coalesce>
+        <coercion_action>ignore</coercion_action>
+        <field>target.identifier</field>
+        <name>targetnode</name>
+        <sys_class_name>sys_rte_eb_etl_field</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 08:29:02</sys_created_on>
+        <sys_id>be056b4b07bd7950b965f7208c1ed072</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>targetnode</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="Edge">f754a74f077d7950b965f7208c1ed044</sys_rte_eb_entity>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_etl_field_be056b4b07bd7950b965f7208c1ed072</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-16 21:36:17</sys_updated_on>
+    </sys_rte_eb_etl_field>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</application>
+        <file_path/>
+        <instance_id>faefb09cdb2ba0d07527d7c8f49619b0</instance_id>
+        <instance_name>dev111463</instance_name>
+        <name>sys_rte_eb_etl_field_be056b4b07bd7950b965f7208c1ed072</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_etl_field"><sys_rte_eb_etl_field action="INSERT_OR_UPDATE"><coalesce>true</coalesce><coercion_action>ignore</coercion_action><field>target.identifier</field><name>targetnode</name><sys_class_name>sys_rte_eb_etl_field</sys_class_name><sys_created_by>adminanil</sys_created_by><sys_created_on>2023-10-15 08:29:02</sys_created_on><sys_id>be056b4b07bd7950b965f7208c1ed072</sys_id><sys_mod_count>8</sys_mod_count><sys_name>targetnode</sys_name><sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package><sys_policy/><sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition><sys_rte_eb_entity display_value="Edge">f754a74f077d7950b965f7208c1ed044</sys_rte_eb_entity><sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope><sys_update_name>sys_rte_eb_etl_field_be056b4b07bd7950b965f7208c1ed072</sys_update_name><sys_updated_by>adminanil</sys_updated_by><sys_updated_on>2023-10-16 21:36:17</sys_updated_on></sys_rte_eb_etl_field></record_update>]]></payload>
+        <payload_hash>464141664</payload_hash>
+        <record_name>targetnode</record_name>
+        <reverted_from/>
+        <source>4cacccb30765b154b965f7208c1ed03a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-16 21:36:17</sys_created_on>
+        <sys_id>32d2676707b1fd50b965f7208c1ed022</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b3a6b11b60000001</sys_recorded_at>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-16 21:36:17</sys_updated_on>
+        <type>ETL Entity field</type>
+        <update_guid>76d2676712b1fd50051138c36f1d7521</update_guid>
+        <update_guid_history>76d2676712b1fd50051138c36f1d7521:464141664,5ec1276387b1fd506d6d4a55780c75fc:-185635347,13a1aba330b1fd50f37abfe3fa82993f:610973207,1ffb1f23d871fd50ba198a6030a0867c:-1636134342,c239df6bd431fd50a8a4bc57201961eb:-1562721997,430e0fab5fbdbd50866d01cd5b653958:464141664,3287efcfb2bd7950df4194b7baa7f5a4:-185635347,e5c6ab4fefbd7950a0f90453b0a81520:610973207,0115eb4b7cbd79502a37925338f62303:-85226125</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-16 21:41:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_etl_field">sys_rte_eb_etl_field</sys_db_object>
+        <sys_id>109c6dcfeeda4a8692ef4197d9ef33c4</sys_id>
+        <sys_metadata>be056b4b07bd7950b965f7208c1ed072</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>targetnode</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_scope_delete display_value="">542b01f948aa4e6e983ab3a9e24e2744</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_etl_field_be056b4b07bd7950b965f7208c1ed072</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_etl_field_be056b4b07bd7950b965f7208c1ed072">32d2676707b1fd50b965f7208c1ed022</sys_update_version>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-16 21:41:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

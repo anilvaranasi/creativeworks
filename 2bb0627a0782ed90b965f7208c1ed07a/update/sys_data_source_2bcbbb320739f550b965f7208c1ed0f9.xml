@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_source">
+    <sys_data_source action="INSERT_OR_UPDATE">
+        <batch_size>1000</batch_size>
+        <category/>
+        <connection_alias/>
+        <connection_override_last_success_time/>
+        <connection_timeout>0</connection_timeout>
+        <connection_url/>
+        <connection_url_parameters/>
+        <csv_delimiter/>
+        <data_in_single_column>false</data_in_single_column>
+        <data_loader><![CDATA[(function loadData(import_set_table, data_source, import_log, last_success_import_time) {
+    //x_146833_creativ_0_appl_file
+    var sDebug = 'Log start';
+    try {
+        var fieldMapper = {};
+        fieldMapper['u_name'] = 'sys_name';
+        fieldMapper['u_scope_display_value'] = 'sys_scope';
+        fieldMapper['u_editor_name'] = 'sys_class_name';
+        fieldMapper['u_name_value'] = 'sys_name';
+        fieldMapper['u_taxonomy_definition'] = 'sys_class_name';
+        fieldMapper['u_sys_id'] = 'sys_update_name';
+        fieldMapper['u_scope_value'] = 'sys_scope';
+        fieldMapper['u_target_node'] = 'targetNode';
+        fieldMapper['u_edge_label'] = 'edgeIdentifier';
+        fieldMapper['u_update_name'] = 'sys_update_name';
+        var rowObject = {};
+        var rowIndex = 0;
+        var fieldList = ['sys_name', 'sys_class_name', 'sys_scope', 'sys_update_name'];
+        //var inScopeClasses = 'sys_security_acl,sys_script_fix,scheduled_import_set,sys_alias,sys_app_application,sys_data_source,sysauto_script,sys_hub_flow,sys_rte_eb_etl_definition,sys_script,sys_script_include,sys_transform_map,sys_user_role,sys_db_object';
+        var grMeta = new GlideRecord('sys_metadata');
+        var file = '';
+        var grFile = new GlideRecord('x_146833_creativ_0_file');
+        grFile.orderByDesc('sys_updated_on');
+        grFile.query();
+        if (grFile.next()) {
+            file = grFile.file_application.sys_id + '';
+        }
+        var appSysId = file;
+        //sys_scope=2bb0627a0782ed90b965f7208c1ed07a^sys_class_name=sys_script
+        sDebug += "sys_scope=" + appSysId + "\n";
+        //var enQuery = 'sys_scope=' + appSysId + '^sys_class_name' + 'IN' + inScopeClasses;
+		var enQuery = 'sys_scope=' + appSysId ;
+        grMeta.addEncodedQuery(enQuery);
+        grMeta.orderByDesc('sys_class_name');
+        grMeta.query();
+        while (grMeta.next()) {
+            var rowData = '';
+            var fieldValueObj = {};
+            for (var index = 0; index < fieldList.length; index++) {
+                var fieldObject = {};
+                if (global.JSUtil.notNil(fieldValue)) {
+                    rowData += '|' + fieldValue;
+                }
+                if (global.JSUtil.nil(fieldValue)) {
+                    rowData = fieldValue;
+                }
+                var fieldName = fieldList[index] + '';
+                var fieldValue = grMeta.getDisplayValue(fieldName);
+                fieldValueObj[fieldName] = fieldValue;
+            }
+            var edgeObject = '';
+            edgeObject = getEdgeDetails(grMeta.getDisplayValue('sys_class_name'), grMeta.sys_name, grMeta.sys_update_name, grMeta.sys_scope);
+            var targetNode = '';
+            if (global.JSUtil.notNil(edgeObject)) {
+                if (global.JSUtil.notNil(edgeObject.targetNode)) {
+                    targetNode = edgeObject.targetNode + '';
+                }
+                var edgeIdentifier = '';
+                if (global.JSUtil.notNil(edgeObject.edgeIdentifier)) {
+                    edgeIdentifier = edgeObject.edgeIdentifier + '';
+                }
+                //sDebug += " targetNode =" + targetNode + " edgeIdentifier=" + edgeIdentifier + "\n";
+            }
+            fieldValueObj['targetNode'] = targetNode + '';
+            fieldValueObj['edgeIdentifier'] = edgeIdentifier + '';
+            //rowObject[grMeta.sys_update_name + ''] = rowData;
+            //rowObject[grMeta.sys_update_name + ''] = fieldValueObj;
+            rowObject[rowIndex] = fieldValueObj;
+            rowIndex++;
+        }
+        for (var m in rowObject) {
+            var map = {};
+            //sDebug += m +'=' + rowObject[m] + "\n";
+            var columnObject = rowObject[m];
+            for (var t in columnObject) {
+                for (var fieldIndex in fieldMapper) {
+                    map[fieldIndex] = columnObject[fieldMapper[fieldIndex]];
+                    sDebug += fieldIndex + "=" + fieldMapper[fieldIndex] + "=" + columnObject[fieldMapper[fieldIndex]] + "\n";
+                }
+                sDebug += m + '=' + t + "==" + columnObject[t] + "\n";
+            }
+            import_set_table.insert(map);
+        }
+    } catch (e) {
+        sDebug = "Exception=" + e;
+    }
+
+    function getEdgeDetails(tableName, objectName, updateName, sysscope) {
+        var edgeObject = {};
+        var targetNode = '';
+        var edgeIdentifier = '';
+        try {
+            if (tableName == 'Business Rule') {
+                // code block
+                var grTable = new GlideRecord('sys_script');
+                var enQuery = 'name=' + objectName + '';
+                sDebug += " enQuery =" + enQuery + "\n";
+                grTable.addEncodedQuery(enQuery);
+                grTable.query();
+                if (grTable.next()) {
+                    var brTableName = grTable.collection + '';
+                    var grTableObj = new GlideRecord('sys_db_object');
+                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                    grTableObj.query();
+                    if (grTableObj.next()) {
+                        targetNode = grTableObj.sys_update_name + '';
+                        edgeIdentifier = updateName + "|" + targetNode;
+                    }
+                }
+            }
+        } catch (e) {
+            sDebug += 'exception in business rule edge lookup' + e;
+        }
+        if (tableName == 'Data Source') {
+            try {
+                // code block
+                var grTable = new GlideRecord('sys_data_source');
+                var enQuery = 'name=' + objectName + '';
+                sDebug += " enQuery =" + enQuery + "\n";
+                grTable.addEncodedQuery(enQuery);
+                grTable.query();
+                if (grTable.next()) {
+                    var brTableName = grTable.import_set_table_name.getDisplayValue();
+                    var grTableObj = new GlideRecord('sys_db_object');
+                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                    grTableObj.query();
+                    if (grTableObj.next()) {
+                        targetNode = grTableObj.sys_update_name + '';
+                        edgeIdentifier = updateName + "|" + targetNode;
+                    }
+                }
+            } catch (e) {
+                sDebug += 'exception in data source edge lookup' + e;
+            }
+        }
+
+        //Access Control
+        try {
+            if (tableName == 'Access Control') {
+                // code block
+                var tableArray = objectName.split(".");
+                if (global.JSUtil.notNil(tableArray)) {
+                    var brTableName = tableArray[0];
+                    var grTableObj = new GlideRecord('sys_db_object');
+                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                    grTableObj.query();
+                    if (grTableObj.next()) {
+                        targetNode = grTableObj.sys_update_name + '';
+                        edgeIdentifier = updateName + "|" + targetNode;
+                    }
+                }
+            }
+        } catch (e) {
+            sDebug += ' Exception in ACL lookup' + e;
+        }
+
+
+        edgeObject.targetNode = targetNode;
+        edgeObject.edgeIdentifier = edgeIdentifier;
+        return edgeObject;
+
+        /*
+        //Scheduled Data Import
+        if (tableName == 'Scheduled Data Import') {
+            // code block
+            var grTable = new GlideRecord('scheduled_import_set');
+            var enQuery = 'name=' + objectName + '';
+            sDebug += " enQuery =" + enQuery + "\n";
+            grTable.addEncodedQuery(enQuery);
+            grTable.query();
+            if (grTable.next()) {
+                targetNode = grTable.data_source.getDisplayValue();
+                edgeIdentifier = objectName + "|" + targetNode;
+            }
+        }
+		*/
+
+    }
+
+    gs.info(sDebug);
+
+
+})(import_set_table, data_source, import_log, last_success_import_time);]]></data_loader>
+        <data_stream_action/>
+        <data_stream_action_inputs/>
+        <data_stream_connection_alias/>
+        <database_name/>
+        <database_port/>
+        <discard_arrays>true</discard_arrays>
+        <expand_node_children>false</expand_node_children>
+        <file_path/>
+        <file_retrieval_method>Attachment</file_retrieval_method>
+        <format>CSV</format>
+        <glide_keystore>false</glide_keystore>
+        <header_row>0</header_row>
+        <import_set_table_label>Creativ 0 Appl File</import_set_table_label>
+        <import_set_table_name>x_146833_creativ_0_appl_file</import_set_table_name>
+        <instance_name/>
+        <jdbc_password/>
+        <jdbc_server/>
+        <jdbc_user_name/>
+        <jdbcprobe_result_set_rows/>
+        <jpath_root_node/>
+        <last_run_database_field/>
+        <last_run_datetime/>
+        <last_success_import_time>2023-10-17 10:34:28</last_success_import_time>
+        <ldap_target/>
+        <ldapprobe_result_set_rows>200</ldapprobe_result_set_rows>
+        <limit/>
+        <maximum_rows/>
+        <mid_server/>
+        <name>Get System MetaData via Script</name>
+        <offset>0</offset>
+        <oracle_port>1521</oracle_port>
+        <oracle_sid>orcl</oracle_sid>
+        <parsing_script><![CDATA[// The input value can be accessed through the variables named "line", "lineNumber" and "result"
+// The function uses result variable to return parse result back. 
+(function(line,lineNumber,result) {
+	// add code here
+})(line,lineNumber,result);]]></parsing_script>
+        <properties/>
+        <query>All Rows from Table</query>
+        <query_timeout>0</query_timeout>
+        <request_action/>
+        <scp_authentication>Username and Password</scp_authentication>
+        <scp_password/>
+        <scp_port/>
+        <scp_server/>
+        <scp_user_name/>
+        <sheet_number>0</sheet_number>
+        <sql_statement/>
+        <ssh_keyfile_path/>
+        <support_pagination>false</support_pagination>
+        <sys_class_name>sys_data_source</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-14 15:30:12</sys_created_on>
+        <sys_id>2bcbbb320739f550b965f7208c1ed0f9</sys_id>
+        <sys_mod_count>171</sys_mod_count>
+        <sys_name>Get System MetaData via Script</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_data_source_2bcbbb320739f550b965f7208c1ed0f9</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-17 10:34:29</sys_updated_on>
+        <table_name/>
+        <type>CUSTOM</type>
+        <use_batch_import>false</use_batch_import>
+        <use_integrated_authentication>false</use_integrated_authentication>
+        <use_last_run_datetime>false</use_last_run_datetime>
+        <xpath_root_node/>
+        <zipped>false</zipped>
+    </sys_data_source>
+    <sys_variable_value action="delete_multiple" query="document_key=2bcbbb320739f550b965f7208c1ed0f9"/>
+</record_update>

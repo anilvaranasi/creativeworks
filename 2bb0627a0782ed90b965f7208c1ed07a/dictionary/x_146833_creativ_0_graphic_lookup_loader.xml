@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e6fe827307fd3190b965f7208c1ed04b" extends="sys_import_set_row" label="ACW-Load Graphics lookup" max_length="40" name="x_146833_creativ_0_graphic_lookup_loader" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Fill" label="Fill" max_length="40" name="u_fill" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Node shape" label="Node shape" max_length="40" name="u_node_shape" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=RecordType" label="RecordType" max_length="40" name="u_recordtype" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Taxonomy definition" label="Taxonomy definition" max_length="70" name="u_taxonomy_definition" type="string"/>
+    </element>
+</database>

@@ -10,10 +10,10 @@
         <script><![CDATA[var GenerateOutput = Class.create();
 GenerateOutput.prototype = {
     initialize: function() {
-		//var tableName = '';
-		//var tableSysId = '';
-		var tableFileSysId = '';
-	},
+        //var tableName = '';
+        //var tableSysId = '';
+        var tableFileSysId = '';
+    },
     buildLabelGraphics: function(lgEnQuery) {
         try {
             var lgColumnListEdgeQuote = ['quote', 'text', 'fontName', 'configuration', 'model', 'position', 'fontStyle'];
@@ -222,8 +222,8 @@ GenerateOutput.prototype = {
                 var graphicsText = this.buildGraphics(enQuery);
                 //gOutputGml += processGraphics(tableSysId,'node') + "\n";
                 gOutputGml += graphicsText;
-                var labelGraphicsText = this.buildLabelGraphics(enQuery);
-                gOutputGml += labelGraphicsText;
+                // var labelGraphicsText = this.buildLabelGraphics(enQuery);
+                //gOutputGml += labelGraphicsText;
                 //gOutputGml += processLabelGraphics(tableSysId,'node') + "\n";
                 gOutputGml += "]" + "\n";
             }
@@ -242,13 +242,13 @@ GenerateOutput.prototype = {
 
                     var gValue = "null";
                     if (global.JSUtil.notNil(grgTable[columnName])) {
+                        gValue = grgTable[columnName];
                         if (columnName == 'source') {
                             gValue = grgTable.source.id;
                         }
                         if (columnName == 'target') {
                             gValue = grgTable.target.id;
                         }
-
                     }
                     if (gColumnList[0] == 'quote') {
                         gRow = gColumnList[gcCounter] + ' ' + '"' + gValue + '"';
@@ -338,7 +338,7 @@ GenerateOutput.prototype = {
         return gOutputGml;
     },
     buildFile: function(gEnQuery) {
-       try {
+        try {
             var columnListGraphNoQuote = ['noquote'];
             var columnListGraphQuote = ['quote', 'Creator', 'Version'];
             var gColumnList = [];
@@ -351,7 +351,7 @@ GenerateOutput.prototype = {
             grgTable.query();
             if (grgTable.next()) {
                 var tableSysId = grgTable.sys_id;
-				tableFileSysId = grgTable.sys_id;
+                tableFileSysId = grgTable.sys_id;
                 //no quote doesnt exist for this data type
                 processRow('quote');
                 var enQuery = 'file=' + tableSysId;
@@ -387,9 +387,10 @@ GenerateOutput.prototype = {
                     gOutputGml += gRow;
                 }
             }
+
             function createAttachment() {
                 var attachment = new GlideSysAttachment();
-				//get datetime for suffix
+                //get datetime for suffix
                 var dateTimeNow = new GlideDateTime().getDisplayValue();
                 dateTimeNow = dateTimeNow.split(" ").join("");
                 dateTimeNow = dateTimeNow.split(":").join("");
@@ -400,7 +401,7 @@ GenerateOutput.prototype = {
                 rec.get(tableFileSysId);
                 var fileName = grgTable.name + "_" + dateTimeNow;
                 var contentType = 'gml';
-				fileName +="." + contentType;
+                fileName += "." + contentType;
                 var content = gOutputGml;
 
                 var agr = attachment.write(rec, fileName, contentType, content);
@@ -415,8 +416,8 @@ GenerateOutput.prototype = {
                 grFile.update();
 
             }
-       } catch (err) {
-           gs.error('Error from function buildFile ' + err);
+        } catch (err) {
+            gs.error('Error from function buildFile ' + err);
         }
         //  return gOutputGml;
     },
@@ -426,13 +427,13 @@ GenerateOutput.prototype = {
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-04-25 06:10:22</sys_created_on>
         <sys_id>2d938ca307962194b965f7208c1ed07f</sys_id>
-        <sys_mod_count>55</sys_mod_count>
+        <sys_mod_count>57</sys_mod_count>
         <sys_name>GenerateOutput</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_script_include_2d938ca307962194b965f7208c1ed07f</sys_update_name>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-13 15:26:27</sys_updated_on>
+        <sys_updated_on>2023-10-16 06:09:46</sys_updated_on>
     </sys_script_include>
 </record_update>

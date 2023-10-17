@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_concat_operation">
+    <sys_rte_eb_concat_operation action="DELETE">
+        <conditional_fields>dcaf5b8b077d7950b965f7208c1ed0c0</conditional_fields>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+	    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+    
+})(batch, output);]]></conditional_script>
+        <is_conditional>false</is_conditional>
+        <joining_string>|</joining_string>
+        <name>Set Edge Label</name>
+        <operation_group/>
+        <order>100</order>
+        <source_sys_rte_eb_field/>
+        <source_sys_rte_eb_fields>061551b507aa2910b965f7208c1ed069,dcaf5b8b077d7950b965f7208c1ed0c0</source_sys_rte_eb_fields>
+        <sys_class_name>sys_rte_eb_concat_operation</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 17:45:41</sys_created_on>
+        <sys_id>a5b3ad5707f1f950b965f7208c1ed0bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Edge Label</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="Staging">ef33117107aa2910b965f7208c1ed052</sys_rte_eb_entity>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_concat_operation_a5b3ad5707f1f950b965f7208c1ed0bd</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 17:45:41</sys_updated_on>
+        <target_sys_rte_eb_field display_value="edgeLabel">5904255707f1f950b965f7208c1ed012</target_sys_rte_eb_field>
+        <target_sys_rte_eb_fields/>
+        <type display_value="Concatenation">4e38102a73b333002b6265a751ab9e1f</type>
+    </sys_rte_eb_concat_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</application>
+        <file_path/>
+        <instance_id>faefb09cdb2ba0d07527d7c8f49619b0</instance_id>
+        <instance_name>dev111463</instance_name>
+        <name>sys_rte_eb_concat_operation_a5b3ad5707f1f950b965f7208c1ed0bd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_rte_eb_concat_operation"&gt;&lt;sys_rte_eb_concat_operation action="INSERT_OR_UPDATE"&gt;&lt;conditional_fields&gt;dcaf5b8b077d7950b965f7208c1ed0c0&lt;/conditional_fields&gt;&lt;conditional_script&gt;&lt;![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i &lt; batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+	    for (var i = 0; i &lt; batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+    
+})(batch, output);]]&gt;&lt;/conditional_script&gt;&lt;is_conditional&gt;false&lt;/is_conditional&gt;&lt;joining_string&gt;|&lt;/joining_string&gt;&lt;name&gt;Set Edge Label&lt;/name&gt;&lt;operation_group/&gt;&lt;order&gt;100&lt;/order&gt;&lt;source_sys_rte_eb_field/&gt;&lt;source_sys_rte_eb_fields&gt;061551b507aa2910b965f7208c1ed069,dcaf5b8b077d7950b965f7208c1ed0c0&lt;/source_sys_rte_eb_fields&gt;&lt;sys_class_name&gt;sys_rte_eb_concat_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;adminanil&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-10-15 17:45:41&lt;/sys_created_on&gt;&lt;sys_id&gt;a5b3ad5707f1f950b965f7208c1ed0bd&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Set Edge Label&lt;/sys_name&gt;&lt;sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0"&gt;2bb0627a0782ed90b965f7208c1ed07a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_rte_eb_definition display_value="Generate GarphML Data"&gt;5ea151bd076a2910b965f7208c1ed0c9&lt;/sys_rte_eb_definition&gt;&lt;sys_rte_eb_entity display_value="Staging"&gt;ef33117107aa2910b965f7208c1ed052&lt;/sys_rte_eb_entity&gt;&lt;sys_scope display_value="AwesomeNowCreativeWorks"&gt;2bb0627a0782ed90b965f7208c1ed07a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_rte_eb_concat_operation_a5b3ad5707f1f950b965f7208c1ed0bd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;adminanil&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-10-15 17:45:41&lt;/sys_updated_on&gt;&lt;target_sys_rte_eb_field display_value="edgeLabel"&gt;5904255707f1f950b965f7208c1ed012&lt;/target_sys_rte_eb_field&gt;&lt;target_sys_rte_eb_fields/&gt;&lt;type display_value="Concatenation"&gt;4e38102a73b333002b6265a751ab9e1f&lt;/type&gt;&lt;/sys_rte_eb_concat_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1138971145</payload_hash>
+        <record_name>Set Edge Label</record_name>
+        <reverted_from/>
+        <source>4cacccb30765b154b965f7208c1ed03a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 17:45:41</sys_created_on>
+        <sys_id>c774a99707f1f950b965f7208c1ed0e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b347196f10000001</sys_recorded_at>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 17:45:41</sys_updated_on>
+        <type>RTE Entity Concatenation Operation</type>
+        <update_guid>cb74a997f4f1f950b3c2de7af210abe2</update_guid>
+        <update_guid_history>cb74a997f4f1f950b3c2de7af210abe2:1138971145</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-16 06:02:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_concat_operation">sys_rte_eb_concat_operation</sys_db_object>
+        <sys_id>5908d2fb24924500b9a5387e93dc4000</sys_id>
+        <sys_metadata>a5b3ad5707f1f950b965f7208c1ed0bd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Edge Label</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_scope_delete display_value="">542b01f948aa4e6e983ab3a9e24e2744</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_concat_operation_a5b3ad5707f1f950b965f7208c1ed0bd</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_concat_operation_a5b3ad5707f1f950b965f7208c1ed0bd">c774a99707f1f950b965f7208c1ed0e3</sys_update_version>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-16 06:02:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

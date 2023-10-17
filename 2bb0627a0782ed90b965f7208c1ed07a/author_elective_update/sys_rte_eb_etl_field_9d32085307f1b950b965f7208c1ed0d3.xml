@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_etl_field">
+    <sys_rte_eb_etl_field action="DELETE">
+        <coalesce>false</coalesce>
+        <coercion_action>create</coercion_action>
+        <field>smoothbends</field>
+        <name>smoothBends</name>
+        <sys_class_name>sys_rte_eb_etl_field</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 10:36:18</sys_created_on>
+        <sys_id>9d32085307f1b950b965f7208c1ed0d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>smoothBends</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="Edge Graphics">6702845707f1b950b965f7208c1ed043</sys_rte_eb_entity>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_etl_field_9d32085307f1b950b965f7208c1ed0d3</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 10:36:18</sys_updated_on>
+    </sys_rte_eb_etl_field>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</application>
+        <file_path/>
+        <instance_id>faefb09cdb2ba0d07527d7c8f49619b0</instance_id>
+        <instance_name>dev111463</instance_name>
+        <name>sys_rte_eb_etl_field_9d32085307f1b950b965f7208c1ed0d3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_etl_field"><sys_rte_eb_etl_field action="INSERT_OR_UPDATE"><coalesce>false</coalesce><coercion_action>create</coercion_action><field>smoothbends</field><name>smoothBends</name><sys_class_name>sys_rte_eb_etl_field</sys_class_name><sys_created_by>adminanil</sys_created_by><sys_created_on>2023-10-15 10:36:18</sys_created_on><sys_id>9d32085307f1b950b965f7208c1ed0d3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>smoothBends</sys_name><sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package><sys_policy/><sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition><sys_rte_eb_entity display_value="Edge Graphics">6702845707f1b950b965f7208c1ed043</sys_rte_eb_entity><sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope><sys_update_name>sys_rte_eb_etl_field_9d32085307f1b950b965f7208c1ed0d3</sys_update_name><sys_updated_by>adminanil</sys_updated_by><sys_updated_on>2023-10-15 10:36:18</sys_updated_on></sys_rte_eb_etl_field></record_update>]]></payload>
+        <payload_hash>96720547</payload_hash>
+        <record_name>smoothBends</record_name>
+        <reverted_from/>
+        <source>4cacccb30765b154b965f7208c1ed03a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 10:36:18</sys_created_on>
+        <sys_id>d932085307f1b950b965f7208c1ed0d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b32e87bc10000001</sys_recorded_at>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 10:36:18</sys_updated_on>
+        <type>ETL Entity field</type>
+        <update_guid>dd32085333f1b950fe98f952f7c175d4</update_guid>
+        <update_guid_history>dd32085333f1b950fe98f952f7c175d4:96720547</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 10:45:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_etl_field">sys_rte_eb_etl_field</sys_db_object>
+        <sys_id>098cdfdb212c40848081936465a546a4</sys_id>
+        <sys_metadata>9d32085307f1b950b965f7208c1ed0d3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>smoothBends</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_scope_delete display_value="">542b01f948aa4e6e983ab3a9e24e2744</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_etl_field_9d32085307f1b950b965f7208c1ed0d3</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_etl_field_9d32085307f1b950b965f7208c1ed0d3">d932085307f1b950b965f7208c1ed0d5</sys_update_version>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 10:45:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

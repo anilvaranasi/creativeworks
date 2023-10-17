@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="658b149807aa2994b965f7208c1ed09d" label="Label Graphics Lookup" max_length="40" name="x_146833_creativ_0_label_graphics_lookup" type="collection">
         <element default="#CCCCFF" label="fill" max_length="10" name="fill" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Node shape" max_length="40" name="node_shape" type="string"/>
         <element label="node table" max_length="32" name="node_table" reference="sys_db_object" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="RecordType" max_length="40" name="recordtype" type="string">
+            <choice>
+                <element inactive_on_update="false" label="ci" sequence="0" value="ci"/>
+                <element inactive_on_update="false" label="application" sequence="1" value="application"/>
+            </choice>
+        </element>
+        <element label="Taxonomy definition" max_length="40" name="taxonomy_definition" type="string"/>
         <index name="index">
             <element name="node_table"/>
+        </index>
+        <index name="index2">
+            <element name="recordtype"/>
+            <element name="taxonomy_definition"/>
         </index>
     </element>
 </database>

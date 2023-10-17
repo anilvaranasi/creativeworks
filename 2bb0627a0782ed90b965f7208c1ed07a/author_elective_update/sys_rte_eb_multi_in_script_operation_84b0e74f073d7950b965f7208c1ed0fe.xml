@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_multi_in_script_operation">
+    <sys_rte_eb_multi_in_script_operation action="DELETE">
+        <conditional_fields/>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]></conditional_script>
+        <is_conditional>false</is_conditional>
+        <name>Get Target Node</name>
+        <operation_group/>
+        <order>100</order>
+        <script><![CDATA[/* Example Script 
+ // In this example the script input fields are 'input_field_1', 'input_field_2' - replace these with the fields used as script inputs // There is a static field 'input' that has all the input field values concatenated with a '|' (function(batch, output) {
+     for (var i = 0; i < batch.length; i++) {
+ 
+         //step1: access the input variables
+         var a = batch[i].input_field_1; //Value of the first source field. 
+         var b = batch[i].input_field_2; //Value of the second source field. 
+ 
+         //step2: Your script/code goes here.
+         var c = a + b;
+ 
+         //step3: set the output for each elements
+         output[i] = b;
+     }
+ 
+ })(batch, output);
+ */
+
+(function(batch, output) {
+	var sDebug = '';
+    // add your code here.
+    //step1: access the input variables
+    var objectName = batch[i].u_name + ''; //Value of the first source field. 
+    var tableName = batch[i].u_taxonomy_definition  + ''; //Value of the second source field. 
+    var targetNode = 'Creativ 0 Appl File';
+	sDebug += " objectName =" + objectName + "\n";
+	sDebug += " targetNode =" + targetNode + "\n";
+    //step2: Your script/code goes here.
+    if (tableName == 'Business Rule') {
+        // code block
+        var grTable = new GlideRecord('sys_script');
+		var enQuery = 'name=' + objectName + '';
+		sDebug += " enQuery =" + enQuery + "\n";
+		grTable.addEncodedQuery(enQuery);
+        grTable.query();
+        if (grTable.next()) {
+            targetNode = grTable.getDisplayValue();
+			
+        }
+    }
+	sDebug += " targetNode =" + targetNode + "\n";
+    //step3: set the output for each elements
+    output[i] = targetNode;
+	gs.info(sDebug);
+})(batch, output);]]></script>
+        <source_sys_rte_eb_field/>
+        <source_sys_rte_eb_fields>6f1557f507ee6910b965f7208c1ed08b,061551b507aa2910b965f7208c1ed069</source_sys_rte_eb_fields>
+        <sys_class_name>sys_rte_eb_multi_in_script_operation</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 08:10:59</sys_created_on>
+        <sys_id>84b0e74f073d7950b965f7208c1ed0fe</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Get Target Node</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="Staging">ef33117107aa2910b965f7208c1ed052</sys_rte_eb_entity>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_multi_in_script_operation_84b0e74f073d7950b965f7208c1ed0fe</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 12:12:04</sys_updated_on>
+        <target_sys_rte_eb_field display_value="targetnode">dcaf5b8b077d7950b965f7208c1ed0c0</target_sys_rte_eb_field>
+        <target_sys_rte_eb_fields/>
+        <type display_value="Multiple Input Script">a5584ee4739000102b6265a751ab9eae</type>
+        <use_unique_input_sets>true</use_unique_input_sets>
+    </sys_rte_eb_multi_in_script_operation>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</application>
+        <file_path/>
+        <instance_id>faefb09cdb2ba0d07527d7c8f49619b0</instance_id>
+        <instance_name>dev111463</instance_name>
+        <name>sys_rte_eb_multi_in_script_operation_84b0e74f073d7950b965f7208c1ed0fe</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_rte_eb_multi_in_script_operation"&gt;&lt;sys_rte_eb_multi_in_script_operation action="INSERT_OR_UPDATE"&gt;&lt;conditional_fields/&gt;&lt;conditional_script&gt;&lt;![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i &lt; batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]&gt;&lt;/conditional_script&gt;&lt;is_conditional&gt;false&lt;/is_conditional&gt;&lt;name&gt;Get Target Node&lt;/name&gt;&lt;operation_group/&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[/* Example Script 
+ // In this example the script input fields are 'input_field_1', 'input_field_2' - replace these with the fields used as script inputs // There is a static field 'input' that has all the input field values concatenated with a '|' (function(batch, output) {
+     for (var i = 0; i &lt; batch.length; i++) {
+ 
+         //step1: access the input variables
+         var a = batch[i].input_field_1; //Value of the first source field. 
+         var b = batch[i].input_field_2; //Value of the second source field. 
+ 
+         //step2: Your script/code goes here.
+         var c = a + b;
+ 
+         //step3: set the output for each elements
+         output[i] = b;
+     }
+ 
+ })(batch, output);
+ */
+
+(function(batch, output) {
+	var sDebug = '';
+    // add your code here.
+    //step1: access the input variables
+    var objectName = batch[i].u_name + ''; //Value of the first source field. 
+    var tableName = batch[i].u_taxonomy_definition  + ''; //Value of the second source field. 
+    var targetNode = 'Creativ 0 Appl File';
+	sDebug += " objectName =" + objectName + "\n";
+	sDebug += " targetNode =" + targetNode + "\n";
+    //step2: Your script/code goes here.
+    if (tableName == 'Business Rule') {
+        // code block
+        var grTable = new GlideRecord('sys_script');
+		var enQuery = 'name=' + objectName + '';
+		sDebug += " enQuery =" + enQuery + "\n";
+		grTable.addEncodedQuery(enQuery);
+        grTable.query();
+        if (grTable.next()) {
+            targetNode = grTable.getDisplayValue();
+			
+        }
+    }
+	sDebug += " targetNode =" + targetNode + "\n";
+    //step3: set the output for each elements
+    output[i] = targetNode;
+	gs.info(sDebug);
+})(batch, output);]]&gt;&lt;/script&gt;&lt;source_sys_rte_eb_field/&gt;&lt;source_sys_rte_eb_fields&gt;6f1557f507ee6910b965f7208c1ed08b,061551b507aa2910b965f7208c1ed069&lt;/source_sys_rte_eb_fields&gt;&lt;sys_class_name&gt;sys_rte_eb_multi_in_script_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;adminanil&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-10-15 08:10:59&lt;/sys_created_on&gt;&lt;sys_id&gt;84b0e74f073d7950b965f7208c1ed0fe&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Get Target Node&lt;/sys_name&gt;&lt;sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0"&gt;2bb0627a0782ed90b965f7208c1ed07a&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_rte_eb_definition display_value="Generate GarphML Data"&gt;5ea151bd076a2910b965f7208c1ed0c9&lt;/sys_rte_eb_definition&gt;&lt;sys_rte_eb_entity display_value="Staging"&gt;ef33117107aa2910b965f7208c1ed052&lt;/sys_rte_eb_entity&gt;&lt;sys_scope display_value="AwesomeNowCreativeWorks"&gt;2bb0627a0782ed90b965f7208c1ed07a&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_rte_eb_multi_in_script_operation_84b0e74f073d7950b965f7208c1ed0fe&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;adminanil&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-10-15 12:12:04&lt;/sys_updated_on&gt;&lt;target_sys_rte_eb_field display_value="targetnode"&gt;dcaf5b8b077d7950b965f7208c1ed0c0&lt;/target_sys_rte_eb_field&gt;&lt;target_sys_rte_eb_fields/&gt;&lt;type display_value="Multiple Input Script"&gt;a5584ee4739000102b6265a751ab9eae&lt;/type&gt;&lt;use_unique_input_sets&gt;true&lt;/use_unique_input_sets&gt;&lt;/sys_rte_eb_multi_in_script_operation&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1956863146</payload_hash>
+        <record_name>Get Target Node</record_name>
+        <reverted_from/>
+        <source>4cacccb30765b154b965f7208c1ed03a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 12:12:04</sys_created_on>
+        <sys_id>8c28d4d307f5b950b965f7208c1ed076</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b334028700000001</sys_recorded_at>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 12:12:04</sys_updated_on>
+        <type>RTE Entity Multiple Input Script Operati</type>
+        <update_guid>c028d4d315f5b950852d646ef3087876</update_guid>
+        <update_guid_history>c028d4d315f5b950852d646ef3087876:-1956863146,c24b0c9b6035b950f94e068b5aa6587f:1227004169,caf084d331f1b9508767c810985d4356:-687729502,25e08c13cf71b950c89e9233f57f5076:2011987412,ce808813cffd79508e3749117a95841a:919493126,9affbf036e71b9504603f46bd9eccc6e:-326269662,f744ef4bef7d7950280056463c58bc49:1502446674,e0f0af4f537d7950e422f54b45395f28:789542505</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 17:42:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_multi_in_script_operation">sys_rte_eb_multi_in_script_operation</sys_db_object>
+        <sys_id>221ff8ab9f1e496893d77ab82459f631</sys_id>
+        <sys_metadata>84b0e74f073d7950b965f7208c1ed0fe</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Target Node</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_scope_delete display_value="">542b01f948aa4e6e983ab3a9e24e2744</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_multi_in_script_operation_84b0e74f073d7950b965f7208c1ed0fe</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_multi_in_script_operation_84b0e74f073d7950b965f7208c1ed0fe">8c28d4d307f5b950b965f7208c1ed076</sys_update_version>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 17:42:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
