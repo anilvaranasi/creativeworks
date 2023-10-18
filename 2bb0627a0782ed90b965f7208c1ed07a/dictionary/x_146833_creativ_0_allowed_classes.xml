@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="b8999abf07317190b965f7208c1ed0ba" label="Allowed Classes" max_length="40" name="x_146833_creativ_0_allowed_classes" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="ClassName" max_length="57" name="classname" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Relationship map notes" max_length="1000" name="relationship_map_notes" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Yes/No" max_length="40" name="yes_no" type="string"/>
+    </element>
+</database>
