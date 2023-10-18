@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>QuerySysMetaData</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var sDebug = 'Log start';
+try {
+    var responseObj = {};
+    var rowIndex = 0;
+    var fieldList = ['sys_name', 'sys_class_name', 'sys_scope', 'sys_update_name'];
+    var inScopeClasses = 'sys_security_acl,sys_script_fix,scheduled_import_set,sys_alias,sys_app_application,sys_data_source,sys_db_object,sys_hub_flow,sys_rte_eb_etl_definition,sys_script,sys_script_include,sys_transform_map,sys_user_role'
+    var grMeta = new GlideRecord('sys_metadata');
+    var appSysId = '2bb0627a0782ed90b965f7208c1ed07a';
+    //sys_scope=2bb0627a0782ed90b965f7208c1ed07a^sys_class_name=sys_script
+    var enQuery = 'sys_scope=' + appSysId + '^sys_class_name' + 'IN' + inScopeClasses;
+    grMeta.addEncodedQuery(enQuery);
+    grMeta.orderByDesc('sys_class_name');
+    grMeta.query();
+    while (grMeta.next()) {
+        var rowData = '';
+        var rowObj = {};
+        for (var index = 0; index < fieldList.length; index++) {
+            var fieldObject = {};
+            if (global.JSUtil.notNil(fieldValue)) {
+                rowData += '|' + fieldValue;
+            }
+            if (global.JSUtil.nil(fieldValue)) {
+                rowData = fieldValue;
+            }
+            var fieldName = fieldList[index] + '';
+            var fieldValue = grMeta.getDisplayValue(fieldName);
+            rowObj[fieldName] = fieldValue;
+        }
+        //responseObj[grMeta.sys_update_name + ''] = rowData;
+        //responseObj[grMeta.sys_update_name + ''] = rowObj;
+        responseObj[rowIndex] = rowObj;
+        rowIndex++;
+    }
+    for (var k in responseObj) {
+        // sDebug += k + "=" + responseObj[k] + "\n";
+    }
+
+    for (var m in responseObj) {
+        //sDebug += m +'=' + responseObj[m] + "\n";
+        var obj = responseObj[m];
+        for (var t in obj) {
+            sDebug += m + '=' + t + "==" + obj[t] + "\n";
+        }
+    }
+} catch (e) {
+    sDebug = "Exception=" + e;
+}
+
+gs.info(sDebug);]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-13 17:22:27</sys_created_on>
+        <sys_id>7a09c72607f53550b965f7208c1ed01c</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name>QuerySysMetaData</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_script_fix_7a09c72607f53550b965f7208c1ed01c</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-14 15:27:46</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

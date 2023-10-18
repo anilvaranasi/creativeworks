@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_index">
+    <sys_index action="INSERT_OR_UPDATE">
+        <col_name_string>recordtype,taxonomy_definition</col_name_string>
+        <index_col_name>059a433107ae6910b965f7208c1ed0e1,d3669fbd07ee6910b965f7208c1ed083</index_col_name>
+        <logical_table_name>x_146833_creativ_0_label_graphics_lookup</logical_table_name>
+        <sys_class_name>sys_index</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-10-17 10:23:36</sys_created_on>
+        <sys_id>fa729e7b07fd3190b965f7208c1ed0ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_146833_creativ_0_label_graphics_lookup</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_index_x_146833_creativ_0_label_graphics_lookup_recordtype_taxonomy_definition</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-10-17 10:23:36</sys_updated_on>
+        <table display_value="Label Graphics Lookup" name="x_146833_creativ_0_label_graphics_lookup">658b149807aa2994b965f7208c1ed09d</table>
+        <unique_index>false</unique_index>
+    </sys_index>
+</record_update>

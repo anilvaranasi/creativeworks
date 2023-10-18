@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="AwesomeNow CreativeWorks GraphML">0b376e7a07c2ed90b965f7208c1ed0b5</application>
+        <assessment/>
+        <device_type/>
+        <filter table="sys_hub_flow">sys_scope=2bb0627a0782ed90b965f7208c1ed07a^EQ<item display_table="sys_scope" display_value="AwesomeNowCreativeWorks" endquery="false" field="sys_scope" goto="false" newquery="false" operator="=" or="false" value="2bb0627a0782ed90b965f7208c1ed07a"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Flows</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>sys_hub_flow</name>
+        <order>3100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-17 06:32:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>755dd13b07b53190b965f7208c1ed015</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Flows</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_app_module_755dd13b07b53190b965f7208c1ed015</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-17 06:32:11</sys_updated_on>
+        <timeline_page/>
+        <title>Flows</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

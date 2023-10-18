@@ -5,18 +5,25 @@
         <attributes/>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
+var nodeName  = current.getDisplayValue('node');
+var name = nodeName;
+var nameLength = name.length;
+var width = 90;
+if(global.JSUtil.notNil(nameLength)) {
+	width = 12*nameLength;
+}
 
 	// Add your code here
-	return '';  // return the calculated value
+	return width;  // return the calculated value
 
 })(current);]]></calculation>
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>w</column_label>
+        <column_label>W</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>90</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -52,20 +59,20 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-04-11 00:42:15</sys_created_on>
-        <sys_name>w</sys_name>
+        <sys_name>W</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_dictionary_x_146833_creativ_0_graphics_w</sys_update_name>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-04-11 00:42:15</sys_updated_on>
+        <sys_updated_on>2023-10-14 19:43:08</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
+        <virtual>true</virtual>
         <virtual_type>script</virtual_type>
         <widget/>
         <write_roles/>

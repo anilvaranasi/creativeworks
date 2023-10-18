@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_set_operation">
+    <sys_rte_eb_set_operation action="INSERT_OR_UPDATE">
+        <conditional_fields/>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]></conditional_script>
+        <is_conditional>false</is_conditional>
+        <name>Set Target Arrow</name>
+        <operation_group/>
+        <order>100</order>
+        <overwrite_existing_value>true</overwrite_existing_value>
+        <set_value>standard</set_value>
+        <source_sys_rte_eb_field/>
+        <source_sys_rte_eb_fields/>
+        <sys_class_name>sys_rte_eb_set_operation</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 10:46:45</sys_created_on>
+        <sys_id>9584481f07f1b950b965f7208c1ed08d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Target Arrow</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="Edge Graphics">6702845707f1b950b965f7208c1ed043</sys_rte_eb_entity>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_set_operation_9584481f07f1b950b965f7208c1ed08d</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 10:46:45</sys_updated_on>
+        <target_sys_rte_eb_field display_value="targetArrow">5132085307f1b950b965f7208c1ed0d1</target_sys_rte_eb_field>
+        <target_sys_rte_eb_fields/>
+        <type display_value="Set">c588011e730000102b6265a751ab9e4a</type>
+    </sys_rte_eb_set_operation>
+</record_update>

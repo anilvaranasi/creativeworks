@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_etl_field">
+    <sys_rte_eb_etl_field action="DELETE">
+        <coalesce>true</coalesce>
+        <coercion_action>create</coercion_action>
+        <field>edge.label</field>
+        <name>edgeLabel</name>
+        <sys_class_name>sys_rte_eb_etl_field</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 10:58:46</sys_created_on>
+        <sys_id>17378c930735b950b965f7208c1ed02e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>edgeLabel</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="Edge Graphics">6702845707f1b950b965f7208c1ed043</sys_rte_eb_entity>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_etl_field_17378c930735b950b965f7208c1ed02e</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 17:52:39</sys_updated_on>
+    </sys_rte_eb_etl_field>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</application>
+        <file_path/>
+        <instance_id>faefb09cdb2ba0d07527d7c8f49619b0</instance_id>
+        <instance_name>dev111463</instance_name>
+        <name>sys_rte_eb_etl_field_17378c930735b950b965f7208c1ed02e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_etl_field"><sys_rte_eb_etl_field action="INSERT_OR_UPDATE"><coalesce>true</coalesce><coercion_action>create</coercion_action><field>edge.label</field><name>edgeLabel</name><sys_class_name>sys_rte_eb_etl_field</sys_class_name><sys_created_by>adminanil</sys_created_by><sys_created_on>2023-10-15 10:58:46</sys_created_on><sys_id>17378c930735b950b965f7208c1ed02e</sys_id><sys_mod_count>1</sys_mod_count><sys_name>edgeLabel</sys_name><sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package><sys_policy/><sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition><sys_rte_eb_entity display_value="Edge Graphics">6702845707f1b950b965f7208c1ed043</sys_rte_eb_entity><sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope><sys_update_name>sys_rte_eb_etl_field_17378c930735b950b965f7208c1ed02e</sys_update_name><sys_updated_by>adminanil</sys_updated_by><sys_updated_on>2023-10-15 17:52:39</sys_updated_on></sys_rte_eb_etl_field></record_update>]]></payload>
+        <payload_hash>366361567</payload_hash>
+        <record_name>edgeLabel</record_name>
+        <reverted_from/>
+        <source>4cacccb30765b154b965f7208c1ed03a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 17:52:39</sys_created_on>
+        <sys_id>d5162ddb07f1f950b965f7208c1ed053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18b3477f95a0000001</sys_recorded_at>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 17:52:39</sys_updated_on>
+        <type>ETL Entity field</type>
+        <update_guid>1d162ddbeff1f950823d573e1363d952</update_guid>
+        <update_guid_history>1d162ddbeff1f950823d573e1363d952:366361567,d65788d30935b9501d280b904a2dc8fc:-1176845916</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-15 17:53:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_rte_eb_etl_field">sys_rte_eb_etl_field</sys_db_object>
+        <sys_id>247b004ece554588abf68f70473e1c40</sys_id>
+        <sys_metadata>17378c930735b950b965f7208c1ed02e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>edgeLabel</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_scope_delete display_value="">542b01f948aa4e6e983ab3a9e24e2744</sys_scope_delete>
+        <sys_update_name>sys_rte_eb_etl_field_17378c930735b950b965f7208c1ed02e</sys_update_name>
+        <sys_update_version display_value="sys_rte_eb_etl_field_17378c930735b950b965f7208c1ed02e">d5162ddb07f1f950b965f7208c1ed053</sys_update_version>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-15 17:53:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

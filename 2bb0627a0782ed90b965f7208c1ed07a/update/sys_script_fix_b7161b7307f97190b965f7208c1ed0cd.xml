@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>ACW-GetTablesFromScriptInclude</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var sDebug = 'Logs from script include';
+var tableName = 'Script Include';
+var objectName = 'AdvancedAuditRollupUtilsBase';
+if (tableName == 'Script Include') {
+    // code block
+    try {
+        var grTable = new GlideRecord('sys_script_include');
+        var tableNames = {};
+        var enQuery = 'name=' + objectName + '';
+        //sDebug += " enQuery =" + enQuery + "\n";
+        grTable.addEncodedQuery(enQuery);
+        grTable.query();
+        if (grTable.next()) {
+            //  sDebug += 'inside if';
+            tableNames = getTableNames(grTable.script + '');
+            //for (var tIndex = 0; tIndex < tableNames.length; tIndex++) {
+            for (var tableNameText in tableNames) {
+                var brTableName = tableNameText + '';
+				sDebug += ' brTableName = ' + brTableName + "\n";
+                var grTableObj = new GlideRecord('sys_db_object');
+                grTableObj.addQuery('name', brTableName);				
+                grTableObj.query();
+                sDebug += "count=" + grTableObj.getRowCount() + "\n";
+                if (grTableObj.next()) {
+                    sDebug += "inside table if" + grTableObj.sys_update_name;
+                    var targetNode = grTableObj.sys_update_name + '';
+                    var edgeIdentifier =  targetNode;
+                    sDebug += " targetNode=" + targetNode + "\n";
+                    sDebug += " edgeIdentifier=" + edgeIdentifier + "\n";
+                }
+            }
+            //}
+        }
+    } catch (e) {
+        sDebug += 'exception in business rule edge lookup' + e;
+    }
+}
+
+function getTableNames(script) {
+    //sDebug += 'inside if' + script;
+    //var sDebug = 'Logs from script include';
+    //var grScInc = new GlideRecord('sys_script_include');
+    //grScInc.get('1f9599a90746101054685d3f0ad30002');
+    //var scriptString = grScInc.script + '';
+    var scriptString = script + '';
+    var scriptArray = scriptString.split(' ');
+    var stringText = 'GlideRecord';
+    var tableArray = {};
+    for (var index = 0; index < scriptArray.length; index++) {
+        var tableName = '';
+        scriptString = scriptArray[index];
+        var stringArray = [];
+        if (scriptString.indexOf(stringText) > -1) {
+            stringArray = scriptString.split(stringText);
+            scriptString = stringArray[1];
+            if (scriptString.indexOf('(') > -1) {
+                stringArray = scriptString.split('(');
+                scriptString = stringArray[1];
+                scriptString = scriptString.replaceAll("'", '');
+                scriptString = scriptString.replaceAll(";", '');
+                scriptString = scriptString.replaceAll(")", '');
+				scriptString = scriptString.trim();
+				//sDebug += " scriptString= " + scriptString + "\n";
+            }
+            tableArray[scriptString] = 1;
+        }
+    }
+    sDebug += 'inside if' + tableArray + '';
+    return tableArray;
+}
+gs.info(sDebug);]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-17 15:33:15</sys_created_on>
+        <sys_id>b7161b7307f97190b965f7208c1ed0cd</sys_id>
+        <sys_mod_count>43</sys_mod_count>
+        <sys_name>ACW-GetTablesFromScriptInclude</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_script_fix_b7161b7307f97190b965f7208c1ed0cd</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-17 19:46:38</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

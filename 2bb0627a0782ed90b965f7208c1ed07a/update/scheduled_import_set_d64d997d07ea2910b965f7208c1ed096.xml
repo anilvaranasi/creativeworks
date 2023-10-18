@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="scheduled_import_set">
+    <scheduled_import_set action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <business_calendar/>
+        <concurrent_import>false</concurrent_import>
+        <condition/>
+        <conditional>false</conditional>
+        <connection_override/>
+        <data_source display_value="Get System MetaData via Script">2bcbbb320739f550b965f7208c1ed0f9</data_source>
+        <entered_time/>
+        <map/>
+        <max_drift/>
+        <name>GetFilesForACustomApp</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <order/>
+        <parent/>
+        <partition_method>roundRobin</partition_method>
+        <partition_script><![CDATA[(function partitionHash(import_set_row) {
+
+	// Add your code here
+	
+	// eg:
+	// return import_set_row.u_important_category;
+	// This would ensure all rows with the same 'u_important_category' value will be in the same Import Set.
+
+	 return import_set_row.sys_import_row;
+
+})(import_set_row);]]></partition_script>
+        <partition_size/>
+        <post_script><![CDATA[/*
+var file = '';
+var grFile = new GlideRecord('x_146833_creativ_0_file');
+grFile.orderByDesc('sys_updated_on');
+grFile.query();
+if (grFile.next()) {
+    file = grFile.sys_id + '';
+}
+var fileQuery = 'sys_id=' + file;
+// fix edges that have missing targt
+var edgeEnQuery = 'graph.file=' + file;
+var grEdge = new GlideRecord('x_146833_creativ_0_edge');
+grEdge.addEncodedQuery(edgeEnQuery);
+grEdge.query();
+while(grEdge.next()) {
+	grEdge.label += 'edgelabel';
+	grEdge.update();
+}
+var graphicsoutput = new x_146833_creativ_0.GenerateOutput();
+graphicsoutput.buildFile(fileQuery);
+*/
+
+(function() {
+
+    try {
+
+        // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+        sn_fd.FlowAPI.getRunner().subflow('x_146833_creativ_0.generate_app_digital_twin_processloaded_data').inBackground().run();
+
+        // Execute Synchronously: Run in foreground. Code snippet has access to outputs.
+        //var result = sn_fd.FlowAPI.getRunner().subflow('x_146833_creativ_0.generate_app_digital_twin_processloaded_data').inForeground().run();
+        //var outputs = result.getOutputs();
+
+        // Current subflow has no outputs defined.		
+    } catch (ex) {
+        var message = ex.getMessage();
+        gs.error(message);
+    }
+
+})();]]></post_script>
+        <post_script_bool>false</post_script_bool>
+        <pre_script/>
+        <pre_script_bool>false</pre_script_bool>
+        <record_source>regular</record_source>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2023-05-02 11:59:17</run_start>
+        <run_time>1969-12-31 18:30:00</run_time>
+        <run_type>once</run_type>
+        <show_connection_override>true</show_connection_override>
+        <synchronize_inserts>true</synchronize_inserts>
+        <sys_class_name>scheduled_import_set</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-05-02 11:59:40</sys_created_on>
+        <sys_id>d64d997d07ea2910b965f7208c1ed096</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>GetFilesForACustomApp</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>scheduled_import_set_d64d997d07ea2910b965f7208c1ed096</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-17 17:38:12</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+        <use_child_connection>false</use_child_connection>
+    </scheduled_import_set>
+</record_update>

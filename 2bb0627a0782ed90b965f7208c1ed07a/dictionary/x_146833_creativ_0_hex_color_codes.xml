@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9e7b0ab707bd3190b965f7208c1ed05f" label="Hex Color Codes" max_length="40" name="x_146833_creativ_0_hex_color_codes" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Code" max_length="40" name="code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Color names" max_length="40" name="color_names" type="string"/>
+    </element>
+</database>

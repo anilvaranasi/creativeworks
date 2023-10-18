@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="173cb2bf07b57190b965f7208c1ed012" sys_domain="global" table="sys_hub_action_output" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-10-17 13:26:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b3cb2bf07b57190b965f7208c1ed029</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">173cb2bf07b57190b965f7208c1ed012</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">933cb2bf07b57190b965f7208c1ed021</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-10-17 13:26:03</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-10-17 13:26:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>273cb2bf07b57190b965f7208c1ed031</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">173cb2bf07b57190b965f7208c1ed012</sys_ui_form>
+            <sys_ui_section caption="Reference Specification" display_value="Reference Specification" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">133cb2bf07b57190b965f7208c1ed02a</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-10-17 13:26:03</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-10-17 13:26:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5b3cb2bf07b57190b965f7208c1ed018</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">173cb2bf07b57190b965f7208c1ed012</sys_ui_form>
+            <sys_ui_section caption="Choice List Specification" display_value="Choice List Specification" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">9b3cb2bf07b57190b965f7208c1ed014</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-10-17 13:26:03</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-10-17 13:26:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5f3cb2bf07b57190b965f7208c1ed01c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">173cb2bf07b57190b965f7208c1ed012</sys_ui_form>
+            <sys_ui_section caption="Dependent Field" display_value="Dependent Field" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">df3cb2bf07b57190b965f7208c1ed018</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-10-17 13:26:03</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-10-17 13:26:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1f3cb2bf07b57190b965f7208c1ed020</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">173cb2bf07b57190b965f7208c1ed012</sys_ui_form>
+            <sys_ui_section caption="Calculated Value" display_value="Calculated Value" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">d33cb2bf07b57190b965f7208c1ed01d</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-10-17 13:26:03</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-10-17 13:26:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e73cb2bf07b57190b965f7208c1ed035</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sys_hub_action_output" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">173cb2bf07b57190b965f7208c1ed012</sys_ui_form>
+            <sys_ui_section caption="Default Value" display_value="Default Value" name="sys_hub_action_output" sys_domain="global" view="7966be310a0a0b8c00bd504090503227">ab3cb2bf07b57190b965f7208c1ed031</sys_ui_section>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-10-17 13:26:03</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>sys_hub_action_output</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-10-17 13:26:03</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>173cb2bf07b57190b965f7208c1ed012</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_hub_action_output</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+            <sys_update_name>sys_ui_form_sections_173cb2bf07b57190b965f7208c1ed012</sys_update_name>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-10-17 13:26:03</sys_updated_on>
+            <sys_user/>
+            <view display_value="Advanced" name="advanced">7966be310a0a0b8c00bd504090503227</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
