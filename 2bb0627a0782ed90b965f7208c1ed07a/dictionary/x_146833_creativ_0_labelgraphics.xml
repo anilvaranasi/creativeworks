@@ -4,7 +4,7 @@
         <element label="contentHeight" max_length="10" name="contentheight" type="float"/>
         <element label="contentWidth" max_length="40" name="contentwidth" type="float"/>
         <element label="edge" max_length="32" name="edge" reference="x_146833_creativ_0_edge" type="reference"/>
-        <element label="fontName" max_length="20" name="fontname" type="string"/>
+        <element default="Dialog" label="fontName" max_length="20" name="fontname" type="string"/>
         <element default="14" label="fontSize" max_length="2" name="fontsize" type="integer"/>
         <element attributes="edge_encryption_enabled=true" default="bold" label="fontStyle" max_length="40" name="fontstyle" type="string"/>
         <element attributes="encode_utf8=false" label="Graph" max_length="32" name="graph" reference="x_146833_creativ_0_graph" type="reference"/>
@@ -17,7 +17,7 @@
                 <element inactive_on_update="false" label="node" value="node"/>
             </choice>
         </element>
-        <element label="text" max_length="255" name="text" type="string"/>
+        <element label="text" max_length="250" name="text" type="string"/>
         <index name="index">
             <element name="edge"/>
         </index>

@@ -4,20 +4,20 @@
         <element attributes="edge_encryption_enabled=true,import_attribute_name=description" label="description" max_length="146" name="u_description" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=description/display_value" label="description/display_value" max_length="55" name="u_description_display_value" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=description/value" label="description/value" max_length="55" name="u_description_value" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=details" label="details" max_length="331" name="u_details" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=details" label="details" max_length="400" name="u_details" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_created_on" label="details/sys_created_on" max_length="95" name="u_details_sys_created_on" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_created_on/label" label="details/sys_created_on/label" max_length="800" name="u_details_sys_created_on_label" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_created_on/label" label="details/sys_created_on/label" max_length="250" name="u_details_sys_created_on_label" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_created_on/value" label="details/sys_created_on/value" max_length="40" name="u_details_sys_created_on_value" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_updated_by" label="details/sys_updated_by" max_length="78" name="u_details_sys_updated_by" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_updated_by/label" label="details/sys_updated_by/label" max_length="800" name="u_details_sys_updated_by_label" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_updated_by/label" label="details/sys_updated_by/label" max_length="250" name="u_details_sys_updated_by_label" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_updated_by/value" label="details/sys_updated_by/value" max_length="40" name="u_details_sys_updated_by_value" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_updated_on" label="details/sys_updated_on" max_length="95" name="u_details_sys_updated_on" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_updated_on/label" label="details/sys_updated_on/label" max_length="800" name="u_details_sys_updated_on_label" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_updated_on/label" label="details/sys_updated_on/label" max_length="250" name="u_details_sys_updated_on_label" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_updated_on/value" label="details/sys_updated_on/value" max_length="40" name="u_details_sys_updated_on_value" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_created_on/display_value" label="details/sys_created_on/display_value" max_length="40" name="u_details_sys___display_valu0" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_updated_by/display_value" label="details/sys_updated_by/display_value" max_length="40" name="u_details_sys___display_valu1" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=details/sys_updated_on/display_value" label="details/sys_updated_on/display_value" max_length="40" name="u_details_sys___display_value" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_edge_label" label="Edge label" max_length="800" name="u_edge_label" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_edge_label" label="Edge label" max_length="250" name="u_edge_label" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=editor_name" label="editor_name" max_length="40" name="u_editor_name" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=editor_url" label="editor_url" max_length="162" name="u_editor_url" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=group_id" label="group_id" max_length="40" name="u_group_id" type="string"/>
@@ -29,7 +29,7 @@
         <element attributes="edge_encryption_enabled=true,import_attribute_name=scope" label="scope" max_length="91" name="u_scope" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=scope/display_value" label="scope/display_value" max_length="40" name="u_scope_display_value" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=scope/value" label="scope/value" max_length="40" name="u_scope_value" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=sys_id" label="sys_id" max_length="400" name="u_sys_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=sys_id" label="sys_id" max_length="250" name="u_sys_id" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=u_target_node" label="Target node" max_length="100" name="u_target_node" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=taxonomy_category" label="taxonomy_category" max_length="40" name="u_taxonomy_category" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=taxonomy_definition" label="taxonomy_definition" max_length="40" name="u_taxonomy_definition" type="string"/>
