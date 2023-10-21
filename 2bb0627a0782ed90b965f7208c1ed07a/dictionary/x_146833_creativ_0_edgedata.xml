@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="e159e7f707bd7190b965f7208c1ed047" extends="sys_import_set_row" label="ACW-Get EdgeData" max_length="40" name="x_146833_creativ_0_edgedata" type="collection">
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_edge_label" label="Edge label" max_length="400" name="u_edge_label" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_edge_label" label="Edge label" max_length="250" name="u_edge_label" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=u_editor_name" label="Editor name" max_length="40" name="u_editor_name" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_scope_display_value" label="Scope display value" max_length="400" name="u_scope_display_value" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_target_node" label="Target node" max_length="400" name="u_target_node" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_update_name" label="Update name" max_length="400" name="u_update_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_scope_display_value" label="Scope display value" max_length="250" name="u_scope_display_value" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_target_node" label="Target node" max_length="250" name="u_target_node" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=u_update_name" label="Update name" max_length="250" name="u_update_name" type="string"/>
     </element>
 </database>

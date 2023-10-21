@@ -3,7 +3,7 @@
         <element default="1" label="Directed" max_length="10" name="directed" type="integer"/>
         <element label="File" max_length="32" name="file" reference="x_146833_creativ_0_file" type="reference"/>
         <element default="1" label="Hierarchic" max_length="10" name="hierarchic" type="integer"/>
-        <element display="true" label="Label" max_length="800" name="label" type="string"/>
+        <element display="true" label="Label" max_length="250" name="label" type="string"/>
         <index name="index">
             <element name="file"/>
         </index>

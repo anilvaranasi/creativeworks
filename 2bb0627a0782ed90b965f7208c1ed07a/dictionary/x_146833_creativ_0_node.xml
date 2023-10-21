@@ -4,7 +4,7 @@
         <element label="Graph" max_length="32" name="graph" reference="x_146833_creativ_0_graph" type="reference"/>
         <element label="id" max_length="40" name="id" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Identifier" max_length="100" name="identifier" type="string"/>
-        <element attributes="edge_encryption_enabled=true" display="true" label="label" max_length="800" name="label" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="label" max_length="250" name="label" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Node Class" max_length="100" name="node_class" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <index name="index">
