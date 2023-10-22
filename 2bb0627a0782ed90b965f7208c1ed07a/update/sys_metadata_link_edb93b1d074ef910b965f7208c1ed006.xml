@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>de6b66dc0762a994b965f7208c1ed057</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_146833_creativ_0_file">
+    <x_146833_creativ_0_file action="INSERT_OR_UPDATE">
+        <ci display_value="CA">9b9f28045390301040c4ddeeff7b12b9</ci>
+        <creator>CreativeWorks</creator>
+        <file_application/>
+        <name>CA cmdb_ci_computer_room</name>
+        <state>draft</state>
+        <sys_class_name/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-28 01:49:43</sys_created_on>
+        <sys_id>de6b66dc0762a994b965f7208c1ed057</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-04-28 01:49:43</sys_updated_on>
+        <version>2.18</version>
+    </x_146833_creativ_0_file>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>gml</content_type>
+        <encryption_context/>
+        <file_name>CA cmdb_ci_computer_room_20230428071945.gml</file_name>
+        <hash>a59d4a914a55a411c094004c64d14c31c1d1531fc5bf2f992cf4ce6e8597a1b6</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>3734</size_bytes>
+        <size_compressed>572</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-28 01:49:45</sys_created_on>
+        <sys_id>e26b66dc0762a994b965f7208c1ed0d6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-04-28 01:49:45</sys_updated_on>
+        <table_name>x_146833_creativ_0_file</table_name>
+        <table_sys_id>de6b66dc0762a994b965f7208c1ed057</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="CA cmdb_ci_computer_room_20230428071945.gml" sys_id="e26b66dc0762a994b965f7208c1ed0d6">e26b66dc0762a994b965f7208c1ed0d6</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-28 01:49:45</sys_created_on>
+        <sys_id>266b66dc0762a994b965f7208c1ed0d6</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>7ZVda9swFIbv9SuEet0hO83XZZotW6GUsWwLZYQhS8e2mCMZWUmT/fod2/OcbIFkoYMObIOQLfno0XuOXk8dCG8dZdOyozewsO5bwchncIW2hrLwVTBiJHEiT8kXkmpwwslUSxoQpR1IDwq7mYggo+xu/uYjD4LemA8ZMVYBfqJxnA8GzZTp5Gc0LQsc9bscKJPayQwYiXWGU67ieDyWkhG79pk2OH7Fq4uRLcbiZFe1TzQYkLTqOqELULfWKXCUkyW5Lxd72y6zxPuAZ9jw3D8G/BiSs2ujyv0Jk+yhTfGazY6jXdds1zXcDb8YbtzAPTyGLw1u+CvZC4jmeQoO6CTPMy2xfLBg5uA24M5n5jyOS8JTuQ7Dm4v1HLV6vrhkD3kDN5HORsI/v3T9i4/JsNfCSYTwBf0AEvRGRCXH+aBSxvFx0LACDevz3A8vJg3/IH0vds+HeWA74ehvMEElJWZh105C7YVeuAT8gQ+ZdZYdolZzJs7ZJ8oKRFXCqT3WmqxYWevTWzCqoCxgRxA8bD3anMXziVZ9ZzCENf5BrHCDr7XIbMKItCbWydrVR5hN1t7OMp3n2iRVOEZWqDWuW+jt19zi/wEbXU/2KQhVB537XYZRI5s1L/R33HFYxvdg/EIrn9I+b57fgU5Sj8k/qVPrOv9Yp0+YTxrt/kuRWp/riul3ndBm22IKu2I6XUzjrpjOcqaumM4QiXciHbelYE+kXidSJdKS/AC/rwZulg4AAA==</data>
+        <length>752</length>
+        <position>1</position>
+        <sys_attachment display_value="CA cmdb_ci_computer_room_20230428071945.gml" sys_id="e26b66dc0762a994b965f7208c1ed0d6">e26b66dc0762a994b965f7208c1ed0d6</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-04-28 01:49:45</sys_created_on>
+        <sys_id>a66b66dc0762a994b965f7208c1ed0d6</sys_id>
+    </sys_attachment_doc>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-22 09:45:30</sys_created_on>
+        <sys_id>edb93b1d074ef910b965f7208c1ed006</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CA cmdb_ci_computer_room</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_metadata_link_edb93b1d074ef910b965f7208c1ed006</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-22 09:45:30</sys_updated_on>
+        <tablename>x_146833_creativ_0_file</tablename>
+    </sys_metadata_link>
+</record_update>
