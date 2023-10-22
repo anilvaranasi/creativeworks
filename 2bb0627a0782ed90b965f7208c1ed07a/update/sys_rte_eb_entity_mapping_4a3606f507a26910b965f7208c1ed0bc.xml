@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_entity_mapping">
+    <sys_rte_eb_entity_mapping action="INSERT_OR_UPDATE">
+        <condition_script><![CDATA[/*  Example Script 
+ (function() {
+ 
+         //step1: access the input variables
+         if (input && input.temp.u_type == 'Disk') {
+         //step2: return true/false 
+            return true;
+         }
+         return false;
+ 
+ })();
+ */
+ 
+ (function(input) {
+     // Add your code here.
+ })(input);]]></condition_script>
+        <encoded_query/>
+        <entity_mapping_group/>
+        <ignore>false</ignore>
+        <is_conditional>false</is_conditional>
+        <name>Level 5 Staging to Node Graphics</name>
+        <order>500</order>
+        <source_sys_rte_eb_entity display_value="Staging">ef33117107aa2910b965f7208c1ed052</source_sys_rte_eb_entity>
+        <sys_class_name>sys_rte_eb_entity_mapping</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-05-02 14:58:30</sys_created_on>
+        <sys_id>4a3606f507a26910b965f7208c1ed0bc</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Level 5 Staging to Node Graphics</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_entity_mapping_4a3606f507a26910b965f7208c1ed0bc</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-05-02 17:10:06</sys_updated_on>
+        <target_sys_rte_eb_entity display_value="Target Node Graphics">48d8827d07a26910b965f7208c1ed03c</target_sys_rte_eb_entity>
+    </sys_rte_eb_entity_mapping>
+</record_update>

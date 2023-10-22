@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_etl_definition">
+    <sys_rte_eb_etl_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copy_empty_fields>false</copy_empty_fields>
+        <description/>
+        <name>Generate GarphML Data</name>
+        <on_after_script><![CDATA[(function onAfter(source, target, importLog) {
+
+	// Add your on after code here
+
+})(source, target, importLog);]]></on_after_script>
+        <on_after_script_bool>false</on_after_script_bool>
+        <on_before_script><![CDATA[(function onBefore(source, target, importLog) {
+
+	// Add your on before code here
+
+})(source, target, importLog);]]></on_before_script>
+        <on_before_script_bool>false</on_before_script_bool>
+        <sys_class_name>sys_rte_eb_etl_definition</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-05-02 11:08:46</sys_created_on>
+        <sys_id>5ea151bd076a2910b965f7208c1ed0c9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Generate GarphML Data</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_etl_definition_5ea151bd076a2910b965f7208c1ed0c9</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-05-02 11:51:23</sys_updated_on>
+    </sys_rte_eb_etl_definition>
+</record_update>

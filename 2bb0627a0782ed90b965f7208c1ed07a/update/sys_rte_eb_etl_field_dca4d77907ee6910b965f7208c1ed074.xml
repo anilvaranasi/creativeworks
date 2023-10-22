@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_etl_field">
+    <sys_rte_eb_etl_field action="INSERT_OR_UPDATE">
+        <coalesce>false</coalesce>
+        <coercion_action>ignore</coercion_action>
+        <field>u_taxonomy_definition</field>
+        <name>u_taxonomy_definition</name>
+        <sys_class_name>sys_rte_eb_etl_field</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-05-02 20:40:58</sys_created_on>
+        <sys_id>dca4d77907ee6910b965f7208c1ed074</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>u_taxonomy_definition</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="Source Application File">9fc2913107aa2910b965f7208c1ed09f</sys_rte_eb_entity>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_etl_field_dca4d77907ee6910b965f7208c1ed074</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-05-02 20:46:50</sys_updated_on>
+    </sys_rte_eb_etl_field>
+</record_update>

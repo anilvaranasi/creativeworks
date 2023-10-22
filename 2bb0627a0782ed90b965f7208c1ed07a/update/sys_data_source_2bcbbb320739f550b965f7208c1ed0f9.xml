@@ -10,352 +10,353 @@
         <csv_delimiter/>
         <data_in_single_column>false</data_in_single_column>
         <data_loader><![CDATA[(function loadData(import_set_table, data_source, import_log, last_success_import_time) {
-    //x_146833_creativ_0_appl_file
-    var sDebug = 'Log start';
-    try {
-        var fieldMapper = {};
-        fieldMapper['u_name'] = 'sys_name';
-        fieldMapper['u_scope_display_value'] = 'sys_scope';
-        fieldMapper['u_editor_name'] = 'sys_class_name';
-        fieldMapper['u_name_value'] = 'sys_name';
-        fieldMapper['u_taxonomy_definition'] = 'sys_class_name';
-        fieldMapper['u_sys_id'] = 'sys_update_name';
-        fieldMapper['u_scope_value'] = 'sys_scope';
-        fieldMapper['u_target_node'] = 'targetNode';
-        fieldMapper['u_edge_label'] = 'edgeIdentifier';
-        fieldMapper['u_update_name'] = 'sys_update_name';
-        var rowObject = {};
-        var rowIndex = 0;
-        var fieldList = ['sys_name', 'sys_class_name', 'sys_scope', 'sys_update_name'];
-        var inScopeClasses = getAllowedClasses();
-        //var inScopeClasses = 'sys_security_acl,sys_script_fix,scheduled_import_set,sys_alias,sys_app_application,sys_data_source,sysauto_script,sys_hub_flow,sys_rte_eb_etl_definition,sys_script,sys_script_include,sys_transform_map,sys_user_role,sys_db_object';
-        var grMeta = new GlideRecord('sys_metadata');
-        var file = '';
-        var grFile = new GlideRecord('x_146833_creativ_0_file');
-        grFile.orderByDesc('sys_updated_on');
-        grFile.query();
-        if (grFile.next()) {
-            file = grFile.file_application.sys_id + '';
-        }
-        var appSysId = file;
-        //sys_scope=2bb0627a0782ed90b965f7208c1ed07a^sys_class_name=sys_script
-        sDebug += "sys_scope=" + appSysId + "\n";
-        var enQuery = 'sys_scope=' + appSysId + '^sys_class_name' + 'IN' + inScopeClasses;
-        //var enQuery = 'sys_scope=' + appSysId;
-        grMeta.addEncodedQuery(enQuery);
-        grMeta.orderByDesc('sys_class_name');
-        grMeta.query();
-        while (grMeta.next()) {
-            var rowData = '';
-            var fieldValueObj = {};
-            for (var index = 0; index < fieldList.length; index++) {
-                var fieldObject = {};
-                if (global.JSUtil.notNil(fieldValue)) {
-                    rowData += '|' + fieldValue;
-                }
-                if (global.JSUtil.nil(fieldValue)) {
-                    rowData = fieldValue;
-                }
-                var fieldName = fieldList[index] + '';
-                var fieldValue = grMeta.getDisplayValue(fieldName);
-                fieldValueObj[fieldName] = fieldValue;
-            }
-            var edgeObject = '';
-            // edgeObject = getEdgeDetails(grMeta.getDisplayValue('sys_class_name'), grMeta.sys_name, grMeta.sys_update_name, grMeta.sys_scope);
-            var targetNode = '';
-            if (global.JSUtil.notNil(edgeObject)) {
-                if (global.JSUtil.notNil(edgeObject.targetNode)) {
-                    targetNode = edgeObject.targetNode + '';
-                }
-                var edgeIdentifier = '';
-                if (global.JSUtil.notNil(edgeObject.edgeIdentifier)) {
-                    edgeIdentifier = edgeObject.edgeIdentifier + '';
-                }
-                //sDebug += " targetNode =" + targetNode + " edgeIdentifier=" + edgeIdentifier + "\n";
-            }
-            fieldValueObj['targetNode'] = targetNode + '';
-            fieldValueObj['edgeIdentifier'] = edgeIdentifier + '';
-            //rowObject[grMeta.sys_update_name + ''] = rowData;
-            //rowObject[grMeta.sys_update_name + ''] = fieldValueObj;
-            var loadField = true;
-            if (grMeta.sys_class_name == 'sys_dictionary') {
-				loadField = false;
-				loadField = checkDictionaryType(grMeta.sys_update_name + '');
-            }
-            if (loadField == true) {
-                rowObject[rowIndex] = fieldValueObj;
-                rowIndex++;
-            }
-        }
-        for (var m in rowObject) {
-            var map = {};
-            //sDebug += m +'=' + rowObject[m] + "\n";
-            var columnObject = rowObject[m];
-            for (var t in columnObject) {
-                for (var fieldIndex in fieldMapper) {
-                    map[fieldIndex] = columnObject[fieldMapper[fieldIndex]];
-                    sDebug += fieldIndex + "=" + fieldMapper[fieldIndex] + "=" + columnObject[fieldMapper[fieldIndex]] + "\n";
-                }
-                sDebug += m + '=' + t + "==" + columnObject[t] + "\n";
-            }
-            import_set_table.insert(map);
-        }
-    } catch (e) {
-        sDebug = "Exception=" + e;
-    }
-
-function checkDictionaryType(updateName) {
-	var loadFlag = false;
-	var grDic = new GlideRecord('sys_dictionary');
-	var enQuery = 'sys_update_name=' + updateName + '^internal_type.label=' + 'reference';
-	grDic.addEncodedQuery(enQuery);
-	grDic.query();
-	if(grDic.next()) {
-loadFlag = true;
-	}
-return loadFlag;
-}
-    function getEdgeDetails(tableName, objectName, updateName, sysscope) {
-        var edgeObject = {};
-        var targetNode = '';
-        var edgeIdentifier = '';
+        //x_146833_creativ_0_appl_file
+        var sDebug = 'Log start';
         try {
-            if (tableName == 'Business Rule') {
-                // code block
-                var grTable = new GlideRecord('sys_script');
-                var enQuery = 'name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
-                grTable.addEncodedQuery(enQuery);
-                grTable.query();
-                if (grTable.next()) {
-                    var brTableName = grTable.collection + '';
-                    var grTableObj = new GlideRecord('sys_db_object');
-                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
-                    grTableObj.query();
-                    if (grTableObj.next()) {
-                        targetNode = grTableObj.sys_update_name + '';
-                        edgeIdentifier = updateName + "|" + targetNode;
+            var fieldMapper = {};
+            fieldMapper['u_name'] = 'sys_name';
+            fieldMapper['u_scope_display_value'] = 'sys_scope';
+            fieldMapper['u_editor_name'] = 'sys_class_name';
+            fieldMapper['u_name_value'] = 'sys_name';
+            fieldMapper['u_taxonomy_definition'] = 'sys_class_name';
+            fieldMapper['u_sys_id'] = 'sys_update_name';
+            fieldMapper['u_scope_value'] = 'sys_scope';
+            fieldMapper['u_target_node'] = 'targetNode';
+            fieldMapper['u_edge_label'] = 'edgeIdentifier';
+            fieldMapper['u_update_name'] = 'sys_update_name';
+            var rowObject = {};
+            var rowIndex = 0;
+            var fieldList = ['sys_name', 'sys_class_name', 'sys_scope', 'sys_update_name'];
+            var inScopeClasses = getAllowedClasses();
+            //var inScopeClasses = 'sys_security_acl,sys_script_fix,scheduled_import_set,sys_alias,sys_app_application,sys_data_source,sysauto_script,sys_hub_flow,sys_rte_eb_etl_definition,sys_script,sys_script_include,sys_transform_map,sys_user_role,sys_db_object';
+            var grMeta = new GlideRecord('sys_metadata');
+            var file = '';
+            var grFile = new GlideRecord('x_146833_creativ_0_file');
+            grFile.orderByDesc('sys_updated_on');
+            grFile.query();
+            if (grFile.next()) {
+                file = grFile.file_application.sys_id + '';
+            }
+            var appSysId = file;
+            //sys_scope=2bb0627a0782ed90b965f7208c1ed07a^sys_class_name=sys_script
+            sDebug += "sys_scope=" + appSysId + "\n";
+            var enQuery = 'sys_scope=' + appSysId + '^sys_class_name' + 'IN' + inScopeClasses;
+            //var enQuery = 'sys_scope=' + appSysId;
+            grMeta.addEncodedQuery(enQuery);
+            grMeta.orderByDesc('sys_class_name');
+            grMeta.query();
+            while (grMeta.next()) {
+                var rowData = '';
+                var fieldValueObj = {};
+                for (var index = 0; index < fieldList.length; index++) {
+                    var fieldObject = {};
+                    if (global.JSUtil.notNil(fieldValue)) {
+                        rowData += '|' + fieldValue;
                     }
+                    if (global.JSUtil.nil(fieldValue)) {
+                        rowData = fieldValue;
+                    }
+                    var fieldName = fieldList[index] + '';
+                    var fieldValue = grMeta.getDisplayValue(fieldName);
+                    fieldValueObj[fieldName] = fieldValue;
                 }
+                var edgeObject = '';
+                // edgeObject = getEdgeDetails(grMeta.getDisplayValue('sys_class_name'), grMeta.sys_name, grMeta.sys_update_name, grMeta.sys_scope);
+                var targetNode = '';
+                if (global.JSUtil.notNil(edgeObject)) {
+                    if (global.JSUtil.notNil(edgeObject.targetNode)) {
+                        targetNode = edgeObject.targetNode + '';
+                    }
+                    var edgeIdentifier = '';
+                    if (global.JSUtil.notNil(edgeObject.edgeIdentifier)) {
+                        edgeIdentifier = edgeObject.edgeIdentifier + '';
+                    }
+                    //sDebug += " targetNode =" + targetNode + " edgeIdentifier=" + edgeIdentifier + "\n";
+                }
+                fieldValueObj['targetNode'] = targetNode + '';
+                fieldValueObj['edgeIdentifier'] = edgeIdentifier + '';
+                //rowObject[grMeta.sys_update_name + ''] = rowData;
+                //rowObject[grMeta.sys_update_name + ''] = fieldValueObj;
+                var loadField = true;
+                if (grMeta.sys_class_name == 'sys_dictionary') {
+                    loadField = false;
+                    loadField = checkDictionaryType(grMeta.sys_update_name + '');
+                }
+                if (loadField == true) {
+                    rowObject[rowIndex] = fieldValueObj;
+                    rowIndex++;
+                }
+            }
+            for (var m in rowObject) {
+                var map = {};
+                //sDebug += m +'=' + rowObject[m] + "\n";
+                var columnObject = rowObject[m];
+                for (var t in columnObject) {
+                    for (var fieldIndex in fieldMapper) {
+                        map[fieldIndex] = columnObject[fieldMapper[fieldIndex]];
+                        sDebug += fieldIndex + "=" + fieldMapper[fieldIndex] + "=" + columnObject[fieldMapper[fieldIndex]] + "\n";
+                    }
+                    //sDebug += m + '=' + t + "==" + columnObject[t] + "\n";
+                }
+                import_set_table.insert(map);
             }
         } catch (e) {
-            sDebug += 'exception in business rule edge lookup' + e;
+            sDebug = "Exception=" + e;
         }
-        if (tableName == 'Data Source') {
+
+        function checkDictionaryType(updateName) {
+            var loadFlag = false;
+            var grDic = new GlideRecord('sys_dictionary');
+            var enQuery = 'sys_update_name=' + updateName + '^internal_type.label=' + 'reference';
+            grDic.addEncodedQuery(enQuery);
+            grDic.query();
+            if (grDic.next()) {
+                loadFlag = true;
+            }
+            return loadFlag;
+        }
+
+        function getEdgeDetails(tableName, objectName, updateName, sysscope) {
+            var edgeObject = {};
+            var targetNode = '';
+            var edgeIdentifier = '';
             try {
-                // code block
-                var grTable = new GlideRecord('sys_data_source');
-                var enQuery = 'name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
-                grTable.addEncodedQuery(enQuery);
-                grTable.query();
-                if (grTable.next()) {
-                    var brTableName = grTable.import_set_table_name.getDisplayValue();
-                    var grTableObj = new GlideRecord('sys_db_object');
-                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
-                    grTableObj.query();
-                    if (grTableObj.next()) {
-                        targetNode = grTableObj.sys_update_name + '';
-                        edgeIdentifier = updateName + "|" + targetNode;
+                if (tableName == 'Business Rule') {
+                    // code block
+                    var grTable = new GlideRecord('sys_script');
+                    var enQuery = 'name=' + objectName + '';
+                    sDebug += " enQuery =" + enQuery + "\n";
+                    grTable.addEncodedQuery(enQuery);
+                    grTable.query();
+                    if (grTable.next()) {
+                        var brTableName = grTable.collection + '';
+                        var grTableObj = new GlideRecord('sys_db_object');
+                        grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                        grTableObj.query();
+                        if (grTableObj.next()) {
+                            targetNode = grTableObj.sys_update_name + '';
+                            edgeIdentifier = updateName + "|" + targetNode;
+                        }
                     }
                 }
             } catch (e) {
-                sDebug += 'exception in Data source edge lookup' + e;
+                sDebug += 'exception in business rule edge lookup' + e;
             }
-        }
-
-        //Table Transform Map
-
-        if (tableName == 'Table Transform Map') {
-            try {
-                // code block
-                var grTable = new GlideRecord('sys_transform_map');
-                var enQuery = 'name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
-                grTable.addEncodedQuery(enQuery);
-                grTable.query();
-                if (grTable.next()) {
-                    var brTableName = grTable.target_table;
-                    var grTableObj = new GlideRecord('sys_db_object');
-                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
-                    grTableObj.query();
-                    if (grTableObj.next()) {
-                        targetNode = grTableObj.sys_update_name + '';
-                        edgeIdentifier = updateName + "|" + targetNode;
+            if (tableName == 'Data Source') {
+                try {
+                    // code block
+                    var grTable = new GlideRecord('sys_data_source');
+                    var enQuery = 'name=' + objectName + '';
+                    //sDebug += " enQuery =" + enQuery + "\n";
+                    grTable.addEncodedQuery(enQuery);
+                    grTable.query();
+                    if (grTable.next()) {
+                        var brTableName = grTable.import_set_table_name.getDisplayValue();
+                        var grTableObj = new GlideRecord('sys_db_object');
+                        grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                        grTableObj.query();
+                        if (grTableObj.next()) {
+                            targetNode = grTableObj.sys_update_name + '';
+                            edgeIdentifier = updateName + "|" + targetNode;
+                        }
                     }
+                } catch (e) {
+                    sDebug += 'exception in Data source edge lookup' + e;
                 }
-            } catch (e) {
-                sDebug += 'exception in Data source edge lookup' + e;
             }
-        }
-        // report lookup
-        if (tableName == 'Report') {
-            try {
-                // code block
-                var grTable = new GlideRecord('sys_report');
-                var enQuery = 'name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
-                grTable.addEncodedQuery(enQuery);
-                grTable.query();
-                if (grTable.next()) {
-                    var brTableName = grTable.table;
-                    var grTableObj = new GlideRecord('sys_db_object');
-                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
-                    grTableObj.query();
-                    if (grTableObj.next()) {
-                        targetNode = grTableObj.sys_update_name + '';
-                        edgeIdentifier = updateName + "|" + targetNode;
+
+            //Table Transform Map
+
+            if (tableName == 'Table Transform Map') {
+                try {
+                    // code block
+                    var grTable = new GlideRecord('sys_transform_map');
+                    var enQuery = 'name=' + objectName + '';
+                    sDebug += " enQuery =" + enQuery + "\n";
+                    grTable.addEncodedQuery(enQuery);
+                    grTable.query();
+                    if (grTable.next()) {
+                        var brTableName = grTable.target_table;
+                        var grTableObj = new GlideRecord('sys_db_object');
+                        grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                        grTableObj.query();
+                        if (grTableObj.next()) {
+                            targetNode = grTableObj.sys_update_name + '';
+                            edgeIdentifier = updateName + "|" + targetNode;
+                        }
                     }
+                } catch (e) {
+                    sDebug += 'exception in Data source edge lookup' + e;
                 }
-            } catch (e) {
-                sDebug += 'exception in report edge lookup' + e;
             }
-        }
-        //Robust Import Set Transformer to table
-        if (tableName == 'Robust Import Set Transformer') {
-            try {
-                // code block
-                var grTable = new GlideRecord('sys_robust_import_set_transformer');
-                var enQuery = 'name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
-                grTable.addEncodedQuery(enQuery);
-                grTable.query();
-                if (grTable.next()) {
-                    var brTableName = grTable.source_table;
-                    var grTableObj = new GlideRecord('sys_db_object');
-                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
-                    grTableObj.query();
-                    if (grTableObj.next()) {
-                        targetNode = grTableObj.sys_update_name + '';
-                        edgeIdentifier = updateName + "|" + targetNode;
+            // report lookup
+            if (tableName == 'Report') {
+                try {
+                    // code block
+                    var grTable = new GlideRecord('sys_report');
+                    var enQuery = 'name=' + objectName + '';
+                    sDebug += " enQuery =" + enQuery + "\n";
+                    grTable.addEncodedQuery(enQuery);
+                    grTable.query();
+                    if (grTable.next()) {
+                        var brTableName = grTable.table;
+                        var grTableObj = new GlideRecord('sys_db_object');
+                        grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                        grTableObj.query();
+                        if (grTableObj.next()) {
+                            targetNode = grTableObj.sys_update_name + '';
+                            edgeIdentifier = updateName + "|" + targetNode;
+                        }
                     }
+                } catch (e) {
+                    sDebug += 'exception in report edge lookup' + e;
                 }
-            } catch (e) {
-                sDebug += 'exception in Robust Import Set Transformer edge lookup' + e;
             }
-        }
-
-        if (tableName == 'UI Action') {
-            try {
-                // code block
-                var grTable = new GlideRecord('sys_ui_action');
-                var enQuery = 'name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
-                grTable.addEncodedQuery(enQuery);
-                grTable.query();
-                if (grTable.next()) {
-                    var brTableName = grTable.table;
-                    var grTableObj = new GlideRecord('sys_db_object');
-                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
-                    grTableObj.query();
-                    if (grTableObj.next()) {
-                        targetNode = grTableObj.sys_update_name + '';
-                        edgeIdentifier = updateName + "|" + targetNode;
+            //Robust Import Set Transformer to table
+            if (tableName == 'Robust Import Set Transformer') {
+                try {
+                    // code block
+                    var grTable = new GlideRecord('sys_robust_import_set_transformer');
+                    var enQuery = 'name=' + objectName + '';
+                    sDebug += " enQuery =" + enQuery + "\n";
+                    grTable.addEncodedQuery(enQuery);
+                    grTable.query();
+                    if (grTable.next()) {
+                        var brTableName = grTable.source_table;
+                        var grTableObj = new GlideRecord('sys_db_object');
+                        grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                        grTableObj.query();
+                        if (grTableObj.next()) {
+                            targetNode = grTableObj.sys_update_name + '';
+                            edgeIdentifier = updateName + "|" + targetNode;
+                        }
                     }
+                } catch (e) {
+                    sDebug += 'exception in Robust Import Set Transformer edge lookup' + e;
                 }
-            } catch (e) {
-                sDebug += 'exception in UI Action edge lookup' + e;
             }
-        }
 
-        if (tableName == 'Flow Formatter') {
-            try {
-                // code block
-                var grTable = new GlideRecord('sys_process_flow');
-                var enQuery = 'name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
-                grTable.addEncodedQuery(enQuery);
-                grTable.query();
-                if (grTable.next()) {
-                    var brTableName = grTable.table;
-                    var grTableObj = new GlideRecord('sys_db_object');
-                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
-                    grTableObj.query();
-                    if (grTableObj.next()) {
-                        targetNode = grTableObj.sys_update_name + '';
-                        edgeIdentifier = updateName + "|" + targetNode;
+            if (tableName == 'UI Action') {
+                try {
+                    // code block
+                    var grTable = new GlideRecord('sys_ui_action');
+                    var enQuery = 'name=' + objectName + '';
+                    sDebug += " enQuery =" + enQuery + "\n";
+                    grTable.addEncodedQuery(enQuery);
+                    grTable.query();
+                    if (grTable.next()) {
+                        var brTableName = grTable.table;
+                        var grTableObj = new GlideRecord('sys_db_object');
+                        grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                        grTableObj.query();
+                        if (grTableObj.next()) {
+                            targetNode = grTableObj.sys_update_name + '';
+                            edgeIdentifier = updateName + "|" + targetNode;
+                        }
                     }
+                } catch (e) {
+                    sDebug += 'exception in UI Action edge lookup' + e;
                 }
-            } catch (e) {
-                sDebug += 'exception in Flow Formatter edge lookup' + e;
             }
-        }
 
-
-        // Client Script
-
-        if (tableName == 'Client Script') {
-            try {
-                // code block
-                var grTable = new GlideRecord('sys_script_client');
-                var enQuery = 'name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
-                grTable.addEncodedQuery(enQuery);
-                grTable.query();
-                if (grTable.next()) {
-                    var brTableName = grTable.table;
-                    var grTableObj = new GlideRecord('sys_db_object');
-                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
-                    grTableObj.query();
-                    if (grTableObj.next()) {
-                        targetNode = grTableObj.sys_update_name + '';
-                        edgeIdentifier = updateName + "|" + targetNode;
+            if (tableName == 'Flow Formatter') {
+                try {
+                    // code block
+                    var grTable = new GlideRecord('sys_process_flow');
+                    var enQuery = 'name=' + objectName + '';
+                    sDebug += " enQuery =" + enQuery + "\n";
+                    grTable.addEncodedQuery(enQuery);
+                    grTable.query();
+                    if (grTable.next()) {
+                        var brTableName = grTable.table;
+                        var grTableObj = new GlideRecord('sys_db_object');
+                        grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                        grTableObj.query();
+                        if (grTableObj.next()) {
+                            targetNode = grTableObj.sys_update_name + '';
+                            edgeIdentifier = updateName + "|" + targetNode;
+                        }
                     }
+                } catch (e) {
+                    sDebug += 'exception in Flow Formatter edge lookup' + e;
                 }
-            } catch (e) {
-                sDebug += 'exception in Client Script edge lookup' + e;
             }
-        }
 
-        //
 
-        if (tableName == 'Action Type') {
-            try {
-                // code block
-                var grTable = new GlideRecord('sys_hub_action_type_definition');
-                var enQuery = 'name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
-                grTable.addEncodedQuery(enQuery);
-                grTable.query();
-                if (grTable.next()) {
-                    var brTableName = grTable.table;
-                    var grTableObj = new GlideRecord('sys_db_object');
-                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
-                    grTableObj.query();
-                    if (grTableObj.next()) {
-                        targetNode = grTableObj.sys_update_name + '';
-                        edgeIdentifier = updateName + "|" + targetNode;
+            // Client Script
+
+            if (tableName == 'Client Script') {
+                try {
+                    // code block
+                    var grTable = new GlideRecord('sys_script_client');
+                    var enQuery = 'name=' + objectName + '';
+                    sDebug += " enQuery =" + enQuery + "\n";
+                    grTable.addEncodedQuery(enQuery);
+                    grTable.query();
+                    if (grTable.next()) {
+                        var brTableName = grTable.table;
+                        var grTableObj = new GlideRecord('sys_db_object');
+                        grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                        grTableObj.query();
+                        if (grTableObj.next()) {
+                            targetNode = grTableObj.sys_update_name + '';
+                            edgeIdentifier = updateName + "|" + targetNode;
+                        }
                     }
+                } catch (e) {
+                    sDebug += 'exception in Client Script edge lookup' + e;
                 }
-            } catch (e) {
-                sDebug += 'exception in UI Action edge lookup' + e;
             }
-        }
 
-        //ETL Definition to Robust Import Set Transformer
-        if (tableName == 'ETL Definition') {
-            try {
-                // code block
-                var grTable = new GlideRecord('sys_robust_import_set_transformer');
-                var enQuery = 'robust_transform_engine.name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
-                grTable.addEncodedQuery(enQuery);
-                grTable.query();
-                if (grTable.next()) {
-                    //var brTableName = grTable.robust_transform_engine;
-                    //var grTableObj = new GlideRecord('sys_rte_eb_etl_definition');
-                    //grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
-                    //grTableObj.query();
-                    //if (grTableObj.next()) {
-                    targetNode = grTable.sys_update_name + '';
-                    edgeIdentifier = updateName + "|" + targetNode;
-                    //}
+            //
+
+            if (tableName == 'Action Type') {
+                try {
+                    // code block
+                    var grTable = new GlideRecord('sys_hub_action_type_definition');
+                    var enQuery = 'name=' + objectName + '';
+                    sDebug += " enQuery =" + enQuery + "\n";
+                    grTable.addEncodedQuery(enQuery);
+                    grTable.query();
+                    if (grTable.next()) {
+                        var brTableName = grTable.table;
+                        var grTableObj = new GlideRecord('sys_db_object');
+                        grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                        grTableObj.query();
+                        if (grTableObj.next()) {
+                            targetNode = grTableObj.sys_update_name + '';
+                            edgeIdentifier = updateName + "|" + targetNode;
+                        }
+                    }
+                } catch (e) {
+                    sDebug += 'exception in UI Action edge lookup' + e;
                 }
-            } catch (e) {
-                sDebug += 'exception in ETL Definition edge lookup' + e;
             }
-        }
-        /*
+
+            //ETL Definition to Robust Import Set Transformer
+            if (tableName == 'ETL Definition') {
+                try {
+                    // code block
+                    var grTable = new GlideRecord('sys_robust_import_set_transformer');
+                    var enQuery = 'robust_transform_engine.name=' + objectName + '';
+                    sDebug += " enQuery =" + enQuery + "\n";
+                    grTable.addEncodedQuery(enQuery);
+                    grTable.query();
+                    if (grTable.next()) {
+                        //var brTableName = grTable.robust_transform_engine;
+                        //var grTableObj = new GlideRecord('sys_rte_eb_etl_definition');
+                        //grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                        //grTableObj.query();
+                        //if (grTableObj.next()) {
+                        targetNode = grTable.sys_update_name + '';
+                        edgeIdentifier = updateName + "|" + targetNode;
+                        //}
+                    }
+                } catch (e) {
+                    sDebug += 'exception in ETL Definition edge lookup' + e;
+                }
+            }
+            /*
         //Access Control
         try {
             if (tableName == 'Access Control') {
@@ -376,11 +377,11 @@ return loadFlag;
             sDebug += ' Exception in ACL lookup' + e;
         }
 		*/
-        edgeObject.targetNode = targetNode;
-        edgeObject.edgeIdentifier = edgeIdentifier;
-        return edgeObject;
+            edgeObject.targetNode = targetNode;
+            edgeObject.edgeIdentifier = edgeIdentifier;
+            return edgeObject;
 
-        /*
+            /*
         //Scheduled Data Import
         if (tableName == 'Scheduled Data Import') {
             // code block
@@ -396,30 +397,40 @@ return loadFlag;
         }
 		*/
 
-    }
-
-    function getAllowedClasses() {
-        var classList = '';
-        try {
-            var grAlClasses = new GlideRecord('x_146833_creativ_0_allowed_classes');
-            grAlClasses.addEncodedQuery('yes_noSTARTSWITHYes');
-            grAlClasses.query();
-            while (grAlClasses.next()) {
-                if (global.JSUtil.nil(classList)) {
-                    classList = grAlClasses.classname + '';
-                } else {
-                    classList += "," + grAlClasses.classname + '';
-                }
-            }
-        } catch (e) {
-            sDebug += " Exception in querying class list" + e;
         }
-        return classList;
-    }
-    gs.info(sDebug);
+
+        function getAllowedClasses() {
+            var classList = '';
+            try {
+                var anaysisMode = gs.getProperty('x_146833_creativ_0.acw_analysis_mode');
+                var enAcQuery = 'application=NULL^yes_noSTARTSWITHYes';
+                if (anaysisMode == 'Default') {
+                    enAcQuery = 'application=NULL^yes_noSTARTSWITHYes';
+                } else {
+                    if (anaysisMode == 'All') {
+						enAcQuery = 'application=NULL';
+                    }
+				}
+                    var grAlClasses = new GlideRecord('x_146833_creativ_0_allowed_classes');
+
+                    grAlClasses.addEncodedQuery(enAcQuery);
+                    grAlClasses.query();
+                    while (grAlClasses.next()) {
+                        if (global.JSUtil.nil(classList)) {
+                            classList = grAlClasses.classname + '';
+                        } else {
+                            classList += "," + grAlClasses.classname + '';
+                        }
+                    }
+                } catch (e) {
+                    sDebug += " Exception in querying class list" + e;
+                }
+                return classList;
+            }
+            gs.info(sDebug);
 
 
-})(import_set_table, data_source, import_log, last_success_import_time);]]></data_loader>
+        })(import_set_table, data_source, import_log, last_success_import_time);]]></data_loader>
         <data_stream_action/>
         <data_stream_action_inputs/>
         <data_stream_connection_alias/>
@@ -475,14 +486,14 @@ return loadFlag;
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-10-14 15:30:12</sys_created_on>
         <sys_id>2bcbbb320739f550b965f7208c1ed0f9</sys_id>
-        <sys_mod_count>237</sys_mod_count>
+        <sys_mod_count>239</sys_mod_count>
         <sys_name>Get System MetaData via Script</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_data_source_2bcbbb320739f550b965f7208c1ed0f9</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-18 20:09:13</sys_updated_on>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-22 00:43:08</sys_updated_on>
         <table_name/>
         <type>CUSTOM</type>
         <use_batch_import>false</use_batch_import>

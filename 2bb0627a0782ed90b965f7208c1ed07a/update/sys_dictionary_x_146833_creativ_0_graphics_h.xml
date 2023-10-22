@@ -16,7 +16,7 @@
         <column_label>H</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>120</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -58,7 +58,7 @@
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_dictionary_x_146833_creativ_0_graphics_h</sys_update_name>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-04-11 00:42:44</sys_updated_on>
+        <sys_updated_on>2023-05-02 12:09:06</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

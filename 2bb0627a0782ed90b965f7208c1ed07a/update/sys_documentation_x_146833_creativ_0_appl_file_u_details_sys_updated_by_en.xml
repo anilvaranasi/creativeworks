@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_details_sys_updated_by" label="details/sys_updated_by" language="en" table="x_146833_creativ_0_appl_file">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_details_sys_updated_by</element>
+            <help/>
+            <hint/>
+            <label>details/sys_updated_by</label>
+            <language>en</language>
+            <name>x_146833_creativ_0_appl_file</name>
+            <plural>details/sys_updated_by</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>adminanil</sys_created_by>
+            <sys_created_on>2023-05-02 11:05:31</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>details/sys_updated_by</sys_name>
+            <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+            <sys_update_name>sys_documentation_x_146833_creativ_0_appl_file_u_details_sys_updated_by_en</sys_update_name>
+            <sys_updated_by>adminanil</sys_updated_by>
+            <sys_updated_on>2023-05-02 11:05:31</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

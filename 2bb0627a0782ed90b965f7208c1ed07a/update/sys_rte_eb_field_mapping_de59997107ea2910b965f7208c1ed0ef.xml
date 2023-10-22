@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_field_mapping">
+    <sys_rte_eb_field_mapping action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <referenced_sys_rte_eb_entity/>
+        <source_sys_rte_eb_field display_value="u_scope_value">f4b411b107aa2910b965f7208c1ed0c3</source_sys_rte_eb_field>
+        <sys_class_name>sys_rte_eb_field_mapping</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-05-02 11:42:14</sys_created_on>
+        <sys_id>de59997107ea2910b965f7208c1ed0ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition>
+        <sys_rte_eb_entity_mapping display_value="Level 1 Source To Staging">11b5153907aa2910b965f7208c1ed08b</sys_rte_eb_entity_mapping>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_field_mapping_de59997107ea2910b965f7208c1ed0ef</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-05-02 11:42:14</sys_updated_on>
+        <target_sys_rte_eb_field display_value="u_scope_value">3c055d3507aa2910b965f7208c1ed0fe</target_sys_rte_eb_field>
+    </sys_rte_eb_field_mapping>
+</record_update>
