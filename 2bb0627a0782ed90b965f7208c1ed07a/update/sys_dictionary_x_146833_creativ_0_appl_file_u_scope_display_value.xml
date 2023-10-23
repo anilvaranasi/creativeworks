@@ -5,7 +5,7 @@
         <attributes>edge_encryption_enabled=true,import_attribute_name=scope/display_value</attributes>
         <audit>false</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>scope/display_value</column_label>
@@ -29,7 +29,7 @@
         <function_field>false</function_field>
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
-        <max_length>40</max_length>
+        <max_length>250</max_length>
         <name>x_146833_creativ_0_appl_file</name>
         <next_element/>
         <primary>false</primary>
@@ -53,7 +53,7 @@
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_dictionary_x_146833_creativ_0_appl_file_u_scope_display_value</sys_update_name>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-05-02 11:05:30</sys_updated_on>
+        <sys_updated_on>2023-10-22 17:45:00</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -37,7 +37,7 @@
         }
         var appSysId = file;
         //sys_scope=2bb0627a0782ed90b965f7208c1ed07a^sys_class_name=sys_script
-        sDebug += "sys_scope=" + appSysId + "\n";
+        sDebug += "  sys_scope=" + appSysId + "\n";
         var enQuery = 'sys_scope=' + appSysId + '^sys_class_name' + 'IN' + inScopeClasses;
         //var enQuery = 'sys_scope=' + appSysId;
         grMeta.addEncodedQuery(enQuery);
@@ -558,33 +558,23 @@
     }
 
     function getAllowedClasses() {
-            var classList = '';
-            try {
-                var anaysisMode = gs.getProperty('x_146833_creativ_0.acw_analysis_mode');
-                var enAcQuery = 'application=NULL^yes_noSTARTSWITHYes';
-                if (anaysisMode == 'Default') {
-                    enAcQuery = 'application=NULL^yes_noSTARTSWITHYes';
+        var classList = '';
+        try {
+            var grAlClasses = new GlideRecord('x_146833_creativ_0_allowed_classes');
+            grAlClasses.addEncodedQuery('yes_noSTARTSWITHYes');
+            grAlClasses.query();
+            while (grAlClasses.next()) {
+                if (global.JSUtil.nil(classList)) {
+                    classList = grAlClasses.classname + '';
                 } else {
-                    if (anaysisMode == 'All') {
-						enAcQuery = 'application=NULL';
-                    }
-				}
-                    var grAlClasses = new GlideRecord('x_146833_creativ_0_allowed_classes');
-
-                    grAlClasses.addEncodedQuery(enAcQuery);
-                    grAlClasses.query();
-                    while (grAlClasses.next()) {
-                        if (global.JSUtil.nil(classList)) {
-                            classList = grAlClasses.classname + '';
-                        } else {
-                            classList += "," + grAlClasses.classname + '';
-                        }
-                    }
-                } catch (e) {
-                    sDebug += " Exception in querying class list" + e;
+                    classList += "," + grAlClasses.classname + '';
                 }
-                return classList;
             }
+        } catch (e) {
+            sDebug += " Exception in querying class list" + e;
+        }
+        return classList;
+    }
 
     function getTableNames(script) {
         //var sDebug = 'Logs from script include';
@@ -639,7 +629,7 @@
         <jpath_root_node/>
         <last_run_database_field/>
         <last_run_datetime/>
-        <last_success_import_time>2023-10-18 20:09:44</last_success_import_time>
+        <last_success_import_time>2023-10-22 17:50:32</last_success_import_time>
         <ldap_target/>
         <ldapprobe_result_set_rows>200</ldapprobe_result_set_rows>
         <limit/>
@@ -672,14 +662,14 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-10-17 15:54:08</sys_created_on>
         <sys_id>d41edfb3073d7190b965f7208c1ed0f9</sys_id>
-        <sys_mod_count>71</sys_mod_count>
+        <sys_mod_count>74</sys_mod_count>
         <sys_name>ACW-Get EdgeData</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_data_source_d41edfb3073d7190b965f7208c1ed0f9</sys_update_name>
-        <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-22 00:44:01</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-10-22 17:50:32</sys_updated_on>
         <table_name/>
         <type>CUSTOM</type>
         <use_batch_import>false</use_batch_import>
