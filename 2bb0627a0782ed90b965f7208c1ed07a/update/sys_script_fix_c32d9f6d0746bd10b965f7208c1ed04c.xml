@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>ACW-CleanupSysMeta</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var grMeta  = new GlideRecord('sys_metadata');
+var enQuery = "update_set=66304ba90702bd10b965f7208c1ed08a^type=Metadata Snapshot^payloadLIKEx_146833_creativ_0_label_graphics_lookup^ORpayloadLIKEx_146833_creativ_0_allowed_classes";
+grMeta.addEncodedQuery(enQuery);
+grMeta.query();
+if(grMeta.next()) {
+gs.print("CountOfRecords=" + grMeta.getRowCount());
+}
+
+
+
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 02:20:12</sys_created_on>
+        <sys_id>c32d9f6d0746bd10b965f7208c1ed04c</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>ACW-CleanupSysMeta</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_script_fix_c32d9f6d0746bd10b965f7208c1ed04c</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 02:28:36</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

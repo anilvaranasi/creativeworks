@@ -31,15 +31,15 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-04-10 22:56:32</sys_created_on>
         <sys_id>2bb0627a0782ed90b965f7208c1ed07a</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-04 14:22:45</sys_updated_on>
+        <sys_updated_on>2023-10-23 00:12:37</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>0.0.0-CONVERTED</version>
+        <version>1.0</version>
     </sys_app>
 </record_update>

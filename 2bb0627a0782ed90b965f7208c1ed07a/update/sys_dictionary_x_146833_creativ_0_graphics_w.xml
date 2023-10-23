@@ -5,13 +5,14 @@
         <attributes/>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
-var nodeName  = current.getDisplayValue('node');
-var name = nodeName;
-var nameLength = name.length;
-var width = 90;
-if(global.JSUtil.notNil(nameLength)) {
-	width = 12*nameLength;
-}
+	
+	var nodeLabel = '';
+	var width = 200;
+	nodeLabel  = current.node.label + ''; 
+	if(global.JSUtil.notNil(nodeLabel)) {
+		var labelLength = nodeLabel.length;
+		width = labelLength*12;
+	}
 
 	// Add your code here
 	return width;  // return the calculated value
@@ -23,7 +24,7 @@ if(global.JSUtil.notNil(nameLength)) {
         <column_label>W</column_label>
         <comments/>
         <create_roles/>
-        <default_value>90</default_value>
+        <default_value/>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -39,7 +40,7 @@ if(global.JSUtil.notNil(nameLength)) {
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="">float</internal_type>
+        <internal_type display_value="Integer">integer</internal_type>
         <mandatory>false</mandatory>
         <max_length>5</max_length>
         <name>x_146833_creativ_0_graphics</name>
@@ -58,14 +59,14 @@ if(global.JSUtil.notNil(nameLength)) {
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>adminanil</sys_created_by>
-        <sys_created_on>2023-04-11 00:42:15</sys_created_on>
+        <sys_created_on>2023-10-23 02:49:43</sys_created_on>
         <sys_name>W</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_dictionary_x_146833_creativ_0_graphics_w</sys_update_name>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-14 19:43:08</sys_updated_on>
+        <sys_updated_on>2023-10-23 05:03:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

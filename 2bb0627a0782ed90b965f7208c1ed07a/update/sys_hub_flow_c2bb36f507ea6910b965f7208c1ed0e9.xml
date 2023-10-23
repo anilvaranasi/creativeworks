@@ -4,7 +4,7 @@
         <acls/>
         <active>true</active>
         <annotation/>
-        <attributes/>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from>225c9b4007222994b965f7208c1ed01c</copied_from>
@@ -18,19 +18,19 @@
         <outputs/>
         <pre_compiled>false</pre_compiled>
         <remote_trigger_id/>
-        <run_as>user</run_as>
+        <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>published</status>
+        <status>draft</status>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-05-02 18:51:53</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c2bb36f507ea6910b965f7208c1ed0e9</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Generate App Digital Twin</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
@@ -38,7 +38,7 @@
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_hub_flow_c2bb36f507ea6910b965f7208c1ed0e9</sys_update_name>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-13 16:04:02</sys_updated_on>
+        <sys_updated_on>2023-10-23 04:04:42</sys_updated_on>
         <type>subflow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=c2bb36f507ea6910b965f7208c1ed0e9"/>
@@ -122,14 +122,14 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-05-02 19:19:17</sys_created_on>
         <sys_id>d7f14ff5072e6910b965f7208c1ed065</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name/>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-05-02 19:19:17</sys_updated_on>
+        <sys_updated_on>2023-10-23 03:41:11</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -160,10 +160,10 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-05-02 18:51:54</sys_created_on>
         <sys_id>9ebb76f507ea6910b965f7208c1ed029</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-13 16:04:07</sys_updated_on>
+        <sys_updated_on>2023-10-23 03:44:08</sys_updated_on>
         <ui_id>6de9aeba-6956-49a4-98a6-7f2ba6d1dac3</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=9ebb76f507ea6910b965f7208c1ed029"/>
@@ -201,7 +201,7 @@
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=c2bb36f507ea6910b965f7208c1ed0e9^sys_idNOT INaff14ff5072e6910b965f7208c1ed0af"/>
     <sys_hub_sub_flow_instance action="INSERT_OR_UPDATE">
         <attributes/>
-        <comment/>
+        <comment>Run the flow</comment>
         <display_text/>
         <flow display_value="Generate App Digital Twin">c2bb36f507ea6910b965f7208c1ed0e9</flow>
         <inputs/>
@@ -214,10 +214,10 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-05-02 19:19:17</sys_created_on>
         <sys_id>aff14ff5072e6910b965f7208c1ed0af</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-13 16:04:02</sys_updated_on>
+        <sys_updated_on>2023-10-23 03:44:08</sys_updated_on>
         <ui_id>919042a9-d975-48a9-8341-1260a78f9be4</ui_id>
     </sys_hub_sub_flow_instance>
     <sys_variable_value action="delete_multiple" query="document_key=aff14ff5072e6910b965f7208c1ed0af"/>
@@ -362,7 +362,7 @@
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
         <attributes/>
         <block display_value="">090ab66e07353550b965f7208c1ed08f</block>
-        <comment/>
+        <comment>Set Http connection</comment>
         <connected_to/>
         <decision_table/>
         <decision_table_inputs/>
@@ -381,10 +381,10 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-10-13 16:03:56</sys_created_on>
         <sys_id>050ab66e07353550b965f7208c1ed090</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-13 16:04:02</sys_updated_on>
+        <sys_updated_on>2023-10-23 03:44:08</sys_updated_on>
         <ui_id>cb49cd02-0132-47ab-b3cb-12ac6386bdac</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -429,10 +429,10 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-05-02 18:51:54</sys_created_on>
         <sys_id>1ebb36f507ea6910b965f7208c1ed0fc</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-13 16:04:02</sys_updated_on>
+        <sys_updated_on>2023-10-23 03:44:08</sys_updated_on>
         <ui_id>46d6269b-0722-4254-9b06-1120b26ef231</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -446,10 +446,10 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-05-02 18:51:54</sys_created_on>
         <sys_id>d2bb76f507ea6910b965f7208c1ed025</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-13 16:03:56</sys_updated_on>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"integer\",\"default_value\":\"\",\"action_error_output\":\"true\",\"label\":\"Code\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"action_error_output\":\"true\",\"label\":\"Message\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Action Status\",\"read_only_complex_object\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"8e3eb395-c990-4a7d-b8da-081a1acab7eb\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <sys_updated_on>2023-10-23 03:41:02</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"integer\",\"default_value\":\"\",\"action_error_output\":\"true\",\"label\":\"Code\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"action_error_output\":\"true\",\"label\":\"Message\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Action Status\",\"read_only_complex_object\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"8e3eb395-c990-4a7d-b8da-081a1acab7eb\"}"}},"serializationFormat":"JSON"}</value>
         <variable display_value="Error Status">0f72a5a25b132010b61ea2013781c749</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -492,10 +492,10 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-05-02 18:51:54</sys_created_on>
         <sys_id>5abb36f507ea6910b965f7208c1ed0f9</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-13 16:04:01</sys_updated_on>
+        <sys_updated_on>2023-10-23 03:44:08</sys_updated_on>
         <ui_id>b5d9dc37-1743-479e-98c3-c9584a82f95f</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1234,14 +1234,14 @@
     <sys_hub_flow action="UPDATE">
         <sys_id>c2bb36f507ea6910b965f7208c1ed0e9</sys_id>
         <latest_snapshot>94028ff5072e6910b965f7208c1ed069</latest_snapshot>
-        <compiler_build>glide-utah-12-21-2022__patch4-hotfix2-06-23-2023_06-23-2023_2224.zip</compiler_build>
+        <compiler_build>glide-vancouver-07-06-2023__patch2-hotfix1-10-04-2023_10-06-2023_1235.zip</compiler_build>
     </sys_hub_flow>
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=c2bb36f507ea6910b965f7208c1ed0e9"/>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=c2bb36f507ea6910b965f7208c1ed0e9^sys_idNOT INe002cff5072e6910b965f7208c1ed00b"/>
     <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"e002cff5072e6910b965f7208c1ed00b","name":"plan","plan_signature":null}}</plan>
         <plan_id display_value="Generate App Digital Twin">c2bb36f507ea6910b965f7208c1ed0e9</plan_id>
-        <snapshot>630aba6e07353550b965f7208c1ed0a7</snapshot>
+        <snapshot>c50d1d6d078e3d10b965f7208c1ed06c</snapshot>
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-05-02 19:19:21</sys_created_on>
         <sys_domain>global</sys_domain>
