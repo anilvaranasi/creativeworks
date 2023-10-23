@@ -4,22 +4,22 @@
         <element attributes="edge_encryption_enabled=true" label="Editor name" max_length="40" name="editor_name" type="string"/>
         <element default="#7D9264" label="Fill" max_length="10" name="fill" type="string"/>
         <element attributes="encode_utf8=false" label="Graph" max_length="32" name="graph" reference="x_146833_creativ_0_graph" type="reference"/>
-        <element default="120" label="H" max_length="5" name="h" type="float"/>
+        <element default="120" label="H" max_length="5" name="h" type="integer"/>
         <element label="Node" max_length="32" name="node" reference="x_146833_creativ_0_node" type="reference"/>
         <element default="#000000" label="outline" max_length="10" name="outline" type="string"/>
         <element default="0" label="raisedBorder" max_length="40" name="raisedborder" type="integer"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="RecordType" max_length="40" name="recordtype" type="string">
             <choice>
-                <element inactive_on_update="false" label="edge" sequence="0" value="edge"/>
-                <element inactive_on_update="false" label="node" sequence="1" value="node"/>
+                <element inactive_on_update="false" label="edge" sequence="10" value="edge"/>
+                <element inactive_on_update="false" label="node" sequence="20" value="node"/>
             </choice>
         </element>
         <element default="1" label="smoothBends" max_length="40" name="smoothbends" type="integer"/>
         <element default="standard" label="targetArrow" max_length="40" name="targetarrow" type="string"/>
         <element default="roundrectangle" label="type" max_length="40" name="type" type="string"/>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;var nodeName  = current.getDisplayValue('node');&#13;&#10;var name = nodeName;&#13;&#10;var nameLength = name.length;&#13;&#10;var width = 90;&#13;&#10;if(global.JSUtil.notNil(nameLength)) {&#13;&#10;&#9;width = 12*nameLength;&#13;&#10;}&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return width;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" default="90" label="W" max_length="5" name="w" type="float" virtual="true"/>
-        <element default="50" label="X" max_length="5" name="x" type="float"/>
-        <element default="50" label="Y" max_length="5" name="y" reference_qual="null" reference_qual_condition="null" type="float"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;&#13;&#10;&#9;var nodeLabel = '';&#13;&#10;&#9;var width = 200;&#13;&#10;&#9;nodeLabel  = current.node.label + ''; &#13;&#10;&#9;if(global.JSUtil.notNil(nodeLabel)) {&#13;&#10;&#9;&#9;var labelLength = nodeLabel.length;&#13;&#10;&#9;&#9;width = labelLength*12;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return width;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="W" max_length="5" name="w" type="integer" virtual="true"/>
+        <element default="50" label="X" max_length="5" name="x" type="integer"/>
+        <element default="50" label="Y" max_length="5" name="y" type="integer"/>
         <index name="index">
             <element name="edge"/>
         </index>

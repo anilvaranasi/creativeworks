@@ -402,7 +402,7 @@ GenerateOutput.prototype = {
                 var fileName = grgTable.name + "_" + dateTimeNow;
                 var contentType = 'gml';
                 fileName += "." + contentType;
-				gOutputGml = gOutputGml.replaceAll("&"," and ");
+                gOutputGml = gOutputGml.replaceAll("&", " and ");
                 var content = gOutputGml;
 
                 var agr = attachment.write(rec, fileName, contentType, content);
@@ -428,13 +428,13 @@ GenerateOutput.prototype = {
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-04-25 06:10:22</sys_created_on>
         <sys_id>2d938ca307962194b965f7208c1ed07f</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>59</sys_mod_count>
         <sys_name>GenerateOutput</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_script_include_2d938ca307962194b965f7208c1ed07f</sys_update_name>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-10-18 06:17:42</sys_updated_on>
+        <sys_updated_on>2023-10-22 17:11:16</sys_updated_on>
     </sys_script_include>
 </record_update>

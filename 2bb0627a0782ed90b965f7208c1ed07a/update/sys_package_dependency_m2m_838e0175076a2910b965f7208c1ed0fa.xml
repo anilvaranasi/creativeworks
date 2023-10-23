@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System Import Sets" source="com.glide.system_import_set">37dd52e2a5300110c0a0e1db2cdc959a</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-05-02 10:54:54</sys_created_on>
+        <sys_id>838e0175076a2910b965f7208c1ed0fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-05-02 10:54:54</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

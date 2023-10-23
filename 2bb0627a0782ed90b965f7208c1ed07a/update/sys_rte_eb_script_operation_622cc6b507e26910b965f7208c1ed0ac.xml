@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rte_eb_script_operation">
+    <sys_rte_eb_script_operation action="INSERT_OR_UPDATE">
+        <conditional_fields/>
+        <conditional_script><![CDATA[/* Example Script
+(function(batch, output) {
+    for (var i = 0; i < batch.length; i++) {
+        
+        // step1: access the input variables
+        var a = batch[i].input;
+
+        // step2: your script code goes here
+        var b = a + " (Now)";
+
+        // setp3: set the output for each element
+        output[i] = b;
+    }
+})(batch, output);
+*/
+(function(batch, output) {
+    // add your code here
+    
+})(batch, output);]]></conditional_script>
+        <is_conditional>false</is_conditional>
+        <name>Set Record Type</name>
+        <operation_group/>
+        <order>100</order>
+        <script><![CDATA[/* Example Script 
+ (function(batch, output) {
+     for (var i = 0; i < batch.length; i++) {
+ 
+         //step1: access the input variables
+         var a = batch[i].input; //Value of the source field. 
+ 
+         //step2: Your script/code goes here.
+         var b = a + 1;
+ 
+         //step3: set the output for each elements
+         output[i] = b;
+     }
+ 
+ })(batch, output);
+ */
+
+(function(batch, output) {
+    // add your code here.
+    for (var i = 0; i < batch.length; i++) {
+
+        //step1: access the input variables
+        var a = batch[i].input; //Value of the source field. 
+
+        //step2: Your script/code goes here.
+        //var b = a + 1;
+        var b = 'node';
+
+        //step3: set the output for each elements
+        output[i] = b;
+    }
+})(batch, output);]]></script>
+        <source_sys_rte_eb_field display_value="u_name">061551b507aa2910b965f7208c1ed069</source_sys_rte_eb_field>
+        <source_sys_rte_eb_fields/>
+        <sys_class_name>sys_rte_eb_script_operation</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-05-02 15:25:04</sys_created_on>
+        <sys_id>622cc6b507e26910b965f7208c1ed0ac</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Set Record Type</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_rte_eb_definition display_value="Generate GarphML Data">5ea151bd076a2910b965f7208c1ed0c9</sys_rte_eb_definition>
+        <sys_rte_eb_entity display_value="Staging">ef33117107aa2910b965f7208c1ed052</sys_rte_eb_entity>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_rte_eb_script_operation_622cc6b507e26910b965f7208c1ed0ac</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-05-02 15:25:20</sys_updated_on>
+        <target_sys_rte_eb_field display_value="recordtype">a10c027507e26910b965f7208c1ed0d4</target_sys_rte_eb_field>
+        <target_sys_rte_eb_fields/>
+        <type display_value="Script Operation">941f88e273b333002b6265a751ab9e84</type>
+        <use_unique_input_sets>true</use_unique_input_sets>
+    </sys_rte_eb_script_operation>
+</record_update>

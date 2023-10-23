@@ -27,7 +27,6 @@
         var rowObject = {};
         var rowIndex = 0;
         var fieldList = ['sys_name', 'sys_class_name', 'sys_scope', 'sys_update_name'];
-        var inScopeClasses = getAllowedClasses();
         //var inScopeClasses = 'sys_security_acl,sys_script_fix,scheduled_import_set,sys_alias,sys_app_application,sys_data_source,sysauto_script,sys_hub_flow,sys_rte_eb_etl_definition,sys_script,sys_script_include,sys_transform_map,sys_user_role,sys_db_object';
         var grMeta = new GlideRecord('sys_metadata');
         var file = '';
@@ -40,7 +39,12 @@
         var appSysId = file;
         //sys_scope=2bb0627a0782ed90b965f7208c1ed07a^sys_class_name=sys_script
         sDebug += "sys_scope=" + appSysId + "\n";
-        var enQuery = 'sys_scope=' + appSysId + '^sys_class_name' + 'IN' + inScopeClasses;
+        var enQuery = 'sys_scope=' + appSysId;
+        var anaysisMode = gs.getProperty('x_146833_creativ_0.acw_analysis_mode');
+        if (anaysisMode == 'Default') {
+            var inScopeClasses = getAllowedClasses();
+            enQuery = 'sys_scope=' + appSysId + '^sys_class_name' + 'IN' + inScopeClasses;
+        }
         //var enQuery = 'sys_scope=' + appSysId;
         grMeta.addEncodedQuery(enQuery);
         grMeta.orderByDesc('sys_class_name');
@@ -79,8 +83,8 @@
             //rowObject[grMeta.sys_update_name + ''] = fieldValueObj;
             var loadField = true;
             if (grMeta.sys_class_name == 'sys_dictionary') {
-				loadField = false;
-				loadField = checkDictionaryType(grMeta.sys_update_name + '');
+                loadField = false;
+                loadField = checkDictionaryType(grMeta.sys_update_name + '');
             }
             if (loadField == true) {
                 rowObject[rowIndex] = fieldValueObj;
@@ -96,7 +100,7 @@
                     map[fieldIndex] = columnObject[fieldMapper[fieldIndex]];
                     sDebug += fieldIndex + "=" + fieldMapper[fieldIndex] + "=" + columnObject[fieldMapper[fieldIndex]] + "\n";
                 }
-                sDebug += m + '=' + t + "==" + columnObject[t] + "\n";
+                //sDebug += m + '=' + t + "==" + columnObject[t] + "\n";
             }
             import_set_table.insert(map);
         }
@@ -104,17 +108,18 @@
         sDebug = "Exception=" + e;
     }
 
-function checkDictionaryType(updateName) {
-	var loadFlag = false;
-	var grDic = new GlideRecord('sys_dictionary');
-	var enQuery = 'sys_update_name=' + updateName + '^internal_type.label=' + 'reference';
-	grDic.addEncodedQuery(enQuery);
-	grDic.query();
-	if(grDic.next()) {
-loadFlag = true;
-	}
-return loadFlag;
-}
+    function checkDictionaryType(updateName) {
+        var loadFlag = false;
+        var grDic = new GlideRecord('sys_dictionary');
+        var enQuery = 'sys_update_name=' + updateName + '^internal_type.label=' + 'reference';
+        grDic.addEncodedQuery(enQuery);
+        grDic.query();
+        if (grDic.next()) {
+            loadFlag = true;
+        }
+        return loadFlag;
+    }
+
     function getEdgeDetails(tableName, objectName, updateName, sysscope) {
         var edgeObject = {};
         var targetNode = '';
@@ -146,7 +151,7 @@ return loadFlag;
                 // code block
                 var grTable = new GlideRecord('sys_data_source');
                 var enQuery = 'name=' + objectName + '';
-                sDebug += " enQuery =" + enQuery + "\n";
+                //sDebug += " enQuery =" + enQuery + "\n";
                 grTable.addEncodedQuery(enQuery);
                 grTable.query();
                 if (grTable.next()) {
@@ -401,8 +406,18 @@ return loadFlag;
     function getAllowedClasses() {
         var classList = '';
         try {
+            var anaysisMode = gs.getProperty('x_146833_creativ_0.acw_analysis_mode');
+            var enAcQuery = 'application=NULL^yes_noSTARTSWITHYes';
+            if (anaysisMode == 'Default') {
+                enAcQuery = 'application=NULL^yes_noSTARTSWITHYes';
+            } else {
+                if (anaysisMode == 'All') {
+                    enAcQuery = 'application=NULL';
+                }
+            }
             var grAlClasses = new GlideRecord('x_146833_creativ_0_allowed_classes');
-            grAlClasses.addEncodedQuery('yes_noSTARTSWITHYes');
+
+            grAlClasses.addEncodedQuery(enAcQuery);
             grAlClasses.query();
             while (grAlClasses.next()) {
                 if (global.JSUtil.nil(classList)) {
@@ -442,7 +457,7 @@ return loadFlag;
         <jpath_root_node/>
         <last_run_database_field/>
         <last_run_datetime/>
-        <last_success_import_time>2023-10-18 20:09:05</last_success_import_time>
+        <last_success_import_time>2023-10-23 05:03:51</last_success_import_time>
         <ldap_target/>
         <ldapprobe_result_set_rows>200</ldapprobe_result_set_rows>
         <limit/>
@@ -475,14 +490,14 @@ return loadFlag;
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-10-14 15:30:12</sys_created_on>
         <sys_id>2bcbbb320739f550b965f7208c1ed0f9</sys_id>
-        <sys_mod_count>237</sys_mod_count>
+        <sys_mod_count>258</sys_mod_count>
         <sys_name>Get System MetaData via Script</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_data_source_2bcbbb320739f550b965f7208c1ed0f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-18 20:09:13</sys_updated_on>
+        <sys_updated_on>2023-10-23 05:03:52</sys_updated_on>
         <table_name/>
         <type>CUSTOM</type>
         <use_batch_import>false</use_batch_import>

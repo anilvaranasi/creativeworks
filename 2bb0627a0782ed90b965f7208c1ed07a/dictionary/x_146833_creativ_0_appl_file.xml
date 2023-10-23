@@ -27,8 +27,8 @@
         <element attributes="edge_encryption_enabled=true,import_attribute_name=name" label="name" max_length="200" name="u_name" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=name_value" label="name_value" max_length="200" name="u_name_value" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=scope" label="scope" max_length="91" name="u_scope" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=scope/display_value" label="scope/display_value" max_length="40" name="u_scope_display_value" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=scope/value" label="scope/value" max_length="40" name="u_scope_value" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=scope/display_value" label="scope/display_value" max_length="250" name="u_scope_display_value" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=scope/value" label="scope/value" max_length="250" name="u_scope_value" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=sys_id" label="sys_id" max_length="250" name="u_sys_id" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=u_target_node" label="Target node" max_length="100" name="u_target_node" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=taxonomy_category" label="taxonomy_category" max_length="40" name="u_taxonomy_category" type="string"/>

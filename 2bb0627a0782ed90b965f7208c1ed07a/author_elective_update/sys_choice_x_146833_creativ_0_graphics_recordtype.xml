@@ -23,15 +23,15 @@
             <label>edge</label>
             <language>en</language>
             <name>x_146833_creativ_0_graphics</name>
-            <sequence>0</sequence>
+            <sequence>10</sequence>
             <synonyms/>
             <sys_created_by>adminanil</sys_created_by>
             <sys_created_on>2023-04-25 09:02:20</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>adminanil</sys_updated_by>
-            <sys_updated_on>2023-04-25 09:02:20</sys_updated_on>
+            <sys_updated_on>2023-10-23 05:12:19</sys_updated_on>
             <value>edge</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -42,15 +42,15 @@
             <label>node</label>
             <language>en</language>
             <name>x_146833_creativ_0_graphics</name>
-            <sequence>1</sequence>
+            <sequence>20</sequence>
             <synonyms/>
             <sys_created_by>adminanil</sys_created_by>
             <sys_created_on>2023-04-25 09:02:20</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_mod_count>0</sys_mod_count>
+            <sys_mod_count>1</sys_mod_count>
             <sys_updated_by>adminanil</sys_updated_by>
-            <sys_updated_on>2023-04-25 09:02:20</sys_updated_on>
+            <sys_updated_on>2023-10-23 05:12:16</sys_updated_on>
             <value>node</value>
         </sys_choice>
     </sys_choice>

@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9623aa118790d11070294087cebb35e3</copied_from>
+        <copied_from_name>Trigger scheduled import</copied_from_name>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>trigger_scheduled_import</internal_name>
+        <label_cache>[{"name":"{{action.job_name}}","label":"action➛Job name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"444cb504-e83d-4167-9038-e660949cf6ab"}}]</label_cache>
+        <master_snapshot>9767ccf9074ebd10b965f7208c1ed08e</master_snapshot>
+        <name>ACW-Trigger scheduled import</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e55788f9074ebd10b965f7208c1ed045</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>ACW-Trigger scheduled import</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_e55788f9074ebd10b965f7208c1ed045</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=e55788f9074ebd10b965f7208c1ed045"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e55788f9074ebd10b965f7208c1ed045"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>e55788f9074ebd10b965f7208c1ed045</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:33</sys_created_on>
+        <sys_id>315788f9074ebd10b965f7208c1ed0c5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:53</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDb95788f9484ebd10057bfccff0e72b8d":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDb95788f9484ebd10057bfccff0e72b8d.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"d7f0804b-57e6-49f4-8831-75d7af2078c5\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDb95788f9484ebd10057bfccff0e72b8d\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">355788f9074ebd10b965f7208c1ed091</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>e55788f9074ebd10b965f7208c1ed045</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:33</sys_created_on>
+        <sys_id>7d5788f9074ebd10b965f7208c1ed0c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:33</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">bd5788f9074ebd10b965f7208c1ed0bb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_e55788f9074ebd10b965f7208c1ed045^id=e55788f9074ebd10b965f7208c1ed045"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=e55788f9074ebd10b965f7208c1ed045^sys_idNOT INb15788f9074ebd10b965f7208c1ed070"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="ACW-Trigger scheduled import">e55788f9074ebd10b965f7208c1ed045</action>
+        <cid>c93121cb-2005-4d3b-a06d-8bb457a159a8</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:32</sys_created_on>
+        <sys_id>b15788f9074ebd10b965f7208c1ed070</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:32</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b15788f9074ebd10b965f7208c1ed070"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>b15788f9074ebd10b965f7208c1ed070</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:32</sys_created_on>
+        <sys_id>b55788f9074ebd10b965f7208c1ed08a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:32</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+   //Execute a scheduled script jobs
+   //This script doesnt return any output variables.
+   var rec = new GlideRecord('scheduled_import_set');
+   var jobName = inputs.jobname;
+   rec.get('name', jobName);
+   if (typeof SncTriggerSynchronizer != 'undefined') {
+      SncTriggerSynchronizer.executeNow(rec);
+   }
+   else {
+      Packages.com.snc.automation.TriggerSynchronizer.executeNow(rec);
+   }
+})(inputs, outputs);</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>b15788f9074ebd10b965f7208c1ed070</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:32</sys_created_on>
+        <sys_id>bd5788f9074ebd10b965f7208c1ed089</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:32</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b15788f9074ebd10b965f7208c1ed070"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>b15788f9074ebd10b965f7208c1ed070</id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:32</sys_created_on>
+        <sys_id>755788f9074ebd10b965f7208c1ed089</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:32</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>jobname</field>
+        <id>b15788f9074ebd10b965f7208c1ed070</id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:32</sys_created_on>
+        <sys_id>715788f9074ebd10b965f7208c1ed08b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:32</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_b15788f9074ebd10b965f7208c1ed070</table>
+        <value>{{action.job_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>b15788f9074ebd10b965f7208c1ed070</id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:32</sys_created_on>
+        <sys_id>3d5788f9074ebd10b965f7208c1ed089</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:32</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=b15788f9074ebd10b965f7208c1ed070"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=b15788f9074ebd10b965f7208c1ed070^sys_idNOT IN315788f9074ebd10b965f7208c1ed074"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>jobname</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">b15788f9074ebd10b965f7208c1ed070</model>
+        <model_id>b15788f9074ebd10b965f7208c1ed070</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_b15788f9074ebd10b965f7208c1ed070</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:32</sys_created_on>
+        <sys_id>315788f9074ebd10b965f7208c1ed074</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=b15788f9074ebd10b965f7208c1ed070"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b15788f9074ebd10b965f7208c1ed070"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_b15788f9074ebd10b965f7208c1ed070"/>
+    <sys_hub_action_input action="delete_multiple" query="model=e55788f9074ebd10b965f7208c1ed045^sys_idNOT INb55788f9074ebd10b965f7208c1ed05a"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=444cb504-e83d-4167-9038-e660949cf6ab</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>job_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Job name</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="ACW-Trigger scheduled import">e55788f9074ebd10b965f7208c1ed045</model>
+        <model_id>e55788f9074ebd10b965f7208c1ed045</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_e55788f9074ebd10b965f7208c1ed045</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:32</sys_created_on>
+        <sys_id>b55788f9074ebd10b965f7208c1ed05a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b55788f9074ebd10b965f7208c1ed05a"/>
+    <sys_hub_action_output action="delete_multiple" query="model=e55788f9074ebd10b965f7208c1ed045^sys_idNOT IN355788f9074ebd10b965f7208c1ed091,bd5788f9074ebd10b965f7208c1ed0bb"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDb95788f9484ebd10057bfccff0e72b8d,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=d7f0804b-57e6-49f4-8831-75d7af2078c5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="ACW-Trigger scheduled import">e55788f9074ebd10b965f7208c1ed045</model>
+        <model_id>e55788f9074ebd10b965f7208c1ed045</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_e55788f9074ebd10b965f7208c1ed045</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:33</sys_created_on>
+        <sys_id>355788f9074ebd10b965f7208c1ed091</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=355788f9074ebd10b965f7208c1ed091"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=355788f9074ebd10b965f7208c1ed091"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=4956b3f8-5c7c-40fb-bd73-1b8a6a684cf6,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="ACW-Trigger scheduled import">e55788f9074ebd10b965f7208c1ed045</model>
+        <model_id>e55788f9074ebd10b965f7208c1ed045</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_e55788f9074ebd10b965f7208c1ed045</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:33</sys_created_on>
+        <sys_id>bd5788f9074ebd10b965f7208c1ed0bb</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bd5788f9074ebd10b965f7208c1ed0bb"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=bd5788f9074ebd10b965f7208c1ed0bb"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=e55788f9074ebd10b965f7208c1ed045"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=e55788f9074ebd10b965f7208c1ed045^sys_idNOT INb157c8f9074ebd10b965f7208c1ed01e"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="ACW-Trigger scheduled import">e55788f9074ebd10b965f7208c1ed045</action_type_id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:33</sys_created_on>
+        <sys_id>b157c8f9074ebd10b965f7208c1ed01e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:33</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b157c8f9074ebd10b965f7208c1ed01e"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_e55788f9074ebd10b965f7208c1ed045^sys_idNOT IN715788f9074ebd10b965f7208c1ed061"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>job_name</element>
+        <help/>
+        <hint/>
+        <label>Job name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_e55788f9074ebd10b965f7208c1ed045</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:32</sys_created_on>
+        <sys_id>715788f9074ebd10b965f7208c1ed061</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_e55788f9074ebd10b965f7208c1ed045"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_e55788f9074ebd10b965f7208c1ed045^sys_idNOT INb55788f9074ebd10b965f7208c1ed0c1,fd5788f9074ebd10b965f7208c1ed0ba"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_e55788f9074ebd10b965f7208c1ed045</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:33</sys_created_on>
+        <sys_id>b55788f9074ebd10b965f7208c1ed0c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_e55788f9074ebd10b965f7208c1ed045</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:33</sys_created_on>
+        <sys_id>fd5788f9074ebd10b965f7208c1ed0ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_e55788f9074ebd10b965f7208c1ed045"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=e55788f9074ebd10b965f7208c1ed045^sys_idNOT IN2767003d074ebd10b965f7208c1ed079"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="ACW-Trigger scheduled import">e55788f9074ebd10b965f7208c1ed045</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"2767003d074ebd10b965f7208c1ed079","name":"plan","plan_signature":null}}</plan>
+        <snapshot>5b67003d074ebd10b965f7208c1ed002</snapshot>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2767003d074ebd10b965f7208c1ed079</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:56</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9623aa118790d11070294087cebb35e3</copied_from>
+        <copied_from_name/>
+        <description/>
+        <internal_name>acwtrigger_scheduled_import</internal_name>
+        <label_cache>[{"name":"{{action.job_name}}","label":"action➛Job name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"444cb504-e83d-4167-9038-e660949cf6ab"}}]</label_cache>
+        <master>true</master>
+        <name>ACW-Trigger scheduled import</name>
+        <natlang/>
+        <outputs/>
+        <parent_action display_value="ACW-Trigger scheduled import">e55788f9074ebd10b965f7208c1ed045</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9767ccf9074ebd10b965f7208c1ed08e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=9767ccf9074ebd10b965f7208c1ed08e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=9767ccf9074ebd10b965f7208c1ed08e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>9767ccf9074ebd10b965f7208c1ed08e</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>1367003d074ebd10b965f7208c1ed000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">9f67ccf9074ebd10b965f7208c1ed0eb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>9767ccf9074ebd10b965f7208c1ed08e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>d367003d074ebd10b965f7208c1ed000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"integer\",\"default_value\":\"\",\"action_error_output\":\"true\",\"label\":\"Code\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"action_error_output\":\"true\",\"label\":\"Message\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Action Status\",\"read_only_complex_object\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"8e3eb395-c990-4a7d-b8da-081a1acab7eb\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">9f67ccf9074ebd10b965f7208c1ed0e6</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_9767ccf9074ebd10b965f7208c1ed08e^id=9767ccf9074ebd10b965f7208c1ed08e"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=9767ccf9074ebd10b965f7208c1ed08e^sys_idNOT INdf67ccf9074ebd10b965f7208c1ed0bd"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="ACW-Trigger scheduled import">9767ccf9074ebd10b965f7208c1ed08e</action>
+        <cid>c93121cb-2005-4d3b-a06d-8bb457a159a8</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>df67ccf9074ebd10b965f7208c1ed0bd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=df67ccf9074ebd10b965f7208c1ed0bd"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>df67ccf9074ebd10b965f7208c1ed0bd</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>5767ccf9074ebd10b965f7208c1ed0e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+   //Execute a scheduled script jobs
+   //This script doesnt return any output variables.
+   var rec = new GlideRecord('scheduled_import_set');
+   var jobName = inputs.jobname;
+   rec.get('name', jobName);
+   if (typeof SncTriggerSynchronizer != 'undefined') {
+      SncTriggerSynchronizer.executeNow(rec);
+   }
+   else {
+      Packages.com.snc.automation.TriggerSynchronizer.executeNow(rec);
+   }
+})(inputs, outputs);</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>df67ccf9074ebd10b965f7208c1ed0bd</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>9367ccf9074ebd10b965f7208c1ed0e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=df67ccf9074ebd10b965f7208c1ed0bd"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>df67ccf9074ebd10b965f7208c1ed0bd</id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>5f67ccf9074ebd10b965f7208c1ed0e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>jobname</field>
+        <id>df67ccf9074ebd10b965f7208c1ed0bd</id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>1367ccf9074ebd10b965f7208c1ed0e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_df67ccf9074ebd10b965f7208c1ed0bd</table>
+        <value>{{action.job_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>df67ccf9074ebd10b965f7208c1ed0bd</id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>1367ccf9074ebd10b965f7208c1ed0e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=df67ccf9074ebd10b965f7208c1ed0bd"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=df67ccf9074ebd10b965f7208c1ed0bd^sys_idNOT IN9b67ccf9074ebd10b965f7208c1ed0c1"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>jobname</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>jobname</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">df67ccf9074ebd10b965f7208c1ed0bd</model>
+        <model_id>df67ccf9074ebd10b965f7208c1ed0bd</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_df67ccf9074ebd10b965f7208c1ed0bd</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>9b67ccf9074ebd10b965f7208c1ed0c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=df67ccf9074ebd10b965f7208c1ed0bd"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=df67ccf9074ebd10b965f7208c1ed0bd"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_df67ccf9074ebd10b965f7208c1ed0bd"/>
+    <sys_hub_action_input action="delete_multiple" query="model=9767ccf9074ebd10b965f7208c1ed08e^sys_idNOT IN1767ccf9074ebd10b965f7208c1ed092"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=444cb504-e83d-4167-9038-e660949cf6ab</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>job_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Job name</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="ACW-Trigger scheduled import">9767ccf9074ebd10b965f7208c1ed08e</model>
+        <model_id>9767ccf9074ebd10b965f7208c1ed08e</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_9767ccf9074ebd10b965f7208c1ed08e</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>1767ccf9074ebd10b965f7208c1ed092</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1767ccf9074ebd10b965f7208c1ed092"/>
+    <sys_hub_action_output action="delete_multiple" query="model=9767ccf9074ebd10b965f7208c1ed08e^sys_idNOT IN9f67ccf9074ebd10b965f7208c1ed0e6,9f67ccf9074ebd10b965f7208c1ed0eb"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=d7f0804b-57e6-49f4-8831-75d7af2078c5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="ACW-Trigger scheduled import">9767ccf9074ebd10b965f7208c1ed08e</model>
+        <model_id>9767ccf9074ebd10b965f7208c1ed08e</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_9767ccf9074ebd10b965f7208c1ed08e</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>9f67ccf9074ebd10b965f7208c1ed0e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9f67ccf9074ebd10b965f7208c1ed0e6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9f67ccf9074ebd10b965f7208c1ed0e6"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=4956b3f8-5c7c-40fb-bd73-1b8a6a684cf6,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="ACW-Trigger scheduled import">9767ccf9074ebd10b965f7208c1ed08e</model>
+        <model_id>9767ccf9074ebd10b965f7208c1ed08e</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_9767ccf9074ebd10b965f7208c1ed08e</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>9f67ccf9074ebd10b965f7208c1ed0eb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9f67ccf9074ebd10b965f7208c1ed0eb"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9f67ccf9074ebd10b965f7208c1ed0eb"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=9767ccf9074ebd10b965f7208c1ed08e"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=9767ccf9074ebd10b965f7208c1ed08e^sys_idNOT IN9367003d074ebd10b965f7208c1ed002"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="ACW-Trigger scheduled import">9767ccf9074ebd10b965f7208c1ed08e</action_type_id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>9367003d074ebd10b965f7208c1ed002</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=9367003d074ebd10b965f7208c1ed002"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_9767ccf9074ebd10b965f7208c1ed08e^sys_idNOT IN9b67ccf9074ebd10b965f7208c1ed0bb"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>job_name</element>
+        <help/>
+        <hint/>
+        <label>Job name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_9767ccf9074ebd10b965f7208c1ed08e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>9b67ccf9074ebd10b965f7208c1ed0bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_9767ccf9074ebd10b965f7208c1ed08e"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_9767ccf9074ebd10b965f7208c1ed08e^sys_idNOT IN1367ccf9074ebd10b965f7208c1ed0fd,df67ccf9074ebd10b965f7208c1ed0ea"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_9767ccf9074ebd10b965f7208c1ed08e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>1367ccf9074ebd10b965f7208c1ed0fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_9767ccf9074ebd10b965f7208c1ed08e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 05:23:55</sys_created_on>
+        <sys_id>df67ccf9074ebd10b965f7208c1ed0ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 05:23:55</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_9767ccf9074ebd10b965f7208c1ed08e"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>e55788f9074ebd10b965f7208c1ed045</sys_id>
+        <latest_snapshot>9767ccf9074ebd10b965f7208c1ed08e</latest_snapshot>
+        <compiler_build>glide-vancouver-07-06-2023__patch2-hotfix1-10-04-2023_10-06-2023_1235.zip</compiler_build>
+    </sys_hub_action_type_definition>
+</record_update>

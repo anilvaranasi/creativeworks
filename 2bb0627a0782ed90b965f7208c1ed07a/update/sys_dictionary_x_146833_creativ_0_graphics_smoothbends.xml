@@ -5,13 +5,13 @@
         <attributes/>
         <audit>false</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>smoothBends</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>1</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -53,7 +53,7 @@
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_dictionary_x_146833_creativ_0_graphics_smoothbends</sys_update_name>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-04-27 10:40:02</sys_updated_on>
+        <sys_updated_on>2023-05-02 12:08:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
