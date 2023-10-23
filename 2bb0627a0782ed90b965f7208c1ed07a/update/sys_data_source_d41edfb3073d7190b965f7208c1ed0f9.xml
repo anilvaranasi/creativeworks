@@ -24,7 +24,7 @@
         var rowObject = {};
         var rowIndex = 0;
         var fieldList = ['sys_class_name', 'sys_scope', 'sys_update_name'];
-        var inScopeClasses = getAllowedClasses();
+        //var inScopeClasses = getAllowedClasses();
         // system dictionary is only added for nodes. 
         //var inScopeClasses = 'sys_security_acl,sys_script_fix,scheduled_import_set,sys_alias,sys_app_application,sys_data_source,sysauto_script,sys_hub_flow,sys_rte_eb_etl_definition,sys_script,sys_script_include,sys_transform_map,sys_user_role,sys_db_object';
         var grMeta = new GlideRecord('sys_metadata');
@@ -37,9 +37,15 @@
         }
         var appSysId = file;
         //sys_scope=2bb0627a0782ed90b965f7208c1ed07a^sys_class_name=sys_script
-        sDebug += "  sys_scope=" + appSysId + "\n";
-        var enQuery = 'sys_scope=' + appSysId + '^sys_class_name' + 'IN' + inScopeClasses;
+        var enQuery = 'sys_scope=' + appSysId + "^sys_class_name!=sys_metadata_delete";
+        var anaysisMode = gs.getProperty('x_146833_creativ_0.acw_analysis_mode');
+        if (anaysisMode == 'Default') {
+            var inScopeClasses = getAllowedClasses();
+            enQuery += '^sys_class_name' + 'IN' + inScopeClasses;
+        }
         //var enQuery = 'sys_scope=' + appSysId;
+		sDebug += "sys_scope=" + appSysId +  " enQuery =" + enQuery + "\n";
+		
         grMeta.addEncodedQuery(enQuery);
         grMeta.orderByDesc('sys_class_name');
         grMeta.query();
@@ -333,9 +339,9 @@
 
         if (tableName == 'Relationship') {
             try {
-				fieldValueObj = {};
-				targetNode = '';
-				edgeIdentifier = '';
+                fieldValueObj = {};
+                targetNode = '';
+                edgeIdentifier = '';
                 // code block
                 var grTable = new GlideRecord('sys_relationship');
                 var enQuery = 'name=' + objectName + "^sys_scope=" + sysscope;
@@ -398,8 +404,8 @@
         if (tableName == 'Dictionary Entry') {
             try {
                 // code block
-				edgeIdentifier = '';
-				targetNode = '';
+                edgeIdentifier = '';
+                targetNode = '';
                 var grTable = new GlideRecord('sys_dictionary');
                 var enQuery = 'sys_update_name=' + updateName + "^sys_scope=" + sysscope + '^internal_type.label=' + 'reference';
                 sDebug += " enQuery base table =" + enQuery + "\n";
@@ -411,7 +417,7 @@
                     grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
                     grTableObj.query();
                     if (grTableObj.next()) {
-						sDebug += " grTableObj.sys_update_name base table =" + grTableObj.sys_update_name + "\n";
+                        sDebug += " grTableObj.sys_update_name base table =" + grTableObj.sys_update_name + "\n";
                         targetNode = grTableObj.sys_update_name + '';
                         edgeIdentifier = updateName + "|" + targetNode;
                         fieldValueObj['sys_scope'] = sysscope;
@@ -420,7 +426,7 @@
                         fieldValueObj['sys_update_name'] = updateName + '';
                         fieldValueObj['targetNode'] = targetNode + '';
                         fieldValueObj['edgeIdentifier'] = edgeIdentifier + '';
-                        rowObject[edgeIdentifier +''] = fieldValueObj;
+                        rowObject[edgeIdentifier + ''] = fieldValueObj;
                     }
                 }
             } catch (e) {
@@ -429,13 +435,13 @@
         }
 
         // reference
-		
+
         if (tableName == 'Dictionary Entry') {
             try {
-				fieldValueObj = {};
+                fieldValueObj = {};
                 // code block
-				edgeIdentifier = '';
-				targetNode = '';
+                edgeIdentifier = '';
+                targetNode = '';
                 var grTable = new GlideRecord('sys_dictionary');
                 var enQuery = 'sys_update_name=' + updateName + "^sys_scope=" + sysscope + '^internal_type.label=' + 'reference';
                 sDebug += " enQuery reference table =" + enQuery + "\n";
@@ -447,7 +453,7 @@
                     grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
                     grTableObj.query();
                     if (grTableObj.next()) {
-						sDebug += " grTableObj.sys_update_name reference table =" + grTableObj.sys_update_name + "\n";
+                        sDebug += " grTableObj.sys_update_name reference table =" + grTableObj.sys_update_name + "\n";
                         targetNode = grTableObj.sys_update_name + '';
                         edgeIdentifier = updateName + "|" + targetNode;
                         fieldValueObj['sys_scope'] = sysscope;
@@ -456,14 +462,14 @@
                         fieldValueObj['sys_update_name'] = updateName + '';
                         fieldValueObj['targetNode'] = targetNode + '';
                         fieldValueObj['edgeIdentifier'] = edgeIdentifier + '';
-                        rowObject[edgeIdentifier+''] = fieldValueObj;
+                        rowObject[edgeIdentifier + ''] = fieldValueObj;
                     }
                 }
             } catch (e) {
                 sDebug += 'exception in Client Script edge lookup' + e;
             }
         }
-		
+
 
         if (tableName == 'Action Type') {
             try {
@@ -629,7 +635,7 @@
         <jpath_root_node/>
         <last_run_database_field/>
         <last_run_datetime/>
-        <last_success_import_time>2023-10-23 05:03:55</last_success_import_time>
+        <last_success_import_time>2023-10-23 11:01:15</last_success_import_time>
         <ldap_target/>
         <ldapprobe_result_set_rows>200</ldapprobe_result_set_rows>
         <limit/>
@@ -662,14 +668,14 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-10-17 15:54:08</sys_created_on>
         <sys_id>d41edfb3073d7190b965f7208c1ed0f9</sys_id>
-        <sys_mod_count>84</sys_mod_count>
+        <sys_mod_count>102</sys_mod_count>
         <sys_name>ACW-Get EdgeData</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_data_source_d41edfb3073d7190b965f7208c1ed0f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-23 05:03:56</sys_updated_on>
+        <sys_updated_on>2023-10-23 11:01:21</sys_updated_on>
         <table_name/>
         <type>CUSTOM</type>
         <use_batch_import>false</use_batch_import>
