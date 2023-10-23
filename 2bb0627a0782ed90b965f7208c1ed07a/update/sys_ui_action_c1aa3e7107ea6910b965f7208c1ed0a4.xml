@@ -31,37 +31,32 @@
         <onclick/>
         <order>100</order>
         <script><![CDATA[(function() {
-	
-	try {
-		var inputs = {};
-		inputs['application'] = current.file_application.sys_id + ''; // String 
-		deleteGraph();
-		// Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
-		// sn_fd.FlowAPI.getRunner().subflow('x_146833_creativ_0.generate_digital_twin').inBackground().withInputs(inputs).run();
-				
-		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
-		var result = sn_fd.FlowAPI.getRunner().subflow('x_146833_creativ_0.generate_app_digital_twin').inBackground().withInputs(inputs).run();
-		current.state = 'processing';
-		current.update();
-		action.setRedirectURL(current);
-gs.addInfoMessage("Refresh the record in couple of minutes. Once flow execution is complete .gml file will get attached to this record.");
-		// Current subflow has no outputs defined.		
-	} catch (ex) {
-		var message = ex.getMessage();
-		gs.error(message);
-	}
-	
+
+    try {
+        deleteGraph();
+        // Start Asynchronously: Uncomment to run in background. Code snippet will not have access to outputs.
+        sn_fd.FlowAPI.getRunner().subflow('x_146833_creativ_0.acwcreate_digital_twin_for_a_servicenow_application').inBackground().run();
+        current.state = 'processing';
+        current.update();
+        action.setRedirectURL(current);
+        gs.addInfoMessage("Refresh the record in couple of minutes. Once flow execution is complete .gml file will get attached to this record.");
+        // Current subflow has no outputs defined.		
+    } catch (ex) {
+        var message = ex.getMessage();
+        gs.error(message);
+    }
+
 })();
 
-function deleteGraph(){
-	var tableName='x_146833_creativ_0_graph';
-var grGraph = new GlideRecord(tableName);
-var nQuery = 'file.sys_id' + current.sys_id;
-grGraph.addEncodedQuery(nQuery);
-grGraph.query();
-while(grGraph.next()) {
-	grGraph.deleteRecord();
-}
+function deleteGraph() {
+    var tableName = 'x_146833_creativ_0_graph';
+    var grGraph = new GlideRecord(tableName);
+    var nQuery = 'file.sys_id=' + current.sys_id;
+    grGraph.addEncodedQuery(nQuery);
+    grGraph.query();
+    while (grGraph.next()) {
+        grGraph.deleteRecord();
+    }
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -73,7 +68,7 @@ while(grGraph.next()) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c1aa3e7107ea6910b965f7208c1ed0a4</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Create App Digital Twin</sys_name>
         <sys_overrides/>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
@@ -81,7 +76,7 @@ while(grGraph.next()) {
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_ui_action_c1aa3e7107ea6910b965f7208c1ed0a4</sys_update_name>
         <sys_updated_by>adminanil</sys_updated_by>
-        <sys_updated_on>2023-05-02 19:45:14</sys_updated_on>
+        <sys_updated_on>2023-10-23 07:04:02</sys_updated_on>
         <table>x_146833_creativ_0_file</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

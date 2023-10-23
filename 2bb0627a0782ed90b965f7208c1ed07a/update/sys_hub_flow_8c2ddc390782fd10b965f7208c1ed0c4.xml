@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=118000,viewActivatedIn=naturalLanguage</attributes>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>acwcreate_digital_twin_for_a_servicenow_application</internal_name>
+        <label_cache>[{"name":"d8ba09ca-0501-4171-8b10-bea126260cfd.__status__.message","label":"1 - Top Level Catch➛Error Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"d8ba09ca-0501-4171-8b10-bea126260cfd.__status__.code","label":"1 - Top Level Catch➛Error Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"d8ba09ca-0501-4171-8b10-bea126260cfd.__status__","label":"1 - Error Handler➛Error Status","type":"object","base_type":"object","attributes":{"uiType":"object","uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>c14d143d0782fd10b965f7208c1ed0df</master_snapshot>
+        <name>ACW-Create Digital twin for a ServiceNow Application</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 06:58:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8c2ddc390782fd10b965f7208c1ed0c4</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>ACW-Create Digital twin for a ServiceNow Application</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_hub_flow_8c2ddc390782fd10b965f7208c1ed0c4</sys_update_name>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:46</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8c2ddc390782fd10b965f7208c1ed0c4^sys_idNOT IN0c2ddc390782fd10b965f7208c1ed0c5"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8c2ddc390782fd10b965f7208c1ed0c4</id>
+        <name>ACW-Create Digital twin for a ServiceNow Application</name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 06:58:43</sys_created_on>
+        <sys_id>0c2ddc390782fd10b965f7208c1ed0c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 06:58:43</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=0c2ddc390782fd10b965f7208c1ed0c5"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=8c2ddc390782fd10b965f7208c1ed0c4^sys_idNOT INb44d143d0782fd10b965f7208c1ed0a8,b49d147d0782fd10b965f7208c1ed00a"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Trigger scheduled import">fab3ae518790d11070294087cebb3579</action_type>
+        <action_type_parent display_value="Trigger scheduled import">9623aa118790d11070294087cebb35e3</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="ACW-Create Digital twin for a ServiceNow Application">8c2ddc390782fd10b965f7208c1ed0c4</flow>
+        <order>1</order>
+        <parent_ui_id>ceb4e22c-dde1-4905-83a5-20672f29957d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 06:59:19</sys_created_on>
+        <sys_id>b44d143d0782fd10b965f7208c1ed0a8</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:03:24</sys_updated_on>
+        <ui_id>bac5c4c7-23b8-4c35-9631-9e1fc4af1aed</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b44d143d0782fd10b965f7208c1ed0a8"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b44d143d0782fd10b965f7208c1ed0a8</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 06:59:19</sys_created_on>
+        <sys_id>784d143d0782fd10b965f7208c1ed0aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 06:59:19</sys_updated_on>
+        <value>GetFilesForACustomApp</value>
+        <variable display_value="Job name">25b5393f07162594b965f7208c1ed0b8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_fab3ae518790d11070294087cebb3579^id=b44d143d0782fd10b965f7208c1ed0a8"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b44d143d0782fd10b965f7208c1ed0a8"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b44d143d0782fd10b965f7208c1ed0a8"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="ACW-Create Digital twin for a ServiceNow Application">8c2ddc390782fd10b965f7208c1ed0c4</flow>
+        <order>3</order>
+        <parent_ui_id>d8ba09ca-0501-4171-8b10-bea126260cfd</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:41</sys_created_on>
+        <sys_id>b49d147d0782fd10b965f7208c1ed00a</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:03:24</sys_updated_on>
+        <ui_id>b8fd7239-cfa1-48c8-81c3-463f0d916c15</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=b49d147d0782fd10b965f7208c1ed00a"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>b49d147d0782fd10b965f7208c1ed00a</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:41</sys_created_on>
+        <sys_id>349d147d0782fd10b965f7208c1ed00c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:41</sys_updated_on>
+        <value>error</value>
+        <variable display_value="Level">5bc1bcc6531003003bf1d9109ec587d7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=b49d147d0782fd10b965f7208c1ed00a"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_level</field>
+        <id>b49d147d0782fd10b965f7208c1ed00a</id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:41</sys_created_on>
+        <sys_id>fc9d147d0782fd10b965f7208c1ed00b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>b49d147d0782fd10b965f7208c1ed00a</id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:41</sys_created_on>
+        <sys_id>b09d147d0782fd10b965f7208c1ed00c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:41</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Failure in subflow - ACW-Create Digital twin for a ServiceNow Application with following error 
+Code : {{d8ba09ca-0501-4171-8b10-bea126260cfd.__status__.code}}
+Message : {{d8ba09ca-0501-4171-8b10-bea126260cfd.__status__.message}}
+</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b49d147d0782fd10b965f7208c1ed00a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b49d147d0782fd10b965f7208c1ed00a"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=8c2ddc390782fd10b965f7208c1ed0c4^sys_idNOT IN389dd07d0782fd10b965f7208c1ed0ab,e89dd07d0782fd10b965f7208c1ed0a6"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">709dd07d0782fd10b965f7208c1ed0ab</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="ACW-Create Digital twin for a ServiceNow Application">8c2ddc390782fd10b965f7208c1ed0c4</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Top Level Catch">35d60003e6022010a5e40cdd1254dd23</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:41</sys_created_on>
+        <sys_id>389dd07d0782fd10b965f7208c1ed0ab</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:46</sys_updated_on>
+        <ui_id>d8ba09ca-0501-4171-8b10-bea126260cfd</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=389dd07d0782fd10b965f7208c1ed0ab"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>389dd07d0782fd10b965f7208c1ed0ab</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:41</sys_created_on>
+        <sys_id>f09dd07d0782fd10b965f7208c1ed0af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:41</sys_updated_on>
+        <value>1</value>
+        <variable display_value="enabled">dd70187cc36e20105553b740ad40dddc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>389dd07d0782fd10b965f7208c1ed0ab</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:41</sys_created_on>
+        <sys_id>f89dd07d0782fd10b965f7208c1ed0ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:41</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"integer\",\"default_value\":\"\",\"action_error_output\":\"true\",\"label\":\"Code\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"action_error_output\":\"true\",\"label\":\"Message\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Action Status\",\"read_only_complex_object\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"8e3eb395-c990-4a7d-b8da-081a1acab7eb\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Error Status">0f72a5a25b132010b61ea2013781c749</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_35d60003e6022010a5e40cdd1254dd23^id=389dd07d0782fd10b965f7208c1ed0ab"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=389dd07d0782fd10b965f7208c1ed0ab"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=389dd07d0782fd10b965f7208c1ed0ab"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ec9dd07d0782fd10b965f7208c1ed0a5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="ACW-Create Digital twin for a ServiceNow Application">8c2ddc390782fd10b965f7208c1ed0c4</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Top Level Try">e9060aa2c3013010ace8b740ad40dd51</logic_definition>
+        <order>0</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:40</sys_created_on>
+        <sys_id>e89dd07d0782fd10b965f7208c1ed0a6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:46</sys_updated_on>
+        <ui_id>ceb4e22c-dde1-4905-83a5-20672f29957d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e89dd07d0782fd10b965f7208c1ed0a6"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e89dd07d0782fd10b965f7208c1ed0a6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e89dd07d0782fd10b965f7208c1ed0a6"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=firefox,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>acwcreate_digital_twin_for_a_servicenow_application</internal_name>
+        <label_cache>[{"name":"d8ba09ca-0501-4171-8b10-bea126260cfd.__status__.message","label":"1 - Top Level Catch➛Error Status➛Message","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{}},{"name":"d8ba09ca-0501-4171-8b10-bea126260cfd.__status__.code","label":"1 - Top Level Catch➛Error Status➛Code","reference":"","reference_display":"","type":"integer","base_type":"integer","column_name":"","attributes":{}},{"name":"d8ba09ca-0501-4171-8b10-bea126260cfd.__status__","label":"1 - Error Handler➛Error Status","type":"object","base_type":"object","attributes":{"uiType":"object","uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>ACW-Create Digital twin for a ServiceNow Application</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="ACW-Create Digital twin for a ServiceNow Application">8c2ddc390782fd10b965f7208c1ed0c4</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 06:59:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c14d143d0782fd10b965f7208c1ed0df</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:45</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=c14d143d0782fd10b965f7208c1ed0df^sys_idNOT IN814d143d0782fd10b965f7208c1ed0e0"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>c14d143d0782fd10b965f7208c1ed0df</id>
+        <name>ACW-Create Digital twin for a ServiceNow Application</name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 06:59:20</sys_created_on>
+        <sys_id>814d143d0782fd10b965f7208c1ed0e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 06:59:20</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=814d143d0782fd10b965f7208c1ed0e0"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=c14d143d0782fd10b965f7208c1ed0df^sys_idNOT IN594d543d0782fd10b965f7208c1ed001,e99d547d0782fd10b965f7208c1ed064"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_type display_value="Trigger scheduled import">fab3ae518790d11070294087cebb3579</action_type>
+        <action_type_parent display_value="Trigger scheduled import">9623aa118790d11070294087cebb35e3</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="ACW-Create Digital twin for a ServiceNow Application">c14d143d0782fd10b965f7208c1ed0df</flow>
+        <order>1</order>
+        <parent_ui_id>ceb4e22c-dde1-4905-83a5-20672f29957d</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 06:59:21</sys_created_on>
+        <sys_id>594d543d0782fd10b965f7208c1ed001</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:44</sys_updated_on>
+        <ui_id>bac5c4c7-23b8-4c35-9631-9e1fc4af1aed</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=594d543d0782fd10b965f7208c1ed001"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>594d543d0782fd10b965f7208c1ed001</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 06:59:21</sys_created_on>
+        <sys_id>194d543d0782fd10b965f7208c1ed002</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 06:59:21</sys_updated_on>
+        <value>GetFilesForACustomApp</value>
+        <variable display_value="Job name">25b5393f07162594b965f7208c1ed0b8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_input_fab3ae518790d11070294087cebb3579^id=594d543d0782fd10b965f7208c1ed001"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=594d543d0782fd10b965f7208c1ed001"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=594d543d0782fd10b965f7208c1ed001"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="ACW-Create Digital twin for a ServiceNow Application">c14d143d0782fd10b965f7208c1ed0df</flow>
+        <order>3</order>
+        <parent_ui_id>d8ba09ca-0501-4171-8b10-bea126260cfd</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:44</sys_created_on>
+        <sys_id>e99d547d0782fd10b965f7208c1ed064</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:44</sys_updated_on>
+        <ui_id>b8fd7239-cfa1-48c8-81c3-463f0d916c15</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e99d547d0782fd10b965f7208c1ed064"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>e99d547d0782fd10b965f7208c1ed064</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:44</sys_created_on>
+        <sys_id>259d547d0782fd10b965f7208c1ed08b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:44</sys_updated_on>
+        <value>error</value>
+        <variable display_value="Level">5bc1bcc6531003003bf1d9109ec587d7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e99d547d0782fd10b965f7208c1ed064"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_level</field>
+        <id>e99d547d0782fd10b965f7208c1ed064</id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:44</sys_created_on>
+        <sys_id>ed9d547d0782fd10b965f7208c1ed08a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>e99d547d0782fd10b965f7208c1ed064</id>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:44</sys_created_on>
+        <sys_id>a19d547d0782fd10b965f7208c1ed08b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Failure in subflow - ACW-Create Digital twin for a ServiceNow Application with following error 
+Code : {{d8ba09ca-0501-4171-8b10-bea126260cfd.__status__.code}}
+Message : {{d8ba09ca-0501-4171-8b10-bea126260cfd.__status__.message}}
+</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e99d547d0782fd10b965f7208c1ed064"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e99d547d0782fd10b965f7208c1ed064"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=c14d143d0782fd10b965f7208c1ed0df^sys_idNOT INe19d547d0782fd10b965f7208c1ed08f,e59d547d0782fd10b965f7208c1ed08c"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">709dd07d0782fd10b965f7208c1ed0ab</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="ACW-Create Digital twin for a ServiceNow Application">c14d143d0782fd10b965f7208c1ed0df</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Top Level Catch">35d60003e6022010a5e40cdd1254dd23</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:44</sys_created_on>
+        <sys_id>e19d547d0782fd10b965f7208c1ed08f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:44</sys_updated_on>
+        <ui_id>d8ba09ca-0501-4171-8b10-bea126260cfd</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e19d547d0782fd10b965f7208c1ed08f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e19d547d0782fd10b965f7208c1ed08f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:44</sys_created_on>
+        <sys_id>219d547d0782fd10b965f7208c1ed092</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:44</sys_updated_on>
+        <value>1</value>
+        <variable display_value="enabled">dd70187cc36e20105553b740ad40dddc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e19d547d0782fd10b965f7208c1ed08f</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:44</sys_created_on>
+        <sys_id>6d9d547d0782fd10b965f7208c1ed091</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:44</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"integer\",\"default_value\":\"\",\"action_error_output\":\"true\",\"label\":\"Code\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"action_error_output\":\"true\",\"label\":\"Message\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"read_only\":\"true\",\"hint\":null,\"uiType\":\"object\",\"default_value\":\"\",\"label\":\"Action Status\",\"read_only_complex_object\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"8e3eb395-c990-4a7d-b8da-081a1acab7eb\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Error Status">0f72a5a25b132010b61ea2013781c749</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_35d60003e6022010a5e40cdd1254dd23^id=e19d547d0782fd10b965f7208c1ed08f"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e19d547d0782fd10b965f7208c1ed08f"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e19d547d0782fd10b965f7208c1ed08f"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">ec9dd07d0782fd10b965f7208c1ed0a5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="ACW-Create Digital twin for a ServiceNow Application">c14d143d0782fd10b965f7208c1ed0df</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Top Level Try">e9060aa2c3013010ace8b740ad40dd51</logic_definition>
+        <order>0</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 07:00:44</sys_created_on>
+        <sys_id>e59d547d0782fd10b965f7208c1ed08c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:44</sys_updated_on>
+        <ui_id>ceb4e22c-dde1-4905-83a5-20672f29957d</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e59d547d0782fd10b965f7208c1ed08c"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e59d547d0782fd10b965f7208c1ed08c"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e59d547d0782fd10b965f7208c1ed08c"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_c14d143d0782fd10b965f7208c1ed0df"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>8c2ddc390782fd10b965f7208c1ed0c4</sys_id>
+        <latest_snapshot>c14d143d0782fd10b965f7208c1ed0df</latest_snapshot>
+        <compiler_build>glide-vancouver-07-06-2023__patch2-hotfix1-10-04-2023_10-06-2023_1235.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=8c2ddc390782fd10b965f7208c1ed0c4"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=8c2ddc390782fd10b965f7208c1ed0c4^sys_idNOT IN194d543d0782fd10b965f7208c1ed03b"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"194d543d0782fd10b965f7208c1ed03b","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="ACW-Create Digital twin for a ServiceNow Application">8c2ddc390782fd10b965f7208c1ed0c4</plan_id>
+        <snapshot>283e1cfd0782fd10b965f7208c1ed0c5</snapshot>
+        <sys_created_by>adminanil</sys_created_by>
+        <sys_created_on>2023-10-23 06:59:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>194d543d0782fd10b965f7208c1ed03b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>adminanil</sys_updated_by>
+        <sys_updated_on>2023-10-23 07:00:46</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>
