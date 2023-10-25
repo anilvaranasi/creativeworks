@@ -20,7 +20,8 @@ It creates a .gml file that can be viewed in yworks yEd Graph Editor a yFiles Gr
 Visualization Library.
 
 Design notes :
-awesomenowcreative works calls ServiceNow relationship API to get all relationships for a CI.
+awesomenowcreative works performs two functions
+1. Create digital twin for a CI relationship as part of which calls ServiceNow relationship API to get all relationships for a CI.
 It converts that data into a .gml file which can be fed into a graph editor to visualize it.
 
 Setup needed: 
@@ -50,3 +51,9 @@ Use to simiulate and analyze CI state in order to bring in any optimization or e
 Video demo :https://youtu.be/n9OlxP-J0vw
 ServiceNow share: https://developer.servicenow.com/connect.do#!/share/contents/3287388_awesomenow_creativeworks_create_a_digital_twin_in_graphml_format?t=PRODUCT_DETAILS
 GitHub: https://github.com/anilvaranasi/creativeworks.git
+
+2. It creates a digital twin for a scoped app.
+    Example digital twin for this scoped app
+   ![image](https://github.com/anilvaranasi/creativeworks/assets/29941323/a0be09e1-b261-4462-8bde-9b845b489502)
+
+2. 
