@@ -56,4 +56,3 @@ GitHub: https://github.com/anilvaranasi/creativeworks.git
     Example digital twin for this scoped app
    ![image](https://github.com/anilvaranasi/creativeworks/assets/29941323/a0be09e1-b261-4462-8bde-9b845b489502)
 
-2. 
