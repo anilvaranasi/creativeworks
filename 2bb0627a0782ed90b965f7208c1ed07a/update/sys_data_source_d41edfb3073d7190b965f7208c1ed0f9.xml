@@ -2,7 +2,6 @@
     <sys_data_source action="INSERT_OR_UPDATE">
         <batch_size>1000</batch_size>
         <category/>
-        <connection_alias/>
         <connection_override_last_success_time/>
         <connection_timeout>0</connection_timeout>
         <connection_url/>
@@ -44,8 +43,8 @@
             enQuery += '^sys_class_name' + 'IN' + inScopeClasses;
         }
         //var enQuery = 'sys_scope=' + appSysId;
-		sDebug += "sys_scope=" + appSysId +  " enQuery =" + enQuery + "\n";
-		
+        sDebug += "sys_scope=" + appSysId + " enQuery =" + enQuery + "\n";
+
         grMeta.addEncodedQuery(enQuery);
         grMeta.orderByDesc('sys_class_name');
         grMeta.query();
@@ -470,6 +469,39 @@
             }
         }
 
+        if (tableName == 'Flow') {
+            try {
+                fieldValueObj = {};
+                // code block
+                edgeIdentifier = '';
+                targetNode = '';
+                var grTable = new GlideRecord('sys_flow_context');
+                var enQuery = 'name=' + updateName + "^sys_scope=" + sysscope;
+                sDebug += " enQuery reference table =" + enQuery + "\n";
+                grTable.addEncodedQuery(enQuery);
+                grTable.query();
+                if (grTable.next()) {
+                    var brTableName = grTable.source_table.name + '';
+                    var grTableObj = new GlideRecord('sys_db_object');
+                    grTableObj.addEncodedQuery('name=' + brTableName + "^sys_scope=" + sysscope);
+                    grTableObj.query();
+                    if (grTableObj.next()) {
+                        sDebug += " grTableObj.sys_update_name reference table =" + grTableObj.sys_update_name + "\n";
+                        targetNode = grTableObj.sys_update_name + '';
+                        edgeIdentifier = updateName + "|" + targetNode;
+                        fieldValueObj['sys_scope'] = sysscope;
+                        fieldValueObj['sys_scope_display'] = scopeDisplay;
+                        fieldValueObj['sys_class_name'] = tableName;
+                        fieldValueObj['sys_update_name'] = updateName + '';
+                        fieldValueObj['targetNode'] = targetNode + '';
+                        fieldValueObj['edgeIdentifier'] = edgeIdentifier + '';
+                        rowObject[edgeIdentifier + ''] = fieldValueObj;
+                    }
+                }
+            } catch (e) {
+                sDebug += 'exception in Client Script edge lookup' + e;
+            }
+        }
 
         if (tableName == 'Action Type') {
             try {
@@ -613,9 +645,6 @@
     }
     gs.info(sDebug);
 })(import_set_table, data_source, import_log, last_success_import_time);]]></data_loader>
-        <data_stream_action/>
-        <data_stream_action_inputs/>
-        <data_stream_connection_alias/>
         <database_name/>
         <database_port/>
         <discard_arrays>true</discard_arrays>
@@ -631,11 +660,10 @@
         <jdbc_password/>
         <jdbc_server/>
         <jdbc_user_name/>
-        <jdbcprobe_result_set_rows/>
         <jpath_root_node/>
         <last_run_database_field/>
         <last_run_datetime/>
-        <last_success_import_time>2023-10-23 11:01:15</last_success_import_time>
+        <last_success_import_time>2023-11-02 17:56:53</last_success_import_time>
         <ldap_target/>
         <ldapprobe_result_set_rows>200</ldapprobe_result_set_rows>
         <limit/>
@@ -659,7 +687,6 @@
         <scp_port/>
         <scp_server/>
         <scp_user_name/>
-        <sheet_name>1</sheet_name>
         <sheet_number>0</sheet_number>
         <sql_statement/>
         <ssh_keyfile_path/>
@@ -668,14 +695,14 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-10-17 15:54:08</sys_created_on>
         <sys_id>d41edfb3073d7190b965f7208c1ed0f9</sys_id>
-        <sys_mod_count>102</sys_mod_count>
+        <sys_mod_count>117</sys_mod_count>
         <sys_name>ACW-Get EdgeData</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_data_source_d41edfb3073d7190b965f7208c1ed0f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-23 11:01:21</sys_updated_on>
+        <sys_updated_on>2023-11-02 17:56:56</sys_updated_on>
         <table_name/>
         <type>CUSTOM</type>
         <use_batch_import>false</use_batch_import>
@@ -684,5 +711,4 @@
         <xpath_root_node/>
         <zipped>false</zipped>
     </sys_data_source>
-    <sys_variable_value action="delete_multiple" query="document_key=d41edfb3073d7190b965f7208c1ed0f9"/>
 </record_update>
