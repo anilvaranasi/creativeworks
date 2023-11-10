@@ -1,4 +1,7 @@
 # creativeworks
+Deployment instructions
+1. Import scoped app via studio
+2. retrieve, preview and commit two updatesets that are part of the list of files.
 Contains application called awesomenowcreativeworks
 
 Digital twin -> A digital twin is a virtual model designed to accurately reflect a physical
