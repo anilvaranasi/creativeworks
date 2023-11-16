@@ -2,6 +2,7 @@
     <sys_data_source action="INSERT_OR_UPDATE">
         <batch_size>1000</batch_size>
         <category/>
+        <connection_alias/>
         <connection_override_last_success_time/>
         <connection_timeout>0</connection_timeout>
         <connection_url/>
@@ -645,6 +646,9 @@
     }
     gs.info(sDebug);
 })(import_set_table, data_source, import_log, last_success_import_time);]]></data_loader>
+        <data_stream_action/>
+        <data_stream_action_inputs/>
+        <data_stream_connection_alias/>
         <database_name/>
         <database_port/>
         <discard_arrays>true</discard_arrays>
@@ -660,6 +664,7 @@
         <jdbc_password/>
         <jdbc_server/>
         <jdbc_user_name/>
+        <jdbcprobe_result_set_rows/>
         <jpath_root_node/>
         <last_run_database_field/>
         <last_run_datetime/>
@@ -687,6 +692,7 @@
         <scp_port/>
         <scp_server/>
         <scp_user_name/>
+        <sheet_name>1</sheet_name>
         <sheet_number>0</sheet_number>
         <sql_statement/>
         <ssh_keyfile_path/>
@@ -711,4 +717,5 @@
         <xpath_root_node/>
         <zipped>false</zipped>
     </sys_data_source>
+    <sys_variable_value action="delete_multiple" query="document_key=d41edfb3073d7190b965f7208c1ed0f9"/>
 </record_update>
