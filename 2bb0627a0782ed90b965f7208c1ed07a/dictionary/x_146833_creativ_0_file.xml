@@ -9,9 +9,16 @@
                 <element inactive_on_update="false" label="draft" sequence="0" value="draft"/>
                 <element inactive_on_update="false" label="processing" sequence="1" value="processing"/>
                 <element inactive_on_update="false" label="processed" sequence="2" value="processed"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="Cancelled"/>
             </choice>
         </element>
         <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Type" max_length="40" name="u_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="CI" sequence="0" value="CI"/>
+                <element inactive_on_update="false" label="Application" sequence="1" value="Application"/>
+            </choice>
+        </element>
         <element default="2.20" label="Version" max_length="5" name="version" type="string"/>
         <index name="index">
             <element name="ci"/>

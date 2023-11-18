@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="495706e42fb505108dc1d0e62799b6c6" extends="sys_import_set_row" label="IncidentLoaderAPI" max_length="40" name="u_incidentloaderapi" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Name" label="Name" max_length="40" name="u_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Scope" label="Scope" max_length="40" name="u_scope" type="string"/>
+    </element>
+</database>

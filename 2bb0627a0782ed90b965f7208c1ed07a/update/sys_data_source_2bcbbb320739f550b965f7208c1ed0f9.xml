@@ -30,8 +30,11 @@
         //var inScopeClasses = 'sys_security_acl,sys_script_fix,scheduled_import_set,sys_alias,sys_app_application,sys_data_source,sysauto_script,sys_hub_flow,sys_rte_eb_etl_definition,sys_script,sys_script_include,sys_transform_map,sys_user_role,sys_db_object';
         var grMeta = new GlideRecord('sys_metadata');
         var file = '';
+		var enQuery = 'state=processing';
         var grFile = new GlideRecord('x_146833_creativ_0_file');
+		grFile.addEncodedQuery(enQuery);
         grFile.orderByDesc('sys_updated_on');
+		grFile.setLimit(1);
         grFile.query();
         if (grFile.next()) {
             file = grFile.file_application.sys_id + '';
@@ -458,7 +461,7 @@
         <jpath_root_node/>
         <last_run_database_field/>
         <last_run_datetime/>
-        <last_success_import_time>2023-10-23 11:00:54</last_success_import_time>
+        <last_success_import_time>2023-11-18 09:13:46</last_success_import_time>
         <ldap_target/>
         <ldapprobe_result_set_rows>200</ldapprobe_result_set_rows>
         <limit/>
@@ -491,14 +494,14 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-10-14 15:30:12</sys_created_on>
         <sys_id>2bcbbb320739f550b965f7208c1ed0f9</sys_id>
-        <sys_mod_count>277</sys_mod_count>
+        <sys_mod_count>1120</sys_mod_count>
         <sys_name>Get System MetaData via Script</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_data_source_2bcbbb320739f550b965f7208c1ed0f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-10-23 11:00:57</sys_updated_on>
+        <sys_updated_on>2023-11-18 09:13:46</sys_updated_on>
         <table_name/>
         <type>CUSTOM</type>
         <use_batch_import>false</use_batch_import>
