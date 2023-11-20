@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="f2f62a7a07c2ed90b965f7208c1ed083" label="file" max_length="40" name="x_146833_creativ_0_file" type="collection">
         <element attributes="encode_utf8=false" label="Configuration Item" max_length="32" name="ci" reference="cmdb_ci" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="100" name="comments" type="string"/>
         <element default="CreativeWorks" label="Creator" max_length="40" name="creator" type="string"/>
         <element label="File Application" max_length="32" name="file_application" reference="sys_scope" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Name" max_length="250" name="name" type="string"/>
