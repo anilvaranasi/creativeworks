@@ -1,5 +1,23 @@
+
 # creativeworks
-Deployment instructions
+**Deployment instructions**
+Download attached file : ACW-SubFlow_v1.0 this is an updateset
+Retrieve this updateset.
+Preview and commit it.
+Download attached file: varanutil_GetRelationshipsForAGivenCIUpToAGivenLevel_v2.0 this is an updateset
+Retrieve this updateset.
+Preview and commit it.
+
+Create a local user with role as itil or cmdb manager. This is needed only in dev or a lowest nonprod.
+Same credentials need to be updated in the basic auth credentials record.
+https://<instance_name>.service-now.com/basic_auth_credentials.do?sys_id=fc05b0ee07dde950b965f7208c1ed0c1
+Install updateset = varanutil_GetRelationshipsForAGivenCIUpToAGivenLevel_v2.0 from github or share links below.
+Install app from github repo.
+Download and install graph editor (this is an optional step)
+https://www.yworks.com/products/yed/download
+
+
+
 1. Import scoped app via studio
 2. retrieve, preview and commit two updatesets that are part of the list of files.
 Contains application called awesomenowcreativeworks
@@ -26,16 +44,6 @@ Design notes :
 awesomenowcreative works performs two functions
 1. Create digital twin for a CI relationship as part of which calls ServiceNow relationship API to get all relationships for a CI.
 It converts that data into a .gml file which can be fed into a graph editor to visualize it.
-
-Setup needed: 
-Create a local user with role as itil or cmdb manager. This is needed only in dev or a lowest nonprod.
-Same credentials need to be updated in the basic auth credentials record.
-https://<instance_name>.service-now.com/basic_auth_credentials.do?sys_id=fc05b0ee07dde950b965f7208c1ed0c1
-Install updateset = varanutil_GetRelationshipsForAGivenCIUpToAGivenLevel_v2.0 from github or share links below.
-Install app from github repo.
-Download and install graph editor (this is an optional step)
-https://www.yworks.com/products/yed/download
-
 
 Steps to create digital twin
 Create a new file or update existing file record.
