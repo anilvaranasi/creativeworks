@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,timeFromCreateToActivate=3486000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>adb82db707922594b965f7208c1ed0e4</copied_from>
+        <copied_from_name>Get Relationship data for A CI</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>get_relationship_data_for_a_ci</internal_name>
+        <label_cache>[{"name":"flow_variable.urlprefix","label":"Flow Variables➛urlprefix","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"2ad394b2-5c48-43e2-aaac-7b8349d5ff9d":["connectionurl"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8d0e4d62-3e80-485f-869b-02e4ee7eb47f"}},{"name":"4f30d598-bbd2-4ccf-976d-2716df849ccf.Record","label":"1 - Look Up Record➛http_connection Record","reference":"http_connection","reference_display":"HTTP(s) Connection","type":"reference","base_type":"reference","usedInstances":{"f2980515-9e7c-445b-819b-3ea25cd678ed":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4f30d598-bbd2-4ccf-976d-2716df849ccf.Record.sys_id","label":"1 - Look Up Record➛http_connection Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"http_connection","column_name":"sys_id","usedInstances":{"2ad394b2-5c48-43e2-aaac-7b8349d5ff9d":["sysid"]}}]</label_cache>
+        <master_snapshot>f40a7ba7c309121049521d12b40131d6</master_snapshot>
+        <master_snapshot_digest/>
+        <name>ACWGet Relationship data for A CI</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:47:59</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>58f8ff27c309121049521d12b401315b</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>ACWGet Relationship data for A CI</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_hub_flow_58f8ff27c309121049521d12b401315b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:46:08</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=58f8ff27c309121049521d12b401315b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=58f8ff27c309121049521d12b401315b"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=58f8ff27c309121049521d12b401315b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=58f8ff27c309121049521d12b401315b^sys_idNOT INd8f8ff27c309121049521d12b401315e"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>58f8ff27c309121049521d12b401315b</id>
+        <name>Get Relationship data for A CI</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:47:59</sys_created_on>
+        <sys_id>d8f8ff27c309121049521d12b401315e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 08:47:59</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=d8f8ff27c309121049521d12b401315e"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=58f8ff27c309121049521d12b401315b^sys_idNOT IN6cf8ff27c309121049521d12b4013196"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=229718eb-1581-41a5-b98e-f705ff8619d7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ci</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>ci</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="ACWGet Relationship data for A CI">58f8ff27c309121049521d12b401315b</model>
+        <model_id>58f8ff27c309121049521d12b401315b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_58f8ff27c309121049521d12b401315b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:48:01</sys_created_on>
+        <sys_id>6cf8ff27c309121049521d12b4013196</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 08:48:01</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6cf8ff27c309121049521d12b4013196"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=58f8ff27c309121049521d12b401315b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=58f8ff27c309121049521d12b401315b"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=58f8ff27c309121049521d12b401315b"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=58f8ff27c309121049521d12b401315b^sys_idNOT IN973680fbc349121049521d12b4013161,b8f8ff27c309121049521d12b40131c3,f4f8ff27c309121049521d12b40131c5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="UpdateHttpConnectionRecordWithConnectionUrl">b225847bc349121049521d12b4013171</action_type>
+        <action_type_parent display_value="UpdateHttpConnectionRecordWithConnectionUrl">18b4cc77c349121049521d12b4013142</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>b225847bc349121049521d12b4013171</compiled_snapshot>
+        <display_text/>
+        <flow display_value="ACWGet Relationship data for A CI">58f8ff27c309121049521d12b401315b</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>f2980515-9e7c-445b-819b-3ea25cd678ed</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 09:46:05</sys_created_on>
+        <sys_id>973680fbc349121049521d12b4013161</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:53:44</sys_updated_on>
+        <ui_id>2ad394b2-5c48-43e2-aaac-7b8349d5ff9d</ui_id>
+        <values>H4sIAAAAAAAA/+1Ty27bMBD8F54lQZJpWfKtSBCgQNsASZpLEBh8LG0CNKVQlBPX8L93KclO6rZBgvZU9Lizr5kh925HtCRzolg+LemMiwmtsjxLaTXNM5nlnKbZJJtREhHL1oCV7bbFjohsmOlCvNtRNUnltCpjzmUeUyFUXM0KGeezrJCqpBUiyRWI2skEuxda7vc4QOq2MWx7+6dzxEob6cCS+d19RBrmkKcHR+a7k9RbhRrGwbxQeiLcb5s+9E7b5Rh/GluuDyByDBSyiMCTBysBdytmWojImlnJfO22ZO5dh4ADJi+t2R4rVtp6HEZC7VOrv+G6Mk3TUKkA5QgYssfwhnED54OfQ0qdM8+QTSd858Zysaq1gHYwQ4JinfFnL7Gh4LLxurZDiw+Dx+7adGv7ZfCCHAccng+RroWFhCaoDfxHMep6VT9eHZheaNsbMyZNLZg5Rsyjfbzzgc+OdPrmxOkB+clrMLDGjYs1axpEFo2rN7rfgqTXydJgkChTPyK7Vi9twkRQmOArsOQC8fMevmVOB7mfcQw2h3VfrX7o4GP/b2QJRZpBnEtaxFRBFfM8ncZlmpcwA1lUxYTso/BLzgxr22ej8JUWD12QOdg2GrQYPA4twunGf0BSGxi92EfjXfJXv2s5ff6eorYWemGdMz/cZy99M6pLMNsgJf306yN8rfh9l/YG6odLO+X+G0nvubz8/+X9I5dXZkoITmWsphRiOkmruMyViFPJU8orzgom/uLl3X8HpX1sWRMHAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="ACWGet Relationship data for A CI">58f8ff27c309121049521d12b401315b</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:48:01</sys_created_on>
+        <sys_id>b8f8ff27c309121049521d12b40131c3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:53:44</sys_updated_on>
+        <ui_id>4f30d598-bbd2-4ccf-976d-2716df849ccf</ui_id>
+        <values>H4sIAAAAAAAA/+VYUW/jKBD+K5af0x52Ejvp26pVpUp7W2nb23vY20MYcIOOgBdwu9mq//3GYCe5JG1jbSqlukeYgflm+L4B++tjTKgTWl0p64ii/GZhr1h8FrM8GxXlsED5lGTj6aiYZuMyT9GEJpwhmsaDWHi/KZqW0+l4kiM0HCKUZUNKkqIYZrRABRmBnyJzDp6OFJLD8J7IuhnPnKsw1UpxDwAsTNhKksWXZx3oTEhmuIrPvn4bxBUxsLPjJj573DDtC02SgktwvW2xbUB1i2o5xN4W5j6uL4s+BYM2rIGCBjH/4bhiHDCURFo+iOdEMeK0WSxnDCfsWsnVxEwoBzvGjfMPK35C3Alq/EoOWVEebMuhj3wR6hVM5QVx5MaZmrratO50pgXlNtSE8ZLU0p2vzwWH68rX1y8JqYfVWtZz9SmUJF5u0B0PzNSWY8arJtkGfZtKeTPTD587pJdC+bq0RqkpkcsRcc6IonYNnseYSz6HjfCcVJVQd7gy+l74xYBlfnonYXBaSv0AQa24U6eBuqdQW3J6CfMXfvoLMaLJ4nfYBhYDICGBJTgco9W18eW8x1TW1hsMUTbsFT8NYruw55JYu8ocyo6/1w3uUIc2YxyK1iyhRlTuA2xxz9vknga/LK3xi/ydrvgKImGiCWXX9NXY/qphKftw/iemc1ZgwyXxbjNR2b+hPNhSXbVeaVGgLM0JyicpB+38F1ZOtgX6BhF6Kvz1CnUKP18v0a6ytVrfmvu4a4NW68nBtD5C6L2pHYIfn9j7yzeU4K00nLAXGcpWZLTaOBwOYU3E26LrLZI9IHQiuW5oHRWL51C1GikFl2zXfXjZGDbuw/T/ex8epUIAEMPhBIWSQvkHDgA9OumMX+RtkWyQ1HNzJRw/RyzdFhCJnI5+9pbRHnA6Gd1A7Og24NkBsbtpPNc2b5luslXP8GDqGaaHU8/jMtVlMXfUvXsQN1To/H82/mTTH/i7tiB52qXOXjGTvjHTp231D3vJf51wwXLxDO8O/Gp+Rs6Dt+wfM1jaxsNB/PhBsDvuVtE7L6bdA5H/7LK3wsTdQfn0jukFnrz4BVmsvcBFiedw5KKCLwzDKbDKYmI4LnWtGCbdB2zHwIYCpTDWtc7bXeozB+GpSIOqIzfjkfeOlt49nwCv59GdwVUZdYm00WwEiUQ+kWiZSL+0+3S80QHf1G/R8S6JkP5E4NOxWjtSbow2z3S9Vw7zBVbs2RL3BJUcFNSv98xdMtjZO1/B+i7+QxxRX6OcFKOUZPkwSRBKEMvRJM+TSVaUGclH5UrgGFtFoYcDpBI4Brhwx6mOIGi7eYVG3rdL7YGq4+6FVs0vhTR3UQMLiBF1sF4H3najQmvJidpoR7dwO/122eJviT4+ypb0Ln7p1eJ2s9phame93+rFUos/lPhecy+SCUfpJGH0ZJIn+cmoZNnJlJHxCZkW43zIOB2Vh3yEfPsXUX8qomMXAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Trigger scheduled import">fab3ae518790d11070294087cebb3579</action_type>
+        <action_type_parent display_value="Trigger scheduled import">9623aa118790d11070294087cebb35e3</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>fab3ae518790d11070294087cebb3579</compiled_snapshot>
+        <display_text/>
+        <flow display_value="ACWGet Relationship data for A CI">58f8ff27c309121049521d12b401315b</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>f2980515-9e7c-445b-819b-3ea25cd678ed</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:48:01</sys_created_on>
+        <sys_id>f4f8ff27c309121049521d12b40131c5</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:53:44</sys_updated_on>
+        <ui_id>687df581-82d3-4a12-9f43-8167e675d697</ui_id>
+        <values>H4sIAAAAAAAA/41TwW7bMAz9lUFnJ3AS24lzCxJk6LCuQNN1h6IwaJlONMiSK8lpvaD/Xsp2sqHFgN7Ex0fy8RF6ODHgTmh1pawDxXHX2quCLVnCeVymszKcT5JpnEZ5msTlfBou+ASLMIlZwITnTeM8nv2Xly+Ip6BCYv7WedY9A3YE2Xhotf71Fd0tSvAS7EHUdqvNai2uQSjiFcLWEtr7T9L5QcjCoGLLh8eA1WBomkPDlqd3qc8ql5CjJOo3nX8ZpH9cxrW1R6wzQu2H+PtQuDuD2hReyCRg+OJQFUgKSpAWA1aBKsBp07KlMw0BBqG4UbK9MA5COWrGPPfFij80bhGGoWeWSEtx7LOX8A5yiZvevD5VbsABqWm4a8xA5wctONrekgJLaKRb/4v1hJvau92XON94qNayqdSP3g52aXC+FSGNxazA2m/r9Q/LlLuDfr49K90K1RkzJKXmIC8ROLIvb5zXc2KNuHvndI988BolVjQxq6CuCclqo4+im0Kiq/FeUjAupX4mdVbs1bj/AWO6Aoy3hG86+B6M8OteUxsq9uN+KvHUYPc/oijieRxGI1zMilE0SeajNJwtRpgkYRqlvEwgZ68Bs61dS7D2r1F0peyp8Wv2tg0GZb3HvoQbUbsViTri4MXr4xsciJqCqQMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=58f8ff27c309121049521d12b401315b"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=58f8ff27c309121049521d12b401315b^sys_idNOT IN9f3680fbc349121049521d12b4013160,f8f8ff27c309121049521d12b40131c2"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">173680fbc349121049521d12b4013160</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="ACWGet Relationship data for A CI">58f8ff27c309121049521d12b401315b</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 09:46:05</sys_created_on>
+        <sys_id>9f3680fbc349121049521d12b4013160</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:46:05</sys_updated_on>
+        <ui_id>f2980515-9e7c-445b-819b-3ea25cd678ed</ui_id>
+        <values>H4sIAAAAAAAA/+VUyW7bMBD9FYNnWdBiObZvQdugAZq4iI0ARREIFDmyiVKkKlJeavjfM9SSBI2DGG1vvVlvhvPem8UHomtb1tYs9aUxYqXI7PuDR4RyGP4+EMHJjOQBzcMpC1kcjeMoCKLJKMzGcRZGPKZAY+IRRQvATKYVF1ZolTaARzZU1i7w2dpygFEFzIUHsBMGKTzChSkl3d+/l8fWQvIKOoUlrbC+hYrMDr+F7L6EVNIMJJZb2EqoFT4/10f/8ENvZPClQd526PgQNz2TrriTFQYegZ0FxQGpcyoNeKSgilOrq/0TUgHlcyWfgbVQFssRl7wz4hfWjpLEJeaAHhm0QbbWgsG8dEpaxNJM9kEt60LdtoJdjyGntbR9jxGpDaQcSqfO0XXc+WKtt3c90ZVQjZMuKDWj8umLWvSb1RaMmwBIKLBQWtCyxC6kZaU3onmMWgp/JfHDz6XeIqlbM5820/WxGdS/QvxjA9/TSjgXN1gGH7cyM2oES5uVxHK2QgvHph3pz9oJag12VtK2G5hgWCVKe4k8G+hUH71un6c0yZMwSE7vwWh8YtovVvlwGOVxwJPpZJhlPBqOGMuH04sxH0YX4Zjnk9EUEf8OGK7C8Xi9uJ0vP918XX57ve1/U+pfHMQZjXh1EKeb88YVRO9cgRvnmUcQBMF/egXCpO02d94a8j8+gge3yS2DaReEAxMGhSwddt3/97vAHict2Etoq6sfzsIzdnwEbj65/UUGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b0f8ff27c309121049521d12b40131c2</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="ACWGet Relationship data for A CI">58f8ff27c309121049521d12b401315b</flow>
+        <flow_variables_assigned>urlprefix</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:48:01</sys_created_on>
+        <sys_id>f8f8ff27c309121049521d12b40131c2</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:46:05</sys_updated_on>
+        <ui_id>b5a98c48-b46e-46ae-b47a-94a79d8a927d</ui_id>
+        <values>H4sIAAAAAAAA/+1XW28rNRD+K9Y+QdvsJdlc+4AqwRGVCkWk57yQo8jrnU0MXnuPL2lDlf/OzF5SqLgIwQNCfer683i+b8YznvQ5MsE3wbsHc+Oc3Olo9cPHq0hqwvD7OdK8hmgVBasaC5V8iq6iA1eBsL33jVslSQmHLMvy2SR2YA9SwEibx1iYOuGNTPA7EXVZWFDcS6OT8we6KqVrFD9++Pc8ir1UpYU+kIZb1O/BRqvnV1v+2MBW8QIUEq+9lXqHx2WJq2leLapqPBeTdJmNszRfTsdZmY2LPM0m2UKg3XDw13n5nVQRCUJucG9sSVrSqwiePOgSkK7iysFVVHNdcm/s8YxY4OW9Vi/AXmqP3iIyfnLyZ3S9SNOULCvAwAR0u2JvMGf3DeWkQzwv1LBpVKj1t51WugKoeFB+uAJEgoNtCQ3JI76evFrvzeP3A9E7qdtI+k1lBFfnFfcYbxE8OEp7kA+vstAhd69zDwpqZNzWvGkQ2TbWHGTLgqLreKdwEVfKPKI6qtWYC4owxrTx+B3iX7bwB24lhfsNusHDRPdey08BbuluF2UKeTkbjyawSEf5YlqNFrNlMUrHkAPMocjnVXRqU7r9FCioLkl9OrZdRtHACSsbf4MSDhictwEGrA36XAS4+DPTKLnY6IuLGyHAOUZRJDdtWIzCYsFhJpjfA6vKbYuY4kcQPmbr1gGrg/PMgg9WM87a1owZebynUmM61AX+kY6ZqnLgWXFklxmTmn1lrbHsa6w6RRRr6JLZijlwqSiFzLQ15Fjfpyw0KAwDc62sTRRvIsYr7K9BHh2HJ143ClaoxjK3N9bjxQi2CWk6KQfDGG99twMbi2CxonzcGtLNtnEh6zX56iM7eyEw2egkcS0Hq4ytuSfgn74dG01ypXaeY31TfwyKdy7egf/OGiwnf/yM0PF8MNxS13fQ59edj07ze6sGB932ILBbscvfULHL3urvqm4PIXGfqDP3dXQ6nT7SY911Q/eaU/fcmZ0Utz35+ujatlhOZnlRTYp0vuSz6TIvlrNpNR+nC5FBmYr58DT+xXv3nx4Nb8PgbRi8DYO3YfD/HwZEjEW3DhUW3etcu1C0fdP9yI+FPNN94e7gAKqzX/zhaEH7s/NhzJQgpEMND1Qpt8O/D7RxxJzQvHmBHo39iRS8YKdfAPSIw++IDAAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=58f8ff27c309121049521d12b401315b"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=58f8ff27c309121049521d12b401315b^sys_idNOT IN54f8ff27c309121049521d12b401318c"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=8d0e4d62-3e80-485f-869b-02e4ee7eb47f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>urlprefix</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>urlprefix</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="ACWGet Relationship data for A CI">58f8ff27c309121049521d12b401315b</model>
+        <model_id>58f8ff27c309121049521d12b401315b</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_58f8ff27c309121049521d12b401315b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:48:00</sys_created_on>
+        <sys_id>54f8ff27c309121049521d12b401318c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 08:48:00</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_58f8ff27c309121049521d12b401315b^sys_idNOT IN74f8ff27c309121049521d12b40131bf"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>ci</element>
+        <help/>
+        <hint/>
+        <label>ci</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_58f8ff27c309121049521d12b401315b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:48:01</sys_created_on>
+        <sys_id>74f8ff27c309121049521d12b40131bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 08:48:01</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_58f8ff27c309121049521d12b401315b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_58f8ff27c309121049521d12b401315b"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_58f8ff27c309121049521d12b401315b"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>26000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>adb82db707922594b965f7208c1ed0e4</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority/>
+        <internal_name>get_relationship_data_for_a_ci</internal_name>
+        <label_cache>[{"name":"flow_variable.urlprefix","label":"Flow Variables➛urlprefix","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"2ad394b2-5c48-43e2-aaac-7b8349d5ff9d":["connectionurl"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"8d0e4d62-3e80-485f-869b-02e4ee7eb47f"}},{"name":"4f30d598-bbd2-4ccf-976d-2716df849ccf.Record","label":"1 - Look Up Record➛http_connection Record","reference":"http_connection","reference_display":"HTTP(s) Connection","type":"reference","base_type":"reference","usedInstances":{"f2980515-9e7c-445b-819b-3ea25cd678ed":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4f30d598-bbd2-4ccf-976d-2716df849ccf.Record.sys_id","label":"1 - Look Up Record➛http_connection Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"http_connection","column_name":"sys_id","usedInstances":{"2ad394b2-5c48-43e2-aaac-7b8349d5ff9d":["sysid"]}}]</label_cache>
+        <master>true</master>
+        <name>ACWGet Relationship data for A CI</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="ACWGet Relationship data for A CI">58f8ff27c309121049521d12b401315b</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:52:40</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f40a7ba7c309121049521d12b40131d6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:46:07</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=f40a7ba7c309121049521d12b40131d6"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f40a7ba7c309121049521d12b40131d6"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=f40a7ba7c309121049521d12b40131d6"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=f40a7ba7c309121049521d12b40131d6^sys_idNOT IN380a7ba7c309121049521d12b40131d7"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>f40a7ba7c309121049521d12b40131d6</id>
+        <name>Get Relationship data for A CI</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:52:40</sys_created_on>
+        <sys_id>380a7ba7c309121049521d12b40131d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 08:52:40</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=380a7ba7c309121049521d12b40131d7"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=f40a7ba7c309121049521d12b40131d6^sys_idNOT IN7c0a7ba7c309121049521d12b40131d8"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=229718eb-1581-41a5-b98e-f705ff8619d7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ci</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>ci</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="ACWGet Relationship data for A CI">f40a7ba7c309121049521d12b40131d6</model>
+        <model_id>f40a7ba7c309121049521d12b40131d6</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_f40a7ba7c309121049521d12b40131d6</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:52:40</sys_created_on>
+        <sys_id>7c0a7ba7c309121049521d12b40131d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 08:52:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7c0a7ba7c309121049521d12b40131d8"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=f40a7ba7c309121049521d12b40131d6"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f40a7ba7c309121049521d12b40131d6"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=f40a7ba7c309121049521d12b40131d6"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=f40a7ba7c309121049521d12b40131d6^sys_idNOT IN090abba7c309121049521d12b4013137,4d0abba7c309121049521d12b4013139,a33680fbc349121049521d12b40131da"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="ACWGet Relationship data for A CI">f40a7ba7c309121049521d12b40131d6</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:52:42</sys_created_on>
+        <sys_id>090abba7c309121049521d12b4013137</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:46:07</sys_updated_on>
+        <ui_id>4f30d598-bbd2-4ccf-976d-2716df849ccf</ui_id>
+        <values>H4sIAAAAAAAA/+VYUW/jKBD+K5af0x52Ejvp26pVpUp7W2nb23vY20MYcIOOgBdwu9mq//3GYCe5JG1jbSqlukeYgflm+L4B++tjTKgTWl0p64ii/GZhr1h8FrM8GxXlsED5lGTj6aiYZuMyT9GEJpwhmsaDWHi/KZqW0+l4kiM0HCKUZUNKkqIYZrRABRmBnyJzDp6OFJLD8J7IuhnPnKsw1UpxDwAsTNhKksWXZx3oTEhmuIrPvn4bxBUxsLPjJj573DDtC02SgktwvW2xbUB1i2o5xN4W5j6uL4s+BYM2rIGCBjH/4bhiHDCURFo+iOdEMeK0WSxnDCfsWsnVxEwoBzvGjfMPK35C3Alq/EoOWVEebMuhj3wR6hVM5QVx5MaZmrratO50pgXlNtSE8ZLU0p2vzwWH68rX1y8JqYfVWtZz9SmUJF5u0B0PzNSWY8arJtkGfZtKeTPTD587pJdC+bq0RqkpkcsRcc6IonYNnseYSz6HjfCcVJVQd7gy+l74xYBlfnonYXBaSv0AQa24U6eBuqdQW3J6CfMXfvoLMaLJ4nfYBhYDICGBJTgco9W18eW8x1TW1hsMUTbsFT8NYruw55JYu8ocyo6/1w3uUIc2YxyK1iyhRlTuA2xxz9vknga/LK3xi/ydrvgKImGiCWXX9NXY/qphKftw/iemc1ZgwyXxbjNR2b+hPNhSXbVeaVGgLM0JyicpB+38F1ZOtgX6BhF6Kvz1CnUKP18v0a6ytVrfmvu4a4NW68nBtD5C6L2pHYIfn9j7yzeU4K00nLAXGcpWZLTaOBwOYU3E26LrLZI9IHQiuW5oHRWL51C1GikFl2zXfXjZGDbuw/T/ex8epUIAEMPhBIWSQvkHDgA9OumMX+RtkWyQ1HNzJRw/RyzdFhCJnI5+9pbRHnA6Gd1A7Og24NkBsbtpPNc2b5luslXP8GDqGaaHU8/jMtVlMXfUvXsQN1To/H82/mTTH/i7tiB52qXOXjGTvjHTp231D3vJf51wwXLxDO8O/Gp+Rs6Dt+wfM1jaxsNB/PhBsDvuVtE7L6bdA5H/7LK3wsTdQfn0jukFnrz4BVmsvcBFiedw5KKCLwzDKbDKYmI4LnWtGCbdB2zHwIYCpTDWtc7bXeozB+GpSIOqIzfjkfeOlt49nwCv59GdwVUZdYm00WwEiUQ+kWiZSL+0+3S80QHf1G/R8S6JkP5E4NOxWjtSbow2z3S9Vw7zBVbs2RL3BJUcFNSv98xdMtjZO1/B+i7+QxxRX6OcFKOUZPkwSRBKEMvRJM+TSVaUGclH5UrgGFtFoYcDpBI4Brhwx6mOIGi7eYVG3rdL7YGq4+6FVs0vhTR3UQMLiBF1sF4H3najQmvJidpoR7dwO/122eJviT4+ypb0Ln7p1eJ2s9phame93+rFUos/lPhecy+SCUfpJGH0ZJIn+cmoZNnJlJHxCZkW43zIOB2Vh3yEfPsXUX8qomMXAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Trigger scheduled import">fab3ae518790d11070294087cebb3579</action_type>
+        <action_type_parent display_value="Trigger scheduled import">9623aa118790d11070294087cebb35e3</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>fab3ae518790d11070294087cebb3579</compiled_snapshot>
+        <display_text/>
+        <flow display_value="ACWGet Relationship data for A CI">f40a7ba7c309121049521d12b40131d6</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>f2980515-9e7c-445b-819b-3ea25cd678ed</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:52:42</sys_created_on>
+        <sys_id>4d0abba7c309121049521d12b4013139</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:46:07</sys_updated_on>
+        <ui_id>687df581-82d3-4a12-9f43-8167e675d697</ui_id>
+        <values>H4sIAAAAAAAA/41TwW7bMAz9lUFnJ3AS24lzCxJk6LCuQNN1h6IwaJlONMiSK8lpvaD/Xsp2sqHFgN7Ex0fy8RF6ODHgTmh1pawDxXHX2quCLVnCeVymszKcT5JpnEZ5msTlfBou+ASLMIlZwITnTeM8nv2Xly+Ip6BCYv7WedY9A3YE2Xhotf71Fd0tSvAS7EHUdqvNai2uQSjiFcLWEtr7T9L5QcjCoGLLh8eA1WBomkPDlqd3qc8ql5CjJOo3nX8ZpH9cxrW1R6wzQu2H+PtQuDuD2hReyCRg+OJQFUgKSpAWA1aBKsBp07KlMw0BBqG4UbK9MA5COWrGPPfFij80bhGGoWeWSEtx7LOX8A5yiZvevD5VbsABqWm4a8xA5wctONrekgJLaKRb/4v1hJvau92XON94qNayqdSP3g52aXC+FSGNxazA2m/r9Q/LlLuDfr49K90K1RkzJKXmIC8ROLIvb5zXc2KNuHvndI988BolVjQxq6CuCclqo4+im0Kiq/FeUjAupX4mdVbs1bj/AWO6Aoy3hG86+B6M8OteUxsq9uN+KvHUYPc/oijieRxGI1zMilE0SeajNJwtRpgkYRqlvEwgZ68Bs61dS7D2r1F0peyp8Wv2tg0GZb3HvoQbUbsViTri4MXr4xsciJqCqQMAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="UpdateHttpConnectionRecordWithConnectionUrl">b225847bc349121049521d12b4013171</action_type>
+        <action_type_parent display_value="UpdateHttpConnectionRecordWithConnectionUrl">18b4cc77c349121049521d12b4013142</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>b225847bc349121049521d12b4013171</compiled_snapshot>
+        <display_text/>
+        <flow display_value="ACWGet Relationship data for A CI">f40a7ba7c309121049521d12b40131d6</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>f2980515-9e7c-445b-819b-3ea25cd678ed</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 09:46:06</sys_created_on>
+        <sys_id>a33680fbc349121049521d12b40131da</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:46:07</sys_updated_on>
+        <ui_id>2ad394b2-5c48-43e2-aaac-7b8349d5ff9d</ui_id>
+        <values>H4sIAAAAAAAA/+1Ty27bMBD8F54lQZJpWfKtSBCgQNsASZpLEBh8LG0CNKVQlBPX8L93KclO6rZBgvZU9Lizr5kh925HtCRzolg+LemMiwmtsjxLaTXNM5nlnKbZJJtREhHL1oCV7bbFjohsmOlCvNtRNUnltCpjzmUeUyFUXM0KGeezrJCqpBUiyRWI2skEuxda7vc4QOq2MWx7+6dzxEob6cCS+d19RBrmkKcHR+a7k9RbhRrGwbxQeiLcb5s+9E7b5Rh/GluuDyByDBSyiMCTBysBdytmWojImlnJfO22ZO5dh4ADJi+t2R4rVtp6HEZC7VOrv+G6Mk3TUKkA5QgYssfwhnED54OfQ0qdM8+QTSd858Zysaq1gHYwQ4JinfFnL7Gh4LLxurZDiw+Dx+7adGv7ZfCCHAccng+RroWFhCaoDfxHMep6VT9eHZheaNsbMyZNLZg5Rsyjfbzzgc+OdPrmxOkB+clrMLDGjYs1axpEFo2rN7rfgqTXydJgkChTPyK7Vi9twkRQmOArsOQC8fMevmVOB7mfcQw2h3VfrX7o4GP/b2QJRZpBnEtaxFRBFfM8ncZlmpcwA1lUxYTso/BLzgxr22ej8JUWD12QOdg2GrQYPA4twunGf0BSGxi92EfjXfJXv2s5ff6eorYWemGdMz/cZy99M6pLMNsgJf306yN8rfh9l/YG6odLO+X+G0nvubz8/+X9I5dXZkoITmWsphRiOkmruMyViFPJU8orzgom/uLl3X8HpX1sWRMHAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=f40a7ba7c309121049521d12b40131d6"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=f40a7ba7c309121049521d12b40131d6^sys_idNOT IN410abba7c309121049521d12b4013136,ab3680fbc349121049521d12b40131dc"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b0f8ff27c309121049521d12b40131c2</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="ACWGet Relationship data for A CI">f40a7ba7c309121049521d12b40131d6</flow>
+        <flow_variables_assigned>urlprefix</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:52:41</sys_created_on>
+        <sys_id>410abba7c309121049521d12b4013136</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:46:07</sys_updated_on>
+        <ui_id>b5a98c48-b46e-46ae-b47a-94a79d8a927d</ui_id>
+        <values>H4sIAAAAAAAA/+1XW29jNRD+K5afoG3OJfe0D6jasqJSlyLS3Reyinx8xonBxz7rS9pQ5b8zPpcEigRC8IKUpxx/Hs9883nGo7xSE3wdvHsyt87JjabXP32+olJHDL9fqVDm+cFsJL/XzjPNYbl39yW9povRdFyIUZHNFmw6WYyLxXQiZsNsznMoMz6j6CbaBatqC0K+IKBZBW+gHVMhYlvva3edpiXs8jwfT0eJA7uTHAbaPCfcVCmrZYrfKa/KwoJiXhqdHj/QVSldrdj+03/nsWYWGXuw9PqV8q1UpYVeopjbZCzmQgxnfJQt8mGejReTYV7mw2Kc5aN8ztGFYgWov5fB7+sIOW+l3nTrh+7osgeNLSOV7IrCiwddAnIQTDm4ohXTJfPG7o+IBVY+anUCtlJ79Eaj8YuTv2K8eZZl0VIA5sWh3T0un1ih4K4Vtd0Sd8wzpBO4D7Yz51uDmrpWlRIEC8q/+z3WGjzWUdT2iI+Ou9NGhUp/3wpCjw76O0QkOFiXUMd0I/8uGbHcmucfe6bvpW6U6TaV4UwdV8yjfkXwkc8rDfLpjdQt8iexQUGFEdcVq2tE1rU1O9lEQdJVslG4SGJ3ILvYOQnjMcMEr4El7xG/a+BPzMqY7gd0g4djuI9afgnQNNG8zGBcToeDEcyzwXg+EYP5dFEMsiGMAWZQjGeCHq6o27t3ijl3Egpvaf0lxDRb2TqB1q3G8Qi3sva3SGqHR/DOoMcaGY61h4u/MqXpxUpfXNxyvE9HYl7pbZMoiYmS4FAb4rdARLluEFP8DNwnZNk4IFVwnljAetGEkabbExI9PsZiJjpUBf5IR4wQDjwp9uQyJ1KTb601lnyHda1iiCW08jZkdkyqKCoxTVU50rU+CTUSw8RcQ2tFkxUlTGAD9/TicXhhVa3gGtlY4rbGerwqTlYhy0Zlb5hgHWw2YBMeLNaYTxrDeNdNXhj1JvrqMjt6iWC60mnqmhhEGFsxH4F/+xytdKQru1c4FkLPeOOSDfgfrMEC8/uvIjqc9Ybr+Ni00Nc3rY+W80eregftdk+wXZHLP4Qil53VP2XdHOoCY9Etg8Cie6u1C0XTSe3cSbg8hvvGPcAOVGs/P3rrZD9lcnlyfkMPh8PnOFnazjvPsfMcO8+x8xw7z7HzHPs/zrESuHTIoXnG7vt/ZnFjj5rEgXaCno39JTI4YYffAKd6U+HjDQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">173680fbc349121049521d12b4013160</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="ACWGet Relationship data for A CI">f40a7ba7c309121049521d12b40131d6</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 09:46:07</sys_created_on>
+        <sys_id>ab3680fbc349121049521d12b40131dc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:46:07</sys_updated_on>
+        <ui_id>f2980515-9e7c-445b-819b-3ea25cd678ed</ui_id>
+        <values>H4sIAAAAAAAA/+1VXW/aMBT9K8jPAeUDKPBWwapVasvUokrTVEU3tgPWHDuLHT6G+O+9TsKHVqZSrY97w+deX59zco/YEl3avLRmpq+NEXNFRj9ePCKUw/D3lghGRiT1IQ2GNKBR2I9C3w8H3SDpR0kQsgg4RMQjCjKOnVQrJqzQKq4AjyxBlq7w1dq8hVXFqSu3+FoYfMIjTJhcwub5vT66EJIVvGGYQ4HzLS/IaPtH6VLGEhIusXW8p9y6q5C/a7Gb3OHGFkLNm/NdM+VpD+qCOVaB7xG+tlwxjnxSkIZ7JAPFwOpic0AKDmyq5BFYCGVxHHHNayN+44Nhr+caU44SKa+Lh+MMEskntYd1KZ2ABaRTUlsWTTtdaEG5qQ1iPIVS2vEpVjdMcye3vmLd4Oa2lmWmHmpXyGHA/pMhUhoeM547tY5+oyV9WujV457pjVCVM01RagrycAKL/iWldXy2hEue4aA4gzxHV+O80EtRXUYuWWcu8dBJpV7ho25rO1AtSwfNhc4N4pMKfoZCOBX3OAYv1zQTMILG1YbjOLSJk51HzMaMJRhzFIkOx79KR7GW3IiLa3/cFVqI3F7jy0ve6Nh5TWCG0Et7gd87v37d/pklO8nKdttNI5/1hoN2krCw3aU0bQ+v+qwdXgV9lg66Q0Q6j5zisu12t08P09mX+2+z72/j9C+jPpa4CyS/Sdx5Gz4Ss/CdmLnve2HKfN//H7NPiZkwcR2ORlv1+Cem7MVFpX7z4DUVBqlVn+l2/+/lChtcMEFPoZUufjpRR2z3CgHPz/wHBwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=f40a7ba7c309121049521d12b40131d6"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=f40a7ba7c309121049521d12b40131d6^sys_idNOT IN450abba7c309121049521d12b4013131"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=8d0e4d62-3e80-485f-869b-02e4ee7eb47f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>urlprefix</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>urlprefix</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="ACWGet Relationship data for A CI">f40a7ba7c309121049521d12b40131d6</model>
+        <model_id>f40a7ba7c309121049521d12b40131d6</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_f40a7ba7c309121049521d12b40131d6</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:52:41</sys_created_on>
+        <sys_id>450abba7c309121049521d12b4013131</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 08:52:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_f40a7ba7c309121049521d12b40131d6^sys_idNOT IN490abba7c309121049521d12b401312a"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>ci</element>
+        <help/>
+        <hint/>
+        <label>ci</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_f40a7ba7c309121049521d12b40131d6</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:52:41</sys_created_on>
+        <sys_id>490abba7c309121049521d12b401312a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 08:52:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_f40a7ba7c309121049521d12b40131d6"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_f40a7ba7c309121049521d12b40131d6"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_f40a7ba7c309121049521d12b40131d6"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>58f8ff27c309121049521d12b401315b</sys_id>
+        <latest_snapshot>f40a7ba7c309121049521d12b40131d6</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch0-07-16-2024_07-27-2024_1019.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=58f8ff27c309121049521d12b401315b"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=58f8ff27c309121049521d12b401315b^sys_idNOT IN950abba7c309121049521d12b4013172"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"950abba7c309121049521d12b4013172","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="ACWGet Relationship data for A CI">58f8ff27c309121049521d12b401315b</plan_id>
+        <snapshot>5ff780bfc349121049521d12b40131b0</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 08:52:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>950abba7c309121049521d12b4013172</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:46:08</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>
