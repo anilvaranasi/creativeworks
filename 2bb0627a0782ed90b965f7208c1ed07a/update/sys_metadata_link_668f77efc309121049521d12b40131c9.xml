@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>072fffefc309121049521d12b401310a</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="basic_auth_credentials">
+    <basic_auth_credentials action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</application>
+        <applies_to>all</applies_to>
+        <authentication_key/>
+        <authentication_protocol/>
+        <classification>basic_auth</classification>
+        <context_name/>
+        <credential_id/>
+        <credential_storage_vault display_value="CyberArk">2bb9bebab7462010eca29a85de11a96d</credential_storage_vault>
+        <credential_store_type>other</credential_store_type>
+        <lookup_key>credential_id</lookup_key>
+        <mid_list/>
+        <name>SystemAdmin</name>
+        <order>100</order>
+        <password>﷞﷟﷒a5f103a5c367021049521d12b4013187﷬﷔1﷬﷭u_bMJykyuBS9t0zySDLiyg==j4bEP9PECq3_uD_MBJ_2xSz3HmfwhJhoizEeLQ==﷮﷯</password>
+        <privacy_key/>
+        <privacy_protocol/>
+        <ssh_certificate/>
+        <ssh_passphrase/>
+        <ssh_private_key/>
+        <sys_class_name>basic_auth_credentials</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 09:16:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>072fffefc309121049521d12b401310a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:16:15</sys_updated_on>
+        <tag/>
+        <type>basic_auth</type>
+        <use_context>false</use_context>
+        <use_high_security>false</use_high_security>
+        <user_name>admin</user_name>
+    </basic_auth_credentials>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-11 09:16:49</sys_created_on>
+        <sys_id>668f77efc309121049521d12b40131c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SystemAdmin</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_metadata_link_668f77efc309121049521d12b40131c9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-11 09:16:49</sys_updated_on>
+        <tablename>basic_auth_credentials</tablename>
+    </sys_metadata_link>
+</record_update>
