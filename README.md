@@ -2,7 +2,7 @@
 
 **Deployment instructions**
 
-Download attached file : ACW-SubFlow_v1.0 this is an updateset
+Download attached file : ACW-SubFlow_v1.0 and ACW-PreRequisiteGlobalUpdateset_v1.0.xml updatesets
 Retrieve this updateset.
 Preview and commit it.
 
