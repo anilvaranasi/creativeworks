@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>Assign Random HexCodes</name>
+        <record_for_rollback>false</record_for_rollback>
+        <script><![CDATA[var counter = 0;
+var endCounter = 200;
+var colorHash = {};
+var colorArray = [];
+var grLabelG = new GlideRecord('x_146833_creativ_0_label_graphics_lookup');
+grLabelG.query();
+var total = grLabelG.getRowCount();
+for (var k = 0; k < total+10; k++) {
+    counter++;
+    if (counter >= 200) {
+        counter = 0;
+    }
+    endCounter = 200 - counter;
+    colorHash[getRandomColor(counter, endCounter)] = 1;
+}
+for (var col in colorHash) {
+    colorArray.push(col);
+}
+counter = 0;
+while (grLabelG.next()) {
+    grLabelG.fill = colorArray[counter];
+    grLabelG.update();
+    counter++;
+}
+
+function getRandomColor(min, max) {
+    // Ensure min and max are within the valid range for RGB values (0-255)
+    min = Math.max(0, Math.min(255, min));
+    max = Math.max(0, Math.min(255, max));
+
+    // Generate a random integer between min and max
+    function randomIntInRange(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Generate random RGB values within the specified range
+    var r = randomIntInRange(min, max);
+    var g = randomIntInRange(min, max);
+    var b = randomIntInRange(min, max);
+
+    // Convert RGB values to a hexadecimal color code
+    var color = '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
+    return color;
+}
+
+// Example usage: Generate a random color with RGB values between 100 and 200
+var randomColor = getRandomColor(100, 200);
+gs.info('Random Color: ' + randomColor);]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>AVaranas</sys_created_by>
+        <sys_created_on>2024-12-27 15:35:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a0783de4fb72de50b629feceaeefdc06</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Assign Random HexCodes</sys_name>
+        <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
+        <sys_update_name>sys_script_fix_a0783de4fb72de50b629feceaeefdc06</sys_update_name>
+        <sys_updated_by>AVaranas</sys_updated_by>
+        <sys_updated_on>2024-12-27 15:52:09</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>
