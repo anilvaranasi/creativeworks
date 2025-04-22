@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="f2f62a7a07c2ed90b965f7208c1ed083" label="file" max_length="40" name="x_146833_creativ_0_file" type="collection">
-        <element attributes="encode_utf8=false" label="Configuration Item" max_length="32" name="ci" reference="cmdb_ci" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="100" name="comments" type="string"/>
-        <element default="CreativeWorks" label="Creator" max_length="40" name="creator" type="string"/>
         <element label="File Application" max_length="32" name="file_application" reference="sys_scope" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" label="Name" max_length="250" name="name" type="string"/>
-        <element attributes="edge_encryption_enabled=true" choice="1" default="draft" label="State" max_length="40" name="state" type="string">
-            <choice>
-                <element inactive_on_update="false" label="draft" sequence="0" value="draft"/>
-                <element inactive_on_update="false" label="processing" sequence="1" value="processing"/>
-                <element inactive_on_update="false" label="processed" sequence="2" value="processed"/>
-                <element inactive_on_update="false" label="Cancelled" sequence="3" value="Cancelled"/>
-            </choice>
-        </element>
-        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
+        <element attributes="encode_utf8=false" label="Configuration Item" max_length="32" name="ci" reference="cmdb_ci" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="Type" max_length="40" name="u_type" type="string">
             <choice>
-                <element inactive_on_update="false" label="CI" sequence="0" value="CI"/>
                 <element inactive_on_update="false" label="Application" sequence="1" value="Application"/>
+                <element inactive_on_update="false" label="CI" sequence="0" value="CI"/>
             </choice>
         </element>
         <element default="2.20" label="Version" max_length="5" name="version" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Name" max_length="250" name="name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Comments" max_length="100" name="comments" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="draft" label="State" max_length="40" name="state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="processing" sequence="1" value="processing"/>
+                <element inactive_on_update="false" label="draft" sequence="0" value="draft"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="Cancelled"/>
+                <element inactive_on_update="false" label="processed" sequence="2" value="processed"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="File Package" max_length="40" name="file_package" type="string"/>
+        <element default="CreativeWorks" label="Creator" max_length="40" name="creator" type="string"/>
+        <element default="javascript:current.getTableName();" dynamic_default_value="b5cb83a85f220100a9ad2572f2b4773c" label="Class" max_length="80" name="sys_class_name" type="sys_class_name" use_dynamic_default="true"/>
         <index name="index">
             <element name="ci"/>
         </index>

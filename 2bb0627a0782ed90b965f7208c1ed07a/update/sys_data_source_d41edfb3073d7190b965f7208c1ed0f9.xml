@@ -29,15 +29,30 @@
         //var inScopeClasses = 'sys_security_acl,sys_script_fix,scheduled_import_set,sys_alias,sys_app_application,sys_data_source,sysauto_script,sys_hub_flow,sys_rte_eb_etl_definition,sys_script,sys_script_include,sys_transform_map,sys_user_role,sys_db_object';
         var grMeta = new GlideRecord('sys_metadata');
         var file = '';
+		var fileType = 'app';
         var grFile = new GlideRecord('x_146833_creativ_0_file');
         grFile.orderByDesc('sys_updated_on');
         grFile.query();
         if (grFile.next()) {
-            file = grFile.file_application.sys_id + '';
+               if (global.JSUtil.notNil(grFile.file_package)) {
+                fileType = 'package';
+                file = grFile.file_package + '';
+            } else {
+                if (global.JSUtil.notNil(grFile.file_application)) {
+                    file = grFile.file_application.sys_id + '';
+                }
+            }
         }
         var appSysId = file;
         //sys_scope=2bb0627a0782ed90b965f7208c1ed07a^sys_class_name=sys_script
-        var enQuery = 'sys_scope=' + appSysId + "^sys_class_name!=sys_metadata_delete";
+        var enQuery = '';
+        if (fileType == 'app') {
+            enQuery = 'sys_scope=' + appSysId + "^sys_class_name!=sys_metadata_delete";
+        }
+        if (fileType == 'package') {
+            //GOTOsys_class_name>=test^sys_package=11fb1d34737200103fcae6e24ff6a7d7
+            enQuery = 'sys_package =' + appSysId + "^sys_class_name!=sys_metadata_delete";
+        }
         var anaysisMode = gs.getProperty('x_146833_creativ_0.acw_analysis_mode');
         if (anaysisMode == 'Default') {
             var inScopeClasses = getAllowedClasses();
@@ -652,6 +667,7 @@
         <database_name/>
         <database_port/>
         <discard_arrays>true</discard_arrays>
+        <enable_parallel_loading>false</enable_parallel_loading>
         <expand_node_children>false</expand_node_children>
         <file_path/>
         <file_retrieval_method>Attachment</file_retrieval_method>
@@ -664,11 +680,10 @@
         <jdbc_password/>
         <jdbc_server/>
         <jdbc_user_name/>
-        <jdbcprobe_result_set_rows/>
         <jpath_root_node/>
         <last_run_database_field/>
         <last_run_datetime/>
-        <last_success_import_time>2023-11-02 17:56:53</last_success_import_time>
+        <last_success_import_time>2025-04-22 17:16:43</last_success_import_time>
         <ldap_target/>
         <ldapprobe_result_set_rows>200</ldapprobe_result_set_rows>
         <limit/>
@@ -678,6 +693,7 @@
         <offset>0</offset>
         <oracle_port>1521</oracle_port>
         <oracle_sid>orcl</oracle_sid>
+        <parallel_loading_script/>
         <parsing_script><![CDATA[// The input value can be accessed through the variables named "line", "lineNumber" and "result"
 // The function uses result variable to return parse result back. 
 (function(line,lineNumber,result) {
@@ -701,14 +717,14 @@
         <sys_created_by>adminanil</sys_created_by>
         <sys_created_on>2023-10-17 15:54:08</sys_created_on>
         <sys_id>d41edfb3073d7190b965f7208c1ed0f9</sys_id>
-        <sys_mod_count>117</sys_mod_count>
+        <sys_mod_count>123</sys_mod_count>
         <sys_name>ACW-Get EdgeData</sys_name>
         <sys_package display_value="AwesomeNowCreativeWorks" source="x_146833_creativ_0">2bb0627a0782ed90b965f7208c1ed07a</sys_package>
         <sys_policy/>
         <sys_scope display_value="AwesomeNowCreativeWorks">2bb0627a0782ed90b965f7208c1ed07a</sys_scope>
         <sys_update_name>sys_data_source_d41edfb3073d7190b965f7208c1ed0f9</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-11-02 17:56:56</sys_updated_on>
+        <sys_updated_on>2025-04-22 17:16:44</sys_updated_on>
         <table_name/>
         <type>CUSTOM</type>
         <use_batch_import>false</use_batch_import>
@@ -718,4 +734,15 @@
         <zipped>false</zipped>
     </sys_data_source>
     <sys_variable_value action="delete_multiple" query="document_key=d41edfb3073d7190b965f7208c1ed0f9"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>d41edfb3073d7190b965f7208c1ed0f9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-04-22 17:15:41</sys_created_on>
+        <sys_id>fef7ebb183812210b0abcfc0deaad377</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-04-22 17:15:41</sys_updated_on>
+        <table>sys_data_source</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>
