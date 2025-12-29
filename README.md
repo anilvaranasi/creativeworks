@@ -1,5 +1,6 @@
 # creativeworks
-
+**Upon deploying scoped app""
+Verify for allowed classes if its empty then no output file will be displayed. allowed classes is available in the repo to download and upload if needed.
 **Deployment instructions**
 
 Download attached file : ACW-SubFlow_v1.0 and ACW-PreRequisiteGlobalUpdateset_v1.0.xml updatesets
